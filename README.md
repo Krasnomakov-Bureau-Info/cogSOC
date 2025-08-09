@@ -5,6 +5,13 @@
 
 # 🧠 CogSOC
 
+## ⚠️ Disclaimer
+
+> **This project is for research and educational purposes only.**
+> - No operational coordination, targeting, or harassment is conducted or supported.
+> - Analysis is derived from open sources and academic/industry materials.
+> - No personal data or doxxing is included.
+
 
 ## ⚡️ Lele: 0 (basic)
 
@@ -25,9 +32,11 @@ In order to evolve into the next stage, it requires **energy** and **experience*
 
 ## 🧬 Evolution Path
 
-1. 🟢 Live tracking and informing
-2. 🟡 Active incident responding
-3. 🔴 Countering and following threats (attack stage)
+1. 🟢 Live tracking and informing (conceptual/analytical)
+2. 🟡 Active incident responding (simulated/analytical)
+3. 🔴 Advanced analytical modeling of adversary TTPs (simulated)
+
+> **Note:** The "evolution path" above is a conceptual framework for analytical maturity, not a commitment to operational activity.
 
 
 ---
@@ -53,6 +62,8 @@ In order to evolve into the next stage, it requires **energy** and **experience*
 
 
 If you are interested in the evolution of this body, our possible next stage is **live tracking and information gathering** — providing detailed information about tracked activities, identified agents, and cases of interest.
+
+If you are interested in the evolution of this body, our possible next stage is **live tracking and information gathering** — providing detailed information about tracked narratives, tactics, and campaigns at a methodological/OSINT level; no doxxing or personal data.
 
 
 ---
