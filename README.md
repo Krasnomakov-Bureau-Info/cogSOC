@@ -85,6 +85,32 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 <!-- toc-articles-auto-generated -->
 
+### Definitions
+- [🧠 What is cognitive warfare?](./articles/01-what-is-cognitive-warfare.md)
+- [🕵️ What are PsyOps?](./articles/02-what-are-psyops.md)
+- [🧑‍💻 What is human hacking?](./articles/03-what-is-human-hacking.md)
+- [🗣️ What is manipulation, opinion manipulation?](./articles/04-what-is-manipulation.md)
+- [📰 What are information operations?](./articles/05-what-are-information-operations.md)
+- [💻 Cyber cognitive warfare](./articles/06-cyber-cognitive-warfare.md)
+
+### Observations
+- [👁️ Observed persistent PsyOps](./articles/07-observed-persistent-psyops.md)
+- [🧩 Observed manipulation strategies](./articles/08-observed-manipulation-strategies.md)
+
+### Attacks and Operations
+- [🎯 Typical psychological and cognitive attack strategies](./articles/09-typical-psychological-attacks.md)
+
+### Defense Strategies
+- [🛡️ Cognitive defense and self-strengthening](./articles/10-cognitive-defense.md)
+
+### Future Threats (Evolving Threats)
+- [🤖 Technologies of tomorrow (mind reading, thought injection, dreams, state influence)](./articles/11-future-threats.md)
+
+### Future Defenses (Against Evolving Threats)
+- [Future defenses (against evolving threats)](./articles/12-future-defenses.md)
+
+### History
+- [History](./articles/13-history.md)
 
 ---
 
