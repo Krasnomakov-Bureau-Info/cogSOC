@@ -72,10 +72,11 @@ If you are interested in the evolution of this body, our possible next stage is 
 <details>
 <summary>🌍 <strong>CogSOC Principles</strong></summary>
 
-- Operates as part of **international civil defense**
-- Does **not** differentiate nationalities, countries, or politics
-- Not financed or patronized
-- Cannot be influenced or shut down — it is a **mirror of modern events**
+- Independent private initiative focused on research and public education in civil protection and resilience, not affiliated with any state, political party, or organization.
+- Institutionally neutral and nonpartisan: does not take positions on social or political disputes beyond its mission; analytical judgments are made without regard to nationality, ideology, or current politics.
+- Non-governmental and self-directed: no external financing or patronage; no donor, sponsor, or institution has review or influence over content or priorities.
+- Non-operational and non-violent: conducts open-source analysis and public-interest explanations related to cognitive/information risks; does not coordinate, incite, or conduct operations against persons or organizations.
+- Civil defense context: contributes to public awareness, preparedness, and protection of civilians against contemporary information/cognitive risks through prevention, mitigation, and education, consistent with the educational aspects of civil protection.
 
 </details>
 
