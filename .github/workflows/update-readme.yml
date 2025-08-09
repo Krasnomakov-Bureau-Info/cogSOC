@@ -1,0 +1,51 @@
+name: Update README
+
+on:
+  push:
+    paths:
+      - '**/*'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate README Table of Contents
+        run: |
+          SECTIONS=(definitions observations attacks defense future-threats future-defenses history)
+          declare -A SECTION_TITLES
+          SECTION_TITLES[definitions]="Definitions"
+          SECTION_TITLES[observations]="Observations"
+          SECTION_TITLES[attacks]="Attacks and Operations"
+          SECTION_TITLES[defense]="Defense Strategies"
+          SECTION_TITLES[future-threats]="Future Threats (Evolving Threats)"
+          SECTION_TITLES[future-defenses]="Future Defenses (Against Evolving Threats)"
+          SECTION_TITLES[history]="History"
+
+          TOC=""
+          for section in "${SECTIONS[@]}"; do
+            files=$(grep -l "#section:$section" articles/*.md 2>/dev/null | sort)
+            if [ -n "$files" ]; then
+              TOC+="\n### ${SECTION_TITLES[$section]}\n"
+              for file in $files; do
+                title=$(grep -m1 '^# ' "$file" | sed 's/^# //')
+                [ -z "$title" ] && title=$(basename "$file" .md)
+                TOC+="- [${title}](./$file)\n"
+              done
+            fi
+          done
+
+          awk -v toc="$TOC" '
+            BEGIN {p=1}
+            /<!-- toc-articles-auto-generated -->/ {print; print toc; p=0; next}
+            /^---/ && p==0 {p=1}
+            p {print}
+          ' README.md > README.tmp && mv README.tmp README.md
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m 'Auto-update README' || echo 'No changes to commit'
+          git push
