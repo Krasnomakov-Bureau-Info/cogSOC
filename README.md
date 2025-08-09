@@ -32,9 +32,11 @@ In order to evolve into the next stage, it requires **energy** and **experience*
 
 ## 🧬 Evolution Path
 
+0. ⚪ Informational Bureau (current stage)
 1. 🟢 Live tracking and informing (conceptual/analytical)
 2. 🟡 Active incident responding (simulated/analytical)
-3. 🔴 Advanced analytical modeling of adversary TTPs (simulated)
+3. 🟠 Active threat hunting (evolving from defense to attack stage)
+4. 🔴 Advanced analytical modeling of adversary TTPs (simulated)
 
 > **Note:** The "evolution path" above is a conceptual framework for analytical maturity, not a commitment to operational activity.
 
@@ -61,7 +63,6 @@ In order to evolve into the next stage, it requires **energy** and **experience*
 > This repo contains **observations** and **analysis**. It uses threat models and focuses on evolving cognitive threat models.
 
 
-If you are interested in the evolution of this body, our possible next stage is **live tracking and information gathering** — providing detailed information about tracked activities, identified agents, and cases of interest.
 
 If you are interested in the evolution of this body, our possible next stage is **live tracking and information gathering** — providing detailed information about tracked narratives, tactics, and campaigns at a methodological/OSINT level; no doxxing or personal data.
 
