@@ -42,11 +42,6 @@ jobs:
             /^---/ && p==0 {p=1}
             p {print}
           ' README.md > README.tmp && mv README.tmp README.md
-            BEGIN {p=1}
-            /<!-- toc-articles-auto-generated -->/ {print; print toc; p=0; next}
-            /^---/ && p==0 {p=1}
-            p {print}
-          ' README.md > README.tmp && mv README.tmp README.md
       - name: Commit changes
         run: |
           git config --global user.name 'github-actions[bot]'
