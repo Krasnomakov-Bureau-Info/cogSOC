@@ -127,6 +127,12 @@ If the situation gets worse, it gains energy and experience — and will provide
 - [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md)
 - [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md)
 
+### Cybersecurity
+- [Cybersecurity](./articles/cybersecurity/placeholder.md)
+
+### Humor
+- [Humor](./articles/humor/placeholder.md)
+
 ---
 
 <p align="center">
