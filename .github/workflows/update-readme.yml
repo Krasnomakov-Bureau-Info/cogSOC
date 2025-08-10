@@ -28,7 +28,7 @@ jobs:
 
           TOC=""
           for section in "${SECTIONS[@]}"; do
-            files=$(grep -l "#section:$section" articles/*.md 2>/dev/null | sort)
+            files=$(grep -l "#section:$section" articles/**/*.md 2>/dev/null | sort)
             if [ -n "$files" ]; then
               TOC+="\n### ${SECTION_TITLES[$section]}\n"
               for file in $files; do
