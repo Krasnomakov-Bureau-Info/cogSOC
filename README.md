@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `.050`  
-**Current experience level:** `.050`
+**Current energy level:** `0.050`  
+**Current experience level:** `0.050`
 
 
 ---
@@ -134,44 +134,84 @@ If the situation gets worse, it gains energy and experience — and will provide
 <!-- toc-articles-auto-generated -->
 
 ### Definitions
-- [🧠 What is cognitive warfare?](./articles/definitions/01-what-is-cognitive-warfare.md)
-- [🕵️ What are PsyOps?](./articles/definitions/02-what-are-psyops.md)
-- [🧑‍💻 What is human hacking?](./articles/definitions/03-what-is-human-hacking.md)
-- [🗣️ What is manipulation, opinion manipulation?](./articles/definitions/04-what-is-manipulation.md)
-- [📰 What are information operations?](./articles/definitions/05-what-are-information-operations.md)
-- [💻 Cyber cognitive warfare](./articles/definitions/06-cyber-cognitive-warfare.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [🧠 What is cognitive warfare?](./articles/definitions/01-what-is-cognitive-warfare.md) | - | - |
+| [🕵️ What are PsyOps?](./articles/definitions/02-what-are-psyops.md) | - | - |
+| [🧑‍💻 What is human hacking?](./articles/definitions/03-what-is-human-hacking.md) | - | - |
+| [🗣️ What is manipulation, opinion manipulation?](./articles/definitions/04-what-is-manipulation.md) | - | - |
+| [📰 What are information operations?](./articles/definitions/05-what-are-information-operations.md) | - | - |
+| [💻 Cyber cognitive warfare](./articles/definitions/06-cyber-cognitive-warfare.md) | - | - |
+
 
 ### Observations
-- [👁️ Observed persistent PsyOps](./articles/observations/07-observed-persistent-psyops.md)
-- [🧩 Observed manipulation strategies](./articles/observations/08-observed-manipulation-strategies.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [👁️ Observed persistent PsyOps](./articles/observations/07-observed-persistent-psyops.md) | - | - |
+| [🧩 Observed manipulation strategies](./articles/observations/08-observed-manipulation-strategies.md) | - | - |
+
 
 ### Attacks and Operations
-- [🎯 Typical psychological and cognitive attack strategies](./articles/attacks/09-typical-psychological-attacks.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [🎯 Typical psychological and cognitive attack strategies](./articles/attacks/09-typical-psychological-attacks.md) | - | - |
+
 
 ### Defense Strategies
-- [🛡️ Cognitive defense and self-strengthening](./articles/defense/10-cognitive-defense.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [🛡️ Cognitive defense and self-strengthening](./articles/defense/10-cognitive-defense.md) | - | - |
+
 
 ### Future Threats (Evolving Threats)
-- [🤖 Technologies of tomorrow (mind reading, thought injection, dreams, state influence)](./articles/future-threats/11-future-threats.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [🤖 Technologies of tomorrow (mind reading, thought injection, dreams, state influence)](./articles/future-threats/11-future-threats.md) | - | - |
+
 
 ### Future Defenses (Against Evolving Threats)
-- [Future defenses (against evolving threats)](./articles/future-defenses/12-future-defenses.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [Future defenses (against evolving threats)](./articles/future-defenses/12-future-defenses.md) | - | - |
+
 
 ### History
-- [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md) (Energy: **0.01**, Experience: **0.01**)
-- [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md) (Energy: **0.005**, Experience: **0.005**)
-- [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md) (Energy: **0.005**, Experience: **0.005**)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md) | 0.01 | 0.01 |
+| [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md) | 0.005 | 0.005 |
+| [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md) | 0.005 | 0.005 |
+
 
 ### Cybersecurity
-- [Cybersecurity](./articles/cybersecurity/placeholder.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [Cybersecurity](./articles/cybersecurity/placeholder.md) | - | - |
+
 
 ### Surveillance
-- [Modern Physical Surveillance and Network-Centric Warfare: European Perspectives on Persistent Surveillance Networks](./articles/surveillance/network_centric_surveillance.md) (Energy: **0.01**, Experience: **0.01**)
-- [Transnational Surveillance: How Russia, USA, and China Monitor Their Citizens Abroad](./articles/surveillance/surveillance_abroad.md) (Energy: **0.01**, Experience: **0.01**)
-- [Ukrainian War Intelligence Networks: The Revolutionary Dynamics of Surveillance and Recruitment in Europe](./articles/surveillance/ukrainian_surveillance.md) (Energy: **0.01**, Experience: **0.01**)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [Modern Physical Surveillance and Network-Centric Warfare: European Perspectives on Persistent Surveillance Networks](./articles/surveillance/network_centric_surveillance.md) | 0.01 | 0.01 |
+| [Transnational Surveillance: How Russia, USA, and China Monitor Their Citizens Abroad](./articles/surveillance/surveillance_abroad.md) | 0.01 | 0.01 |
+| [Ukrainian War Intelligence Networks: The Revolutionary Dynamics of Surveillance and Recruitment in Europe](./articles/surveillance/ukrainian_surveillance.md) | 0.01 | 0.01 |
+
 
 ### Humor
-- [Humor](./articles/humor/placeholder.md)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
+| [Humor](./articles/humor/placeholder.md) | - | - |
+
 
 <!-- toc-articles-auto-generated-end -->
 
