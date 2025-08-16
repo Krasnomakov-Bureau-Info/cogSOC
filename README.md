@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `0.050`  
-**Current experience level:** `0.050`
+**Current energy level:** `0.060`  
+**Current experience level:** `0.060`
 
 
 ---
@@ -137,7 +137,7 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 | Name | Energy cost | Experience cost |
 | --- | ---: | ---: |
-| [🧠 What is cognitive warfare?](./articles/definitions/01-what-is-cognitive-warfare.md) | - | - |
+| [Cognitive Warfare: A Comprehensive Analysis](./articles/definitions/01-what-is-cognitive-warfare.md) | 0.010 | 0.010 |
 | [🕵️ What are PsyOps?](./articles/definitions/02-what-are-psyops.md) | - | - |
 | [🧑‍💻 What is human hacking?](./articles/definitions/03-what-is-human-hacking.md) | - | - |
 | [🗣️ What is manipulation, opinion manipulation?](./articles/definitions/04-what-is-manipulation.md) | - | - |
