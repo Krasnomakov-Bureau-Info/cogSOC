@@ -132,10 +132,11 @@ If the situation gets worse, it gains energy and experience — and will provide
 ## 📚 Table of Contents
 
 <!-- toc-articles-auto-generated -->
+
+### Definitions
+
 | Name | Energy cost | Experience cost |
 | --- | ---: | ---: |
-
-| **Definitions** | | |
 | [🧠 What is cognitive warfare?](./articles/definitions/01-what-is-cognitive-warfare.md) | - | - |
 | [🕵️ What are PsyOps?](./articles/definitions/02-what-are-psyops.md) | - | - |
 | [🧑‍💻 What is human hacking?](./articles/definitions/03-what-is-human-hacking.md) | - | - |
@@ -143,37 +144,74 @@ If the situation gets worse, it gains energy and experience — and will provide
 | [📰 What are information operations?](./articles/definitions/05-what-are-information-operations.md) | - | - |
 | [💻 Cyber cognitive warfare](./articles/definitions/06-cyber-cognitive-warfare.md) | - | - |
 
-| **Observations** | | |
+
+### Observations
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [👁️ Observed persistent PsyOps](./articles/observations/07-observed-persistent-psyops.md) | - | - |
 | [🧩 Observed manipulation strategies](./articles/observations/08-observed-manipulation-strategies.md) | - | - |
 
-| **Attacks and Operations** | | |
+
+### Attacks and Operations
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [🎯 Typical psychological and cognitive attack strategies](./articles/attacks/09-typical-psychological-attacks.md) | - | - |
 
-| **Defense Strategies** | | |
+
+### Defense Strategies
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [🛡️ Cognitive defense and self-strengthening](./articles/defense/10-cognitive-defense.md) | - | - |
 
-| **Future Threats (Evolving Threats)** | | |
+
+### Future Threats (Evolving Threats)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [🤖 Technologies of tomorrow (mind reading, thought injec…](./articles/future-threats/11-future-threats.md) | - | - |
 
-| **Future Defenses (Against Evolving Threats)** | | |
+
+### Future Defenses (Against Evolving Threats)
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [Future defenses (against evolving threats)](./articles/future-defenses/12-future-defenses.md) | - | - |
 
-| **History** | | |
+
+### History
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [The Twelve Spies: Biblical Foundations of Israeli Intel…](./articles/history/intelligence_origins.md) | 0.010 | 0.010 |
 | [Wilhelm Stieber’s Intelligence Machine and Its Reverber…](./articles/history/stieber_1.md) | 0.005 | 0.005 |
 | [Wilhelm Stieber: Personality, Methods, and Legacy in th…](./articles/history/stieber_2.md) | 0.005 | 0.005 |
 
-| **Cybersecurity** | | |
+
+### Cybersecurity
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [Cybersecurity](./articles/cybersecurity/placeholder.md) | - | - |
 
-| **Surveillance** | | |
+
+### Surveillance
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [Modern Physical Surveillance and Network-Centric Warfar…](./articles/surveillance/network_centric_surveillance.md) | 0.010 | 0.010 |
 | [Transnational Surveillance: How Russia, USA, and China …](./articles/surveillance/surveillance_abroad.md) | 0.010 | 0.010 |
 | [Ukrainian War Intelligence Networks: The Revolutionary …](./articles/surveillance/ukrainian_surveillance.md) | 0.010 | 0.010 |
 
-| **Humor** | | |
+
+### Humor
+
+| Name | Energy cost | Experience cost |
+| --- | ---: | ---: |
 | [Humor](./articles/humor/placeholder.md) | - | - |
+
 
 <!-- toc-articles-auto-generated-end -->
 
