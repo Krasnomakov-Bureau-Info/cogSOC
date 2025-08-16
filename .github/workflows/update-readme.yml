@@ -23,7 +23,8 @@ jobs:
           export LANG=C.UTF-8
           SECTIONS=(definitions observations attacks defense future-threats future-defenses history cybersecurity surveillance humor)
           # Max characters for the article link text to keep table width stable in GitHub UI
-          MAX_NAME_LEN=80
+          # Reduce if tables still wrap inconsistently.
+          MAX_NAME_LEN=56
           declare -A SECTION_TITLES
           SECTION_TITLES[definitions]="Definitions"
           SECTION_TITLES[observations]="Observations"
