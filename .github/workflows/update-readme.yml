@@ -39,28 +39,35 @@ jobs:
             files=$(find articles -type f -name "*.md" -path "*/$section/*" | sort)
             if [ -n "$files" ]; then
               TOC+="\n### ${SECTION_TITLES[$section]}\n"
+              TOC+="\n| Name | Energy cost | Experience cost |\n| --- | ---: | ---: |\n"
               for file in $files; do
-                title=$(grep -m1 '^# ' "$file" | sed 's/^# //' | sed 's/\[/\\\[/g' | sed 's/\]/\\\]/g')
-                [ -z "$title" ] && title=$(basename "$file" .md)
+                title=$(grep -m1 '^# ' "$file" | sed 's/^# //' | sed 's/\[/\\\[/g' | sed 's/\]/\\\]/g' | sed 's/|/\\|/g')
+                [ -z "$title" ] && title=$(basename "$file" .md | sed 's/|/\\|/g')
 
                 energy=$(grep -m1 '^energy:' "$file" | sed 's/^energy: //')
                 experience=$(grep -m1 '^experience:' "$file" | sed 's/^experience: //')
 
+                energy_cell="$energy"; [ -n "$energy_cell" ] || energy_cell="-"
+                experience_cell="$experience"; [ -n "$experience_cell" ] || experience_cell="-"
+
+                TOC+="| [${title}](./$file) | ${energy_cell} | ${experience_cell} |\n"
+
                 if [ -n "$energy" ] && [ -n "$experience" ]; then
-                  TOC+="- [${title}](./$file) (Energy: **${energy}**, Experience: **${experience}**)\n"
-                  TOTAL_ENERGY=$(echo "$TOTAL_ENERGY + $energy" | bc)
-                  TOTAL_EXPERIENCE=$(echo "$TOTAL_EXPERIENCE + $experience" | bc)
-                else
-                  TOC+="- [${title}](./$file)\n"
+                  TOTAL_ENERGY=$(echo "$TOTAL_ENERGY + $energy" | bc -l)
+                  TOTAL_EXPERIENCE=$(echo "$TOTAL_EXPERIENCE + $experience" | bc -l)
                 fi
               done
+              TOC+="\n"
             fi
           done
+          # Format totals to three decimal places
+          TOTAL_ENERGY_FMT=$(printf "%.3f" "$TOTAL_ENERGY")
+          TOTAL_EXPERIENCE_FMT=$(printf "%.3f" "$TOTAL_EXPERIENCE")
           echo "toc<<EOF" >> $GITHUB_OUTPUT
           echo -e "$TOC" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-          echo "total_energy=$TOTAL_ENERGY" >> $GITHUB_OUTPUT
-          echo "total_experience=$TOTAL_EXPERIENCE" >> $GITHUB_OUTPUT
+          echo "total_energy=$TOTAL_ENERGY_FMT" >> $GITHUB_OUTPUT
+          echo "total_experience=$TOTAL_EXPERIENCE_FMT" >> $GITHUB_OUTPUT
 
       - name: Update README
         run: |
@@ -70,10 +77,10 @@ jobs:
           
           # Update TOC
           awk -v toc="$TOC" '
-            BEGIN {p=1}
-            /<!-- toc-articles-auto-generated -->/ {print; print toc; p=0; next}
-            /<!-- toc-articles-auto-generated-end -->/ {p=1}
-            p {print}
+            BEGIN {inblk=0}
+            /<!-- toc-articles-auto-generated -->/ {print; print toc; inblk=1; next}
+            /<!-- toc-articles-auto-generated-end -->/ {print; inblk=0; next}
+            !inblk {print}
           ' README.md > README.tmp && mv README.tmp README.md
 
           # Update totals
