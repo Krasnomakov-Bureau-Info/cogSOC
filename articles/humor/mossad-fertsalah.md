@@ -1,6 +1,6 @@
 ---
-energy: 0.005
-experience: 0.005
+energy: 0.002
+experience: 0.001
 ---
 
 #section:surveillance
