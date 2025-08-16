@@ -171,7 +171,7 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 | Name | Energy cost | Experience cost |
 | --- | ---: | ---: |
-| [🤖 Technologies of tomorrow (mind reading, thought injection, dreams, state influence)](./articles/future-threats/11-future-threats.md) | - | - |
+| [🤖 Technologies of tomorrow (mind reading, thought injection, dreams, state infl…](./articles/future-threats/11-future-threats.md) | - | - |
 
 
 ### Future Defenses (Against Evolving Threats)
@@ -185,9 +185,9 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 | Name | Energy cost | Experience cost |
 | --- | ---: | ---: |
-| [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md) | 0.01 | 0.01 |
+| [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md) | 0.010 | 0.010 |
 | [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md) | 0.005 | 0.005 |
-| [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md) | 0.005 | 0.005 |
+| [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern…](./articles/history/stieber_2.md) | 0.005 | 0.005 |
 
 
 ### Cybersecurity
@@ -201,9 +201,9 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 | Name | Energy cost | Experience cost |
 | --- | ---: | ---: |
-| [Modern Physical Surveillance and Network-Centric Warfare: European Perspectives on Persistent Surveillance Networks](./articles/surveillance/network_centric_surveillance.md) | 0.01 | 0.01 |
-| [Transnational Surveillance: How Russia, USA, and China Monitor Their Citizens Abroad](./articles/surveillance/surveillance_abroad.md) | 0.01 | 0.01 |
-| [Ukrainian War Intelligence Networks: The Revolutionary Dynamics of Surveillance and Recruitment in Europe](./articles/surveillance/ukrainian_surveillance.md) | 0.01 | 0.01 |
+| [Modern Physical Surveillance and Network-Centric Warfare: European Perspectives…](./articles/surveillance/network_centric_surveillance.md) | 0.010 | 0.010 |
+| [Transnational Surveillance: How Russia, USA, and China Monitor Their Citizens A…](./articles/surveillance/surveillance_abroad.md) | 0.010 | 0.010 |
+| [Ukrainian War Intelligence Networks: The Revolutionary Dynamics of Surveillance…](./articles/surveillance/ukrainian_surveillance.md) | 0.010 | 0.010 |
 
 
 ### Humor
