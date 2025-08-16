@@ -42,6 +42,42 @@ In order to evolve into the next stage, it requires **energy** and **experience*
 
 ---
 
+<details>
+<summary><strong>⚡️ Energy and Experience Protocol</strong></summary>
+
+### Principle of Growth
+The evolution of CogSOC is fueled by accumulating **Energy** and **Experience**. Articles are the primary means of generating these resources, with the goal of reaching **100-150 units** to advance to the next stage.
+
+### The Nature of Articles
+- **Reactive, Not Reflective:** Articles are published as reactive responses to events. However, the topic of an article is not a direct mirror of the event that prompted it. Instead, articles are analytical reactions that, in aggregate, serve a single purpose. At this stage, they do not contain direct facts, document specific violations, or make accusations.
+
+### Energy Calculation (Effort & Risk)
+Energy is a measure of the resources required to produce an article, categorized by topic. More abstract or general articles cost less, while more specific and sensitive ones cost more.
+- **Minimal Cost (`~0.005`):** `Humor`.
+- **Low Cost (`~0.01`):** `History`, general `Definitions`.
+- **Moderate Cost:** `Future Threats` and `Future Defenses`, due to their speculative nature.
+- **High Cost:** `Observations` and `Attacks`, as they are based on analyzing real-world events and acknowledged threats.
+- **Variable Cost:** `Defense` articles have a cost equivalent to the `Attack` they are designed to counter.
+- *The maximum energy per article is 1.0 unit.*
+
+### Experience Calculation (Utility & Applicability)
+Experience is a measure of an article's usefulness and applicability in real-world conditions.
+- **Specificity is Key:** The more an article details a concrete scheme, the actors involved, or specific situations where a tactic is practiced, the more experience it yields.
+- **Practical Value:** Actionable `Defense` strategies that can be readily applied also generate significant experience.
+
+### Transition to Arsenal
+All documented cognitive and cyber attacks, along with their corresponding defenses, transition into the **CogSOC arsenal**. As the project evolves and real-world data is confirmed, this knowledge base will support the more advanced phases outlined in the evolution model, including the development of a distributed SOC and, eventually, active pursuit capabilities.
+
+### Additional Growth Vectors
+Accumulating energy and experience is also pursued through:
+- Public awareness campaigns (advertising).
+- Formal inquiries to relevant authorities.
+- Collaboration with other organizations in the privacy and security sectors.
+
+</details>
+
+---
+
 
 ## 🎯 Topics & Areas of Interest
 
