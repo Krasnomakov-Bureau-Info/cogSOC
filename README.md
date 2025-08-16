@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `.020`  
-**Current experience level:** `.020`
+**Current energy level:** `.050`  
+**Current experience level:** `.050`
 
 
 ---
@@ -164,6 +164,11 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 ### Cybersecurity
 - [Cybersecurity](./articles/cybersecurity/placeholder.md)
+
+### Surveillance
+- [Modern Physical Surveillance and Network-Centric Warfare: European Perspectives on Persistent Surveillance Networks](./articles/surveillance/network_centric_surveillance.md) (Energy: **0.01**, Experience: **0.01**)
+- [Transnational Surveillance: How Russia, USA, and China Monitor Their Citizens Abroad](./articles/surveillance/surveillance_abroad.md) (Energy: **0.01**, Experience: **0.01**)
+- [Ukrainian War Intelligence Networks: The Revolutionary Dynamics of Surveillance and Recruitment in Europe](./articles/surveillance/ukrainian_surveillance.md) (Energy: **0.01**, Experience: **0.01**)
 
 ### Humor
 - [Humor](./articles/humor/placeholder.md)
