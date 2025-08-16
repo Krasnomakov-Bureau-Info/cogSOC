@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `0`  
-**Current experience level:** `0`
+**Current energy level:** `.020`  
+**Current experience level:** `.020`
 
 
 ---
@@ -122,9 +122,9 @@ If the situation gets worse, it gains energy and experience — and will provide
 - [Future defenses (against evolving threats)](./articles/future-defenses/12-future-defenses.md)
 
 ### History
-- [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md)
-- [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md)
-- [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md)
+- [The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine](./articles/history/intelligence_origins.md) (Energy: **0.01**, Experience: **0.01**)
+- [Wilhelm Stieber’s Intelligence Machine and Its Reverberations in Japan](./articles/history/stieber_1.md) (Energy: **0.005**, Experience: **0.005**)
+- [Wilhelm Stieber: Personality, Methods, and Legacy in the Architecture of Modern Espionage](./articles/history/stieber_2.md) (Energy: **0.005**, Experience: **0.005**)
 
 ### Cybersecurity
 - [Cybersecurity](./articles/cybersecurity/placeholder.md)
