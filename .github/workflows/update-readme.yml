@@ -18,7 +18,7 @@ jobs:
       - name: Generate README Table of Contents and Calculate Totals
         id: generate_toc
         run: |
-          SECTIONS=(definitions observations attacks defense future-threats future-defenses history cybersecurity humor)
+          SECTIONS=(definitions observations attacks defense future-threats future-defenses history cybersecurity surveillance humor)
           declare -A SECTION_TITLES
           SECTION_TITLES[definitions]="Definitions"
           SECTION_TITLES[observations]="Observations"
@@ -28,6 +28,7 @@ jobs:
           SECTION_TITLES[future-defenses]="Future Defenses (Against Evolving Threats)"
           SECTION_TITLES[history]="History"
           SECTION_TITLES[cybersecurity]="Cybersecurity"
+          SECTION_TITLES[surveillance]="Surveillance"
           SECTION_TITLES[humor]="Humor"
 
           TOC=""
