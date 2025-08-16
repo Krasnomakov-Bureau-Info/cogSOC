@@ -136,7 +136,7 @@ If the situation gets worse, it gains energy and experience — and will provide
 ### Definitions
 | Name | Energy cost | Experience cost |
 |:---|---:|---:|
-| [Cognitive Warfare: A Comprehensive Analysis](./articles/definitions/01-what-is-cognitive-warfare.md) | 0.010 | 0.010 |
+| [The War for Human Minds: Understanding Cognitive Warfar…](./articles/definitions/01-what-is-cognitive-warfare.md) | 0.010 | 0.010 |
 | [🕵️ What are PsyOps?](./articles/definitions/02-what-are-psyops.md) | - | - |
 | [🧑‍💻 What is human hacking?](./articles/definitions/03-what-is-human-hacking.md) | - | - |
 | [🗣️ What is manipulation, opinion manipulation?](./articles/definitions/04-what-is-manipulation.md) | - | - |
