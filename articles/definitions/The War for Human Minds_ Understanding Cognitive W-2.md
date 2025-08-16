@@ -1,10 +1,3 @@
----
-energy: 0.01
-experience: 0.01
----
-
-#section:definitions
-
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
 
 # The War for Human Minds: Understanding Cognitive Warfare in the Digital Age
