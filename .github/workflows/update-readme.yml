@@ -18,7 +18,12 @@ jobs:
       - name: Generate README Table of Contents and Calculate Totals
         id: generate_toc
         run: |
+          # Ensure UTF-8 handling (for emoji and non-ASCII titles)
+          export LC_ALL=C.UTF-8
+          export LANG=C.UTF-8
           SECTIONS=(definitions observations attacks defense future-threats future-defenses history cybersecurity surveillance humor)
+          # Max characters for the article link text to keep table width stable in GitHub UI
+          MAX_NAME_LEN=80
           declare -A SECTION_TITLES
           SECTION_TITLES[definitions]="Definitions"
           SECTION_TITLES[observations]="Observations"
@@ -44,11 +49,23 @@ jobs:
                 title=$(grep -m1 '^# ' "$file" | sed 's/^# //' | sed 's/\[/\\\[/g' | sed 's/\]/\\\]/g' | sed 's/|/\\|/g')
                 [ -z "$title" ] && title=$(basename "$file" .md | sed 's/|/\\|/g')
 
+                # Truncate title to fixed length with ellipsis (Unicode-safe) using python -c
+                title=$(TRUNC_N="$MAX_NAME_LEN" python3 -c 'import os,sys; n=int(os.environ.get("TRUNC_N","80")); s=sys.stdin.read().rstrip("\n"); print(s if len(s)<=n else s[:max(0,n-1)]+"…")' <<< "$title")
+
                 energy=$(grep -m1 '^energy:' "$file" | sed 's/^energy: //')
                 experience=$(grep -m1 '^experience:' "$file" | sed 's/^experience: //')
 
-                energy_cell="$energy"; [ -n "$energy_cell" ] || energy_cell="-"
-                experience_cell="$experience"; [ -n "$experience_cell" ] || experience_cell="-"
+                # Format numeric cells to three decimals if present; otherwise use '-'
+                if echo "$energy" | grep -Eq '^[0-9]*\.?[0-9]+$'; then
+                  energy_cell=$(printf '%.3f' "$energy")
+                else
+                  energy_cell="-"
+                fi
+                if echo "$experience" | grep -Eq '^[0-9]*\.?[0-9]+$'; then
+                  experience_cell=$(printf '%.3f' "$experience")
+                else
+                  experience_cell="-"
+                fi
 
                 TOC+="| [${title}](./$file) | ${energy_cell} | ${experience_cell} |\n"
 
