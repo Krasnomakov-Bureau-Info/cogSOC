@@ -41,12 +41,12 @@ jobs:
           TOTAL_ENERGY=0
           TOTAL_EXPERIENCE=0
 
-          TOC+="| Name | Energy cost | Experience cost |\n|:---|---:|---:|\n"
-
           for section in "${SECTIONS[@]}"; do
             files=$(find articles -type f -name "*.md" -path "*/$section/*" | sort)
             if [ -n "$files" ]; then
-              TOC+="\n| **${SECTION_TITLES[$section]}** | | |\n"
+              TOC+="\n### ${SECTION_TITLES[$section]}\n"
+              TOC+="| Name | Energy cost | Experience cost |\n"
+              TOC+="|:---|---:|---:|\n"
               for file in $files; do
                 title=$(grep -m1 '^# ' "$file" | sed 's/^# //' | sed 's/\[/\\\[/g' | sed 's/\]/\\\]/g' | sed 's/|/\\|/g')
                 [ -z "$title" ] && title=$(basename "$file" .md | sed 's/|/\\|/g')
@@ -76,6 +76,7 @@ jobs:
                   TOTAL_EXPERIENCE=$(echo "$TOTAL_EXPERIENCE + $experience" | bc -l)
                 fi
               done
+              TOC+="\n"
             fi
           done
           # Format totals to three decimal places
