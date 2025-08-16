@@ -3,7 +3,8 @@ name: Update README
 on:
   push:
     paths:
-      - '**/*'
+      - 'articles/**/*.md'
+      - '.github/workflows/update-readme.yml'
   workflow_dispatch:
 
 permissions:
@@ -14,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Generate README Table of Contents
+      - name: Generate README Table of Contents and Calculate Totals
+        id: generate_toc
         run: |
           SECTIONS=(definitions observations attacks defense future-threats future-defenses history cybersecurity humor)
           declare -A SECTION_TITLES
@@ -29,31 +31,62 @@ jobs:
           SECTION_TITLES[humor]="Humor"
 
           TOC=""
+          TOTAL_ENERGY=0
+          TOTAL_EXPERIENCE=0
+
           for section in "${SECTIONS[@]}"; do
-            files=$(grep -l "#section:$section" articles/**/*.md 2>/dev/null | sort)
+            files=$(find articles -type f -name "*.md" -path "*/$section/*" | sort)
             if [ -n "$files" ]; then
               TOC+="\n### ${SECTION_TITLES[$section]}\n"
               for file in $files; do
-                title=$(grep -m1 '^# ' "$file" | sed 's/^# //')
+                title=$(grep -m1 '^# ' "$file" | sed 's/^# //' | sed 's/\[/\\\[/g' | sed 's/\]/\\\]/g')
                 [ -z "$title" ] && title=$(basename "$file" .md)
-                TOC+="- [${title}](./$file)\n"
+
+                energy=$(grep -m1 '^energy:' "$file" | sed 's/^energy: //')
+                experience=$(grep -m1 '^experience:' "$file" | sed 's/^experience: //')
+
+                if [ -n "$energy" ] && [ -n "$experience" ]; then
+                  TOC+="- [${title}](./$file) (Energy: **${energy}**, Experience: **${experience}**)\n"
+                  TOTAL_ENERGY=$(echo "$TOTAL_ENERGY + $energy" | bc)
+                  TOTAL_EXPERIENCE=$(echo "$TOTAL_EXPERIENCE + $experience" | bc)
+                else
+                  TOC+="- [${title}](./$file)\n"
+                fi
               done
             fi
           done
+          echo "toc<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$TOC" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+          echo "total_energy=$TOTAL_ENERGY" >> $GITHUB_OUTPUT
+          echo "total_experience=$TOTAL_EXPERIENCE" >> $GITHUB_OUTPUT
 
+      - name: Update README
+        run: |
+          TOTAL_ENERGY=${{ steps.generate_toc.outputs.total_energy }}
+          TOTAL_EXPERIENCE=${{ steps.generate_toc.outputs.total_experience }}
+          TOC="${{ steps.generate_toc.outputs.toc }}"
+          
+          # Update TOC
           awk -v toc="$TOC" '
             BEGIN {p=1}
             /<!-- toc-articles-auto-generated -->/ {print; print toc; p=0; next}
-            /^---/ && p==0 {p=1}
+            /<!-- toc-articles-auto-generated-end -->/ {p=1}
             p {print}
           ' README.md > README.tmp && mv README.tmp README.md
+
+          # Update totals
+          sed -i "s/^\*\*Current energy level:\*\* \`.*\`/\\*\\*Current energy level:\\*\\* \`$TOTAL_ENERGY\`/" README.md
+          sed -i "s/^\*\*Current experience level:\*\* \`.*\`/\\*\\*Current experience level:\\*\\* \`$TOTAL_EXPERIENCE\`/" README.md
+
       - name: Commit changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
           git add README.md
-          git commit -m 'Auto-update README' || echo 'No changes to commit'
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update README with article weights and totals"
+            git push
+          fi

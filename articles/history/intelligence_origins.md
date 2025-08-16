@@ -1,6 +1,9 @@
-#section:history
+---
+energy: 0.01
+experience: 0.01
+---
 
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+#section:history
 
 # The Twelve Spies: Biblical Foundations of Israeli Intelligence Doctrine
 

@@ -1,4 +1,3 @@
-
 <p align="center">
 	<img src="https://img.shields.io/badge/CogSOC-Cognitive%20Security%20Operations%20Center-blueviolet?style=for-the-badge&logo=security&logoColor=white" alt="CogSOC Banner"/>
 </p>
@@ -132,6 +131,8 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 ### Humor
 - [Humor](./articles/humor/placeholder.md)
+
+<!-- toc-articles-auto-generated-end -->
 
 ---
 
