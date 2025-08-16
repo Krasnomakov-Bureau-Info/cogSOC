@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `0.060`  
-**Current experience level:** `0.060`
+**Current energy level:** `0.065`  
+**Current experience level:** `0.065`
 
 
 ---
@@ -200,7 +200,7 @@ If the situation gets worse, it gains energy and experience — and will provide
 ### Humor
 | Name | Energy cost | Experience cost |
 |:---|---:|---:|
-| [Humor](./articles/humor/placeholder.md) | - | - |
+| [The Great Danish Data Leak: How Intelligence Agencies H…](./articles/humor/mossad-fertsalah.md) | 0.005 | 0.005 |
 
 
 <!-- toc-articles-auto-generated-end -->
