@@ -237,7 +237,7 @@ Both Russian and Western research communities have identified this challenge and
 
 [^1]: https://infolab.uottawa.ca/common/Uploaded files/PDI files/InfoLab - Cognitive Warfare, Securing Hearts and Minds.pdf
 
-[^2]: Rossiiskie-issledovaniia-o-zapadnykh-informatsionno-psikhologicheskikh-operatsiiakh.pdf
+[^2]: ../../assets/Российские исследования о западных информационно-психологических операциях.pdf
 
 [^3]: https://innovationhub-act.org/wp-content/uploads/2023/12/Cognitive-Warfare.pdf
 
