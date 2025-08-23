@@ -1,0 +1,241 @@
+id,code,category,category_name,name,default_route
+RV-EVT-0001,A-FOOT-ROTATION,A,"Physical surveillance and proximity pressure","Foot surveillance with shift rotations",VERIFY
+RV-EVT-0002,A-VEHICLE-HANDOFF,A,"Physical surveillance and proximity pressure","Vehicle tailing with handoffs at intersections",VERIFY
+RV-EVT-0003,A-STATIC-STAKEOUT,A,"Physical surveillance and proximity pressure","Static stakeouts near residence/office",VERIFY
+RV-EVT-0004,A-PUBLIC-TRANSPORT-SHADOW,A,"Physical surveillance and proximity pressure","Shadowing inside public transport",VERIFY
+RV-EVT-0005,A-ROUTINE-PRESENCE,A,"Physical surveillance and proximity pressure","Repeated presence at predictable routines (gym, shop)",VERIFY
+RV-EVT-0006,A-CLOSE-FOLLOW,A,"Physical surveillance and proximity pressure","Close-follow on foot to test reactions",VERIFY
+RV-EVT-0007,A-OVERT-FILMING,A,"Physical surveillance and proximity pressure","Overt filming/photography in sight",VERIFY
+RV-EVT-0008,A-COVERT-FILMING,A,"Physical surveillance and proximity pressure","Covert filming from windows or parked cars",VERIFY
+RV-EVT-0009,A-STORE-STAFF-SHADOW,A,"Physical surveillance and proximity pressure","Store staff always around during visits",VERIFY
+RV-EVT-0010,A-ELEVATOR-SHADOW,A,"Physical surveillance and proximity pressure","Elevator shadowing and door-block maneuvers",VERIFY
+RV-EVT-0011,A-STAIRWELL-MIRROR,A,"Physical surveillance and proximity pressure","Stairwell mirroring (up/down)",VERIFY
+RV-EVT-0012,A-CHANCE-MEETING,A,"Physical surveillance and proximity pressure","Street-corner chance meetings (scripted)",VERIFY
+RV-EVT-0013,A-REPEATED-PATH-CROSS,A,"Physical surveillance and proximity pressure","We just crossed paths again repetitions",VERIFY
+RV-EVT-0014,A-IDLING-VEHICLE-OBSERVE,A,"Physical surveillance and proximity pressure","Unmarked vehicle idling with driver observing",VERIFY
+RV-EVT-0015,A-DRONE-HOVER,A,"Physical surveillance and proximity pressure","Drone hovering in visual range",VERIFY
+RV-EVT-0016,A-NEIGHBOR-WATCH,A,"Physical surveillance and proximity pressure","Coordinated neighbor watch (curtains move on arrival)",VERIFY
+RV-EVT-0017,A-GPS-SCOOTER-TAIL,A,"Physical surveillance and proximity pressure","GPS-enabled scooter/bike tailing",VERIFY
+RV-EVT-0018,A-DOG-WALKER-TRAIL,A,"Physical surveillance and proximity pressure","Trailing dog-walkers who appear repeatedly",VERIFY
+RV-EVT-0019,A-CONSTRUCTION-ALONG-ROUTE,A,"Physical surveillance and proximity pressure","Construction crews suddenly working along route",VERIFY
+RV-EVT-0020,A-SECURITY-RANDOM-CHECKS,A,"Physical surveillance and proximity pressure","Security guards random checks focused on target",VERIFY
+RV-EVT-0021,B-KNOW-EVERYTHING-CHANT,B,"Performances and intimidation theater","We know everything chant/phrases overheard",IGNORE
+RV-EVT-0022,B-STAGED-CALL-PRIVATE-DETAILS,B,"Performances and intimidation theater","Staged phone calls near you with private details",IGNORE
+RV-EVT-0023,B-LOUD-SCHEDULE-COMMENT,B,"Performances and intimidation theater","Loud commentary about your schedule in public",IGNORE
+RV-EVT-0024,B-ACTORS-NAME-USE,B,"Performances and intimidation theater","Actors using your name in conversations",IGNORE
+RV-EVT-0025,B-DROPPED-DATA-DOCS,B,"Performances and intimidation theater","Dropped documents with your data in your path",IGNORE
+RV-EVT-0026,B-FLASH-MOB-SIGNS,B,"Performances and intimidation theater","Flash mobs near your route with suggestive signs",IGNORE
+RV-EVT-0027,B-LICENSE-PLATE-CODES,B,"Performances and intimidation theater","License plates with coded messages (pattern priming)",IGNORE
+RV-EVT-0028,B-STRANGERS-REPEAT-ACTIONS,B,"Performances and intimidation theater","Random strangers repeating your recent actions",IGNORE
+RV-EVT-0029,B-STORE-DISPLAY-ALTER,B,"Performances and intimidation theater","Store displays altered to reference your data",IGNORE
+RV-EVT-0030,B-LASER-WINDOW-BEDTIME,B,"Performances and intimidation theater","Laser pointers at windows at bedtime",VERIFY
+RV-EVT-0031,B-NIGHT-CAR-HONKS,B,"Performances and intimidation theater","Nighttime car honks timed to your lights off",IGNORE
+RV-EVT-0032,B-DOOR-KNOCK-VANISH,B,"Performances and intimidation theater","Door knocks with no one present (knock-and-vanish)",IGNORE
+RV-EVT-0033,B-OBJECT-DOORSTEP,B,"Performances and intimidation theater","Object placement on doorstep (anonymous tokens)",VERIFY
+RV-EVT-0034,B-LOUD-BANGS-CALLS,B,"Performances and intimidation theater","Sudden loud bangs timed to key calls or emails",VERIFY
+RV-EVT-0035,B-HARASSMENT-SYNCH,B,"Performances and intimidation theater","Street harassment synchronized across locations",VERIFY
+RV-EVT-0036,B-MOCK-INTERROGATION,B,"Performances and intimidation theater","Public mock interrogation performances",IGNORE
+RV-EVT-0037,B-SINGING-YOUR-SONG,B,"Performances and intimidation theater","Singing/whistling your song as you pass",IGNORE
+RV-EVT-0038,B-COINCIDENCE-SYMBOLS,B,"Performances and intimidation theater","Coincidences aligning numbers, colors, symbols",IGNORE
+RV-EVT-0039,B-STREET-SIGNAGE-ALTER,B,"Performances and intimidation theater","Street signage temporarily altered for you",VERIFY
+RV-EVT-0040,B-PROJECTED-LIGHTS,B,"Performances and intimidation theater","Projected lights into windows (morse-like)",VERIFY
+RV-EVT-0041,C-OBJECT-DISPLACEMENT,C,"Residential intrusions (overt/covert)","Minor object displacement at home",HARDEN
+RV-EVT-0042,C-THERMOSTAT-CHANGE,C,"Residential intrusions (overt/covert)","Thermostat settings changed overnight",HARDEN
+RV-EVT-0043,C-APPLIANCE-TOGGLE,C,"Residential intrusions (overt/covert)","Appliances turned on/off unexpectedly",HARDEN
+RV-EVT-0044,C-WINDOW-UNLOCKED,C,"Residential intrusions (overt/covert)","Windows unlocked/partially opened",ESCALATE
+RV-EVT-0045,C-FOOTPRINTS-INDOOR,C,"Residential intrusions (overt/covert)","Traceable footprints or scuffs indoors",ESCALATE
+RV-EVT-0046,C-HIDDEN-CAMERA,C,"Residential intrusions (overt/covert)","Hidden camera discovery (obvious or badly placed)",ESCALATE
+RV-EVT-0047,C-SMARTLOCK-UNKNOWN-ACCESS,C,"Residential intrusions (overt/covert)","Smart lock logs showing unknown access",ESCALATE
+RV-EVT-0048,C-UTILITY-ANOMALY,C,"Residential intrusions (overt/covert)","Water/electricity usage anomalies",VERIFY
+RV-EVT-0049,C-UNSCHEDULED-MAINTENANCE,C,"Residential intrusions (overt/covert)","Maintenance visits without prior notice",VERIFY
+RV-EVT-0050,C-PET-AGITATION,C,"Residential intrusions (overt/covert)","Pet agitation aligned with suspected intrusions",VERIFY
+RV-EVT-0051,D-CREDENTIAL-STUFFING,D,"Digital account and device threats","Credential stuffing from known breaches",HARDEN
+RV-EVT-0052,D-PASSWORD-RESET-PROMPT,D,"Digital account and device threats","Password reset prompts you did not trigger",HARDEN
+RV-EVT-0053,D-NEW-LOGIN-UNUSUAL,D,"Digital account and device threats","New login from unusual geo/device",HARDEN
+RV-EVT-0054,D-MFA-FATIGUE,D,"Digital account and device threats","MFA fatigue (push-bombing) attempts",HARDEN
+RV-EVT-0055,D-SESSION-HIJACK-OAUTH,D,"Digital account and device threats","Session hijack via OAuth token reuse",HARDEN
+RV-EVT-0056,D-SIM-SWAP-ATTEMPT,D,"Digital account and device threats","SIM swap or attempted SIM swap",ESCALATE
+RV-EVT-0057,D-VOICEMAIL-PIN-BRUTE,D,"Digital account and device threats","Voicemail PIN brute forcing",HARDEN
+RV-EVT-0058,D-EMAIL-RULE-INJECTION,D,"Digital account and device threats","Email rule injection (auto-forward/auto-delete)",HARDEN
+RV-EVT-0059,D-RECOVERY-OPTION-ALTER,D,"Digital account and device threats","Account recovery options altered silently",HARDEN
+RV-EVT-0060,D-PHISH-SECURITY-ALERT,D,"Digital account and device threats","Security alert phishing imitating your providers",HARDEN
+RV-EVT-0061,D-MOBILE-CONFIG-MALICIOUS,D,"Digital account and device threats","Malicious mobile config profiles (MDM-like)",HARDEN
+RV-EVT-0062,D-APP-SIDELOAD-PROMPT,D,"Digital account and device threats","App sideloading prompts disguised as updates",HARDEN
+RV-EVT-0063,D-MALVERTISING-DRIVEBY,D,"Digital account and device threats","Malvertising drive-by installs",HARDEN
+RV-EVT-0064,D-BROWSER-EXT-DATA-EXFIL,D,"Digital account and device threats","Browser extension with data exfiltration behavior",HARDEN
+RV-EVT-0065,D-KEYCHAIN-MANIPULATION,D,"Digital account and device threats","Keychain/keyring manipulation",ESCALATE
+RV-EVT-0066,D-CLOUD-SHARE-LEAK,D,"Digital account and device threats","Cloud storage sharing link leakage",HARDEN
+RV-EVT-0067,D-UNAUTH-API-TOKEN,D,"Digital account and device threats","Unauthorized API tokens in dev consoles",HARDEN
+RV-EVT-0068,D-UNKNOWN-BLUETOOTH-PAIR,D,"Digital account and device threats","Device pairing to unknown Bluetooth/CarPlay",HARDEN
+RV-EVT-0069,D-WIFI-EVIL-TWIN,D,"Digital account and device threats","Wi-Fi Evil Twin (SSID spoof) capture",HARDEN
+RV-EVT-0070,D-ROGUE-DNS-CAPPORT,D,"Digital account and device threats","Rogue DNS or captive portal injection",HARDEN
+RV-EVT-0071,E-ROUTER-CONFIG-TAMPER,E,"Network and endpoint compromise vectors","Home router config tampering (admin creds reused)",HARDEN
+RV-EVT-0072,E-ISP-DNS-MANIPULATION,E,"Network and endpoint compromise vectors","ISP-level DNS manipulation or injection",ESCALATE
+RV-EVT-0073,E-ARP-SPOOFING,E,"Network and endpoint compromise vectors","ARP spoofing on shared/public networks",HARDEN
+RV-EVT-0074,E-IOT-PIVOT,E,"Network and endpoint compromise vectors","IoT devices exploited as pivot points",HARDEN
+RV-EVT-0075,E-SMB-OPEN-SHARE,E,"Network and endpoint compromise vectors","SMB/open shares exposed inadvertently",HARDEN
+RV-EVT-0076,E-PRINTER-MEMORY-LEAK,E,"Network and endpoint compromise vectors","Printer/scanner memory leaks of documents",VERIFY
+RV-EVT-0077,E-OFFICE-MACRO-WEAPON,E,"Network and endpoint compromise vectors","Office suite macros weaponized (doc, xls, ppt)",HARDEN
+RV-EVT-0078,E-BROWSER-CREDENTIAL-THEFT,E,"Network and endpoint compromise vectors","Browser credential theft (non-isolated profile)",HARDEN
+RV-EVT-0079,E-CLIPBOARD-HIJACK,E,"Network and endpoint compromise vectors","Clipboard hijacking (passwords/keys copied)",HARDEN
+RV-EVT-0080,E-RDP-ENABLE-UNAUTH,E,"Network and endpoint compromise vectors","Remote desktop enablement without consent",ESCALATE
+RV-EVT-0081,E-HIDDEN-ACCOUNT-BACKDOOR,E,"Network and endpoint compromise vectors","Hidden accounts or backdoor services created",ESCALATE
+RV-EVT-0082,E-FIRMWARE-DOWNGRADE,E,"Network and endpoint compromise vectors","Firmware downgrade/replace attempts",ESCALATE
+RV-EVT-0083,E-SUPPLYCHAIN-TROJAN,E,"Network and endpoint compromise vectors","Supply-chain trojaned installer usage",ESCALATE
+RV-EVT-0084,E-USB-RUBBERDUCKY,E,"Network and endpoint compromise vectors","USB rubber ducky/BadUSB payloads",ESCALATE
+RV-EVT-0085,E-WEBCAM-MIC-ACTIVATION,E,"Network and endpoint compromise vectors","Webcam/mic activation without indicator",ESCALATE
+RV-EVT-0086,F-CLOUD-SYNC-EXFIL,F,"Data theft, leaks, and exposure","Exfiltration via cloud sync collisions",HARDEN
+RV-EVT-0087,F-CONTACT-LIST-SCRAPE,F,"Data theft, leaks, and exposure","Contact list scraping and misuse",HARDEN
+RV-EVT-0088,F-CALENDAR-EXPOSURE,F,"Data theft, leaks, and exposure","Calendar exposure and stalking schedules",HARDEN
+RV-EVT-0089,F-EXIF-EXPLOIT,F,"Data theft, leaks, and exposure","Photo metadata (EXIF) exploitation",VERIFY
+RV-EVT-0090,F-WATERMARK-TRACE,F,"Data theft, leaks, and exposure","Document watermark tracing to source",VERIFY
+RV-EVT-0091,F-PASSWORD-MANAGER-TARGET,F,"Data theft, leaks, and exposure","Password manager vault targeting (master credential fishing)",HARDEN
+RV-EVT-0092,F-RECOVERY-CODES-HARVEST,F,"Data theft, leaks, and exposure","Recovery codes harvested (printed/mailed/emailed)",HARDEN
+RV-EVT-0093,F-FIN-AGGREGATOR-ABUSE,F,"Data theft, leaks, and exposure","Financial aggregator access abuse (read-only tokens)",HARDEN
+RV-EVT-0094,F-HEALTH-PORTAL-ACCESS,F,"Data theft, leaks, and exposure","Health portal access for sensitive data",HARDEN
+RV-EVT-0095,F-GOV-PORTAL-SCRAPE,F,"Data theft, leaks, and exposure","Government portal scraping (tax, ID, permits)",VERIFY
+RV-EVT-0096,G-IMPERSONATION-CONTACTS,G,"Social engineering and impersonation","Impersonation of you to contacts (SMS/DM/email)",HARDEN
+RV-EVT-0097,G-URGENT-HELP-FAMILY,G,"Social engineering and impersonation","Urgent help requests to family in your name",VERIFY
+RV-EVT-0098,G-DEEPFAKE-VOICE-BANK,G,"Social engineering and impersonation","Deepfake voice snippets to authenticate to banks",ESCALATE
+RV-EVT-0099,G-DEEPFAKE-VIDEO-CALL,G,"Social engineering and impersonation","Video-call deepfake attempt (face + voice)",ESCALATE
+RV-EVT-0100,G-IT-SUPPORT-SCAM,G,"Social engineering and impersonation","IT support scams targeted to your stack",HARDEN
+RV-EVT-0101,G-FAKE-LEGAL-THREAT,G,"Social engineering and impersonation","Fake legal threats demanding immediate payment",VERIFY
+RV-EVT-0102,G-MESSAGING-ACCOUNT-TAKEOVER,G,"Social engineering and impersonation","WhatsApp/Telegram account takeover attempts",HARDEN
+RV-EVT-0103,G-SOCIAL-CLONE-OUTREACH,G,"Social engineering and impersonation","Social media clone profile outreach to network",HARDEN
+RV-EVT-0104,G-LINKEDIN-RECRUITER-LURE,G,"Social engineering and impersonation","LinkedIn recruiter lures for data/phishing",VERIFY
+RV-EVT-0105,G-DELIVERY-PRETEXT-ENTRY,G,"Social engineering and impersonation","Delivery-driver pretext to enter property",VERIFY
+RV-EVT-0106,H-WHISPER-CAMPAIGN,H,"Psyops and narrative manipulation","Whisper campaigns (rumors at work/neighborhood)",IGNORE
+RV-EVT-0107,H-EDITED-SCREENSHOTS,H,"Psyops and narrative manipulation","Edited screenshots of your posts/messages",VERIFY
+RV-EVT-0108,H-OUTOFCONTEXT-MEDIA,H,"Psyops and narrative manipulation","Out-of-context video/audio evidence",VERIFY
+RV-EVT-0109,H-DOGPILING-COORDINATED,H,"Psyops and narrative manipulation","Coordinated dogpiling on a post to induce silence",IGNORE
+RV-EVT-0110,H-CONCERN-TROLLING,H,"Psyops and narrative manipulation","Concern trolling by sockpuppets urging risky actions",IGNORE
+RV-EVT-0111,H-REPUTATION-SITE-FALSE,H,"Psyops and narrative manipulation","Reputation site entries with false claims",VERIFY
+RV-EVT-0112,H-FAKE-NEWS-MENTION,H,"Psyops and narrative manipulation","Fake news mentions in fringe outlets",IGNORE
+RV-EVT-0113,H-HASHTAG-HIJACK,H,"Psyops and narrative manipulation","Hashtag hijacking linking your name to scandal",VERIFY
+RV-EVT-0114,H-ANON-TIPS-EMPLOYER,H,"Psyops and narrative manipulation","Anonymous tips to your employer/clients",VERIFY
+RV-EVT-0115,H-MENTION-FLOOD,H,"Psyops and narrative manipulation","Flood of low-quality mentions to bury signals",IGNORE
+RV-EVT-0116,I-SPURIOUS-PLATFORM-COMPLAINT,I,"Legal/administrative pressure and chokepoints","Spurious complaints to platform trust/safety",VERIFY
+RV-EVT-0117,I-FALSE-DMCA-REQUEST,I,"Legal/administrative pressure and chokepoints","False DMCA/privacy takedown requests",VERIFY
+RV-EVT-0118,I-PORTAL-SUSPEND-MISUSE,I,"Legal/administrative pressure and chokepoints","Misuse of reporting portals to suspend you",VERIFY
+RV-EVT-0119,I-BOGUS-INVOICE-HARASS,I,"Legal/administrative pressure and chokepoints","Bogus invoice/collections harassment",VERIFY
+RV-EVT-0120,I-WELFARE-NOISE-CHECK,I,"Legal/administrative pressure and chokepoints","Welfare checks or noise complaints to police",VERIFY
+RV-EVT-0121,I-INSURANCE-BANK-FLAG,I,"Legal/administrative pressure and chokepoints","Insurance or banking flagging based on false risk",VERIFY
+RV-EVT-0122,I-LANDLORD-PRESSURE,I,"Legal/administrative pressure and chokepoints","Landlord/property manager pressure based on reports",VERIFY
+RV-EVT-0123,I-HR-INQUIRY-IMPERSONATION,I,"Legal/administrative pressure and chokepoints","Employer HR inquiries seeded by impersonation",VERIFY
+RV-EVT-0124,I-FOIA-HARASSMENT,I,"Legal/administrative pressure and chokepoints","Harassing public records requests (FOIA-like)",VERIFY
+RV-EVT-0125,I-PROCESS-SERVER-THREAT,I,"Legal/administrative pressure and chokepoints","Process server impersonations or threats",VERIFY
+RV-EVT-0126,J-SMALL-CARD-TEST,J,"Financial and logistics interference","Small unauthorized card transactions (testing)",VERIFY
+RV-EVT-0127,J-CARD-FRAUD-REMOTE-CITY,J,"Financial and logistics interference","Card present fraud in cities you weren’t in",VERIFY
+RV-EVT-0128,J-DELIVERY-REROUTE,J,"Financial and logistics interference","Delivery reroutes/cancellations you didn’t make",VERIFY
+RV-EVT-0129,J-SUBSCRIPTION-DRAIN,J,"Financial and logistics interference","Subscription signups to drain funds/time",VERIFY
+RV-EVT-0130,J-TRAVEL-BOOKING-MOD,J,"Financial and logistics interference","Travel booking cancellations/modifications",VERIFY
+RV-EVT-0131,J-RIDESHARE-COLLUSION,J,"Financial and logistics interference","Rideshare driver collusion for tracking",VERIFY
+RV-EVT-0132,J-RENTAL-ACCOUNT-OPEN,J,"Financial and logistics interference","Rental service accounts opened in your name",VERIFY
+RV-EVT-0133,J-BANK-PHISH-SECURITY,J,"Financial and logistics interference","Bank account info phishing via security team",VERIFY
+RV-EVT-0134,J-CRYPTO-SEED-PHISH,J,"Financial and logistics interference","Crypto wallet seed phrase phishing",VERIFY
+RV-EVT-0135,J-ATM-SKIMMER-PROXIMITY,J,"Financial and logistics interference","ATM skimmer proximity patterns near you",VERIFY
+RV-EVT-0136,K-NIGHT-NOISE-HARASS,K,"Environmental and sensory interference","Nighttime noise harassment near bedroom window",IGNORE
+RV-EVT-0137,K-CAR-ALARM-TRIGGER,K,"Environmental and sensory interference","Car alarms triggered near your route",IGNORE
+RV-EVT-0138,K-STREETLIGHT-FLICKER,K,"Environmental and sensory interference","Streetlight flicker coinciding with exits/entries",IGNORE
+RV-EVT-0139,K-ODOR-SMOKE-TIMED,K,"Environmental and sensory interference","Odor/smoke events timed to arrivals",IGNORE
+RV-EVT-0140,K-DIRECTED-SPEAKER,K,"Environmental and sensory interference","Directed speaker announcements near workspace",VERIFY
+RV-EVT-0141,K-HVAC-TAMPERING,K,"Environmental and sensory interference","HVAC tampering in shared buildings",VERIFY
+RV-EVT-0142,K-MOTION-ALERT-FLOOD,K,"Environmental and sensory interference","Proximity-triggered motion alerts floods",IGNORE
+RV-EVT-0143,K-LASER-LED-EYES,K,"Environmental and sensory interference","Laser/LED pointer into eyes at crosswalks",VERIFY
+RV-EVT-0144,K-FLOODLIGHT-DOOR-TIMED,K,"Environmental and sensory interference","Floodlights timed to your door opens",IGNORE
+RV-EVT-0145,K-INTERCOM-BUZZ-NOONE,K,"Environmental and sensory interference","Intercom buzz with no one present",IGNORE
+RV-EVT-0146,L-NOCTURNAL-SUGGESTIVE-AUDIO,L,"Dream/sleep interference and cognitive channels","Nocturnal suggestive audio via thin walls or vents",VERIFY
+RV-EVT-0147,L-SMART-SPEAKER-ACTIVATION,L,"Dream/sleep interference and cognitive channels","Smart speaker activation at night with suggestive content",VERIFY
+RV-EVT-0148,L-NIGHTMARE-PRIMING-MEDIA,L,"Dream/sleep interference and cognitive channels","Nightmare priming via evening targeted media",IGNORE
+RV-EVT-0149,L-BEDTIME-PING-STORM,L,"Dream/sleep interference and cognitive channels","Bedtime ping storms (notifications) despite settings",VERIFY
+RV-EVT-0150,L-BEDROOM-EM-LIGHT-CHANGE,L,"Dream/sleep interference and cognitive channels","Sudden changes in bedroom EM/light environment",VERIFY
+RV-EVT-0151,L-SLEEP-APP-MANIPULATION,L,"Dream/sleep interference and cognitive channels","Sleep tracking app manipulation (false scores)",VERIFY
+RV-EVT-0152,L-SLEEP-TALK-RUMOR,L,"Dream/sleep interference and cognitive channels","You talked in your sleep rumors seeded next day",IGNORE
+RV-EVT-0153,L-ALARM-MISFIRE,L,"Dream/sleep interference and cognitive channels","Alarm misfires to disrupt circadian rhythm",VERIFY
+RV-EVT-0154,L-LATENIGHT-CALL-HANGUP,L,"Dream/sleep interference and cognitive channels","Anonymous late-night calls that hang up",IGNORE
+RV-EVT-0155,L-STIMULUS-TIMING-INTRUSIVE,L,"Dream/sleep interference and cognitive channels","Stimulus-timing to anchor intrusive thoughts",VERIFY
+RV-EVT-0156,M-NEIGHBOR-CONFRONTATION,M,"Community and relationship pressure","Neighbor confrontations over contrived grievances",VERIFY
+RV-EVT-0157,M-HOA-BOARD-COMPLAINTS,M,"Community and relationship pressure","HOA/tenant board weaponized complaints",VERIFY
+RV-EVT-0158,M-FRIENDS-FAMILY-FALSE-CONCERN,M,"Community and relationship pressure","Friends/family contacted with false concerns",VERIFY
+RV-EVT-0159,M-EXPARTNER-MANIPULATION,M,"Community and relationship pressure","Ex-partner manipulation attempts resurface",VERIFY
+RV-EVT-0160,M-COMMUNITY-LEADER-INTERVENE,M,"Community and relationship pressure","Religious/community leaders nudged to intervene",VERIFY
+RV-EVT-0161,M-REFS-CONTACTED-INNUENDO,M,"Community and relationship pressure","Professional references contacted with innuendo",VERIFY
+RV-EVT-0162,M-MEETUP-ORGANIZER-WARN,M,"Community and relationship pressure","Meetup/event organizers receive warnings",VERIFY
+RV-EVT-0163,M-VOLUNTEER-EXCLUSION-PRESSURE,M,"Community and relationship pressure","Volunteer orgs pressured to exclude you",VERIFY
+RV-EVT-0164,M-SHOPKEEPER-OBSERVE-REPORT,M,"Community and relationship pressure","Local shopkeepers told to watch/report",VERIFY
+RV-EVT-0165,M-SOCIAL-VENUE-BLOCKING,M,"Community and relationship pressure","Coincidental blocking at social venues",VERIFY
+RV-EVT-0166,N-RIDESHARE-CANCELLATIONS,N,"Mobility and travel disruptions","Rideshare cancellations upon your pickup",VERIFY
+RV-EVT-0167,N-TAXI-DRIVER-LOST,N,"Mobility and travel disruptions","Taxi drivers lost near your destination",VERIFY
+RV-EVT-0168,N-TRANSIT-DELAY-LINE,N,"Mobility and travel disruptions","Public transport accidental delays on your line",VERIFY
+RV-EVT-0169,N-LUGGAGE-TAMPERING,N,"Mobility and travel disruptions","Luggage tampering indications",VERIFY
+RV-EVT-0170,N-AIRPORT-RANDOM-CHECKS,N,"Mobility and travel disruptions","Airport random checks every time",VERIFY
+RV-EVT-0171,N-TICKETING-SITE-ERRORS,N,"Mobility and travel disruptions","Ticketing site errors only for your account",VERIFY
+RV-EVT-0172,N-HOTEL-RESERVATION-NOTFOUND,N,"Mobility and travel disruptions","Hotel reservation not found on arrival",VERIFY
+RV-EVT-0173,N-DUP-BOOKINGS-FLAPPING,N,"Mobility and travel disruptions","Duplicate bookings appearing then disappearing",VERIFY
+RV-EVT-0174,N-CAR-RENTAL-DAMAGE-CLAIM,N,"Mobility and travel disruptions","Car rental damage issues invented",VERIFY
+RV-EVT-0175,N-PARKING-TICKET-ERRONEOUS,N,"Mobility and travel disruptions","Parking tickets placed erroneously at home",VERIFY
+RV-EVT-0176,O-CALENDAR-INVITE-MOVE,O,"Workplace and professional sabotage","Calendar invites moved/duplicated",VERIFY
+RV-EVT-0177,O-DOCUMENT-VERSION-CONFLICT,O,"Workplace and professional sabotage","Document version conflicts seeded",VERIFY
+RV-EVT-0178,O-ACCESS-RIGHTS-TOGGLE,O,"Workplace and professional sabotage","Access rights toggled on shared repos",HARDEN
+RV-EVT-0179,O-MEETING-ID-LEAK,O,"Workplace and professional sabotage","Meeting IDs leaked to crash calls",VERIFY
+RV-EVT-0180,O-PERFORMANCE-RUMOR,O,"Workplace and professional sabotage","Performance concern rumors via backchannels",VERIFY
+RV-EVT-0181,O-CLIENT-POACH-IMPERSONATION,O,"Workplace and professional sabotage","Client poaching with impersonation",VERIFY
+RV-EVT-0182,O-RFP-INVALIDATED-CONFLICT,O,"Workplace and professional sabotage","RFPs invalidated by anonymous conflict tips",VERIFY
+RV-EVT-0183,O-HR-POLICY-FALSE-VIOLATION,O,"Workplace and professional sabotage","HR policy violations falsely attributed",VERIFY
+RV-EVT-0184,O-EXPENSE-REIMBURSEMENT-LOST,O,"Workplace and professional sabotage","Lost expense reimbursements repeatedly",VERIFY
+RV-EVT-0185,O-NDA-BREACH-FALSE,O,"Workplace and professional sabotage","NDA breach accusations seeded with fake evidence",VERIFY
+RV-EVT-0186,P-PHARMACY-LOST-MEDS,P,"Health and safety vectors","Pharmacy pickup lost meds",VERIFY
+RV-EVT-0187,P-APPOINTMENT-CANCELLED,P,"Health and safety vectors","Appointment cancellations by you",VERIFY
+RV-EVT-0188,P-TEST-RESULT-MISDIRECT,P,"Health and safety vectors","Misdirected test results notifications",VERIFY
+RV-EVT-0189,P-WEARABLE-DATA-ANOMALY,P,"Health and safety vectors","Wearable device data anomalies",VERIFY
+RV-EVT-0190,P-GPS-SAFETY-APP-FALSE-ALARM,P,"Health and safety vectors","GPS safety app false alarms to contacts",VERIFY
+RV-EVT-0191,P-EMERGENCY-CONTACT-SPOOF,P,"Health and safety vectors","Emergency contact spoof calls",VERIFY
+RV-EVT-0192,P-SMOKE-CO-ALARM-FALSE,P,"Health and safety vectors","Home smoke/CO alarm triggers without cause",VERIFY
+RV-EVT-0193,P-FRIDGE-PANTRY-TAMPER,P,"Health and safety vectors","Fridge/pantry tampering suspicion",VERIFY
+RV-EVT-0194,P-ALLERGEN-INTRODUCED,P,"Health and safety vectors","Allergens introduced in shared spaces",ESCALATE
+RV-EVT-0195,P-BIKE-CAR-TIRE-SLOW-LEAK,P,"Health and safety vectors","Bike/car tire slow leaks near departure",VERIFY
+RV-EVT-0196,Q-KYC-FAILURE-WITHOUT-CAUSE,Q,"Platform and identity infrastructure","Identity verification failures (KYC) without cause",VERIFY
+RV-EVT-0197,Q-PHONE-NUMBER-INVALID,Q,"Platform and identity infrastructure","Phone number invalid on services",VERIFY
+RV-EVT-0198,Q-EMAIL-DOMAIN-REPUTATION-DROP,Q,"Platform and identity infrastructure","Email domain reputation abruptly lowered",VERIFY
+RV-EVT-0199,Q-SMS-CODE-DELIVERY-FAIL,Q,"Platform and identity infrastructure","SMS delivery failures on critical codes",VERIFY
+RV-EVT-0200,Q-CAPTCHA-FRAUD-HYPERAGGRESSIVE,Q,"Platform and identity infrastructure","Captcha and fraud systems suddenly hyper-aggressive",VERIFY
+RV-EVT-0201,Q-USERNAME-SQUATTING,Q,"Platform and identity infrastructure","Username squatting near your handle",VERIFY
+RV-EVT-0202,Q-LOOKALIKE-DOMAIN-REGISTER,Q,"Platform and identity infrastructure","Confusable lookalike domains registered",VERIFY
+RV-EVT-0203,Q-SOCIAL-HANDLE-TYPO-CLONE,Q,"Platform and identity infrastructure","Social handle subtle typo clones",VERIFY
+RV-EVT-0204,Q-GRAVATAR-PHOTO-HIJACK,Q,"Platform and identity infrastructure","Gravatar/profile photo hijack clones",VERIFY
+RV-EVT-0205,Q-PASSWORD-BREACH-NOTICE-FAKE,Q,"Platform and identity infrastructure","Password breach notifications faked convincingly",VERIFY
+RV-EVT-0206,R-SEARCH-RESULT-POLLUTION,R,"Information environment shaping","Search engine results polluted for your name",VERIFY
+RV-EVT-0207,R-AUTOCOMPLETE-POISON,R,"Information environment shaping","Autocomplete poisoned with negative terms",VERIFY
+RV-EVT-0208,R-MAP-PIN-MANIPULATION,R,"Information environment shaping","Map pins added/removed for your locations",VERIFY
+RV-EVT-0209,R-REVIEW-SITE-BRIGADE,R,"Information environment shaping","Review site brigading against your business",VERIFY
+RV-EVT-0210,R-KNOWLEDGE-PANEL-VANDAL,R,"Information environment shaping","Wikipedia/knowledge panel vandalism attempts",VERIFY
+RV-EVT-0211,R-DATA-BROKER-FALSE-ENTRIES,R,"Information environment shaping","Data broker files seeded with false entries",VERIFY
+RV-EVT-0212,R-PUBLIC-RECORDS-DATA-MIX,R,"Information environment shaping","Public records mixed with someone else’s data",VERIFY
+RV-EVT-0213,R-ACADEMIC-PROFILE-SPOOF,R,"Information environment shaping","Academic or publication profiles spoofed",VERIFY
+RV-EVT-0214,R-CONFERENCE-CFP-SABOTAGE,R,"Information environment shaping","Conference CFP submissions sabotaged",VERIFY
+RV-EVT-0215,R-FAKE-CITATION-INDEXING,R,"Information environment shaping","Scholar indexing of fake citations to you",VERIFY
+RV-EVT-0216,S-UNAUTH-SUBSCRIPTION-CONTRACT,S,"Legal boundary and compliance traps","Unauthorized subscription contracts in your name",VERIFY
+RV-EVT-0217,S-TOS-BREACH-NOTICE-FAKE,S,"Legal boundary and compliance traps","Terms of service breach notices based on fakes",VERIFY
+RV-EVT-0218,S-TRADEMARK-COPYRIGHT-COMPLAINT,S,"Legal boundary and compliance traps","Trademark/copyright complaints about your content",VERIFY
+RV-EVT-0219,S-DMCA-COUNTERNOTICE-BAIT,S,"Legal boundary and compliance traps","DMCA counter-notice baiting",VERIFY
+RV-EVT-0220,S-GDPR-DSAR-CONFUSION,S,"Legal boundary and compliance traps","GDPR/DSAR requests filed to confuse controllers",VERIFY
+RV-EVT-0221,S-HARASSMENT-REPORT-FALSE,S,"Legal boundary and compliance traps","Harassment reports filed against you falsely",VERIFY
+RV-EVT-0222,S-TRESPASS-ACCUSATION-LURED,S,"Legal boundary and compliance traps","Trespass accusations after lured entries",VERIFY
+RV-EVT-0223,S-RECORDING-WITHOUT-CONSENT-TRAP,S,"Legal boundary and compliance traps","Recording without consent traps",VERIFY
+RV-EVT-0224,S-DRONE-REGULATION-COMPLAINT,S,"Legal boundary and compliance traps","Drone regulation complaints against you",VERIFY
+RV-EVT-0225,S-FIRE-CODE-PERMIT-INSPECTION,S,"Legal boundary and compliance traps","Fire code/permit inspections triggered",VERIFY
+RV-EVT-0226,T-FOUND-USB-LURE,T,"Decoy and honeypot lures","Found USB meets in your path",IGNORE
+RV-EVT-0227,T-FREE-WIFI-POPUP,T,"Decoy and honeypot lures","Free Wi-Fi pop-ups at your haunts",IGNORE
+RV-EVT-0228,T-EXCLUSIVE-BETA-APP-INVITE,T,"Decoy and honeypot lures","Exclusive beta app invites via DM",IGNORE
+RV-EVT-0229,T-PRIVATE-GROUP-ID-REQUEST,T,"Decoy and honeypot lures","Private group invitations requesting scans/IDs",IGNORE
+RV-EVT-0230,T-SCHOLARSHIP-GRANT-BAIT,T,"Decoy and honeypot lures","Scholarship or grant bait with forms",IGNORE
+RV-EVT-0231,T-BUG-BOUNTY-PHISH,T,"Decoy and honeypot lures","Bug bounty emails with phishing links",IGNORE
+RV-EVT-0232,T-CLASS-ACTION-PAYOUT-PHISH,T,"Decoy and honeypot lures","Class action claims payout phishing",IGNORE
+RV-EVT-0233,T-SECURITY-AUDIT-ADMIN-DEMAND,T,"Decoy and honeypot lures","Security audit offers demanding admin",IGNORE
+RV-EVT-0234,T-REPUTATION-CLEAN-LURE,T,"Decoy and honeypot lures","We can clean your reputation lures",IGNORE
+RV-EVT-0235,T-PRESS-INTERVIEW-CONTEXT-HARVEST,T,"Decoy and honeypot lures","Press interview requests harvesting context",IGNORE
+RV-EVT-0236,U-INTAKE-PIPELINE-FLOOD,U,"Meta-attacks on defenses","Flooding your intake pipeline to induce overload",ESCALATE
+RV-EVT-0237,U-CANONICAL-SCHEMA-MIMIC,U,"Meta-attacks on defenses","Mimicking your canonical schema to slip fakes",ESCALATE
+RV-EVT-0238,U-METRIC-POISONING-SYNTHETIC,U,"Meta-attacks on defenses","Poisoning your DNR/metrics with synthetic events",ESCALATE
+RV-EVT-0239,U-TRUST-ANCHOR-COUNTERFEIT,U,"Meta-attacks on defenses","Counterfeiting your trust-anchor statements",ESCALATE
+RV-EVT-0240,U-TIMING-ATTACK-CADENCE,U,"Meta-attacks on defenses","Timing attacks to break your cadence/tempo",ESCALATE

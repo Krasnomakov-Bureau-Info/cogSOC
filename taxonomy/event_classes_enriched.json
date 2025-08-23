@@ -1,0 +1,41 @@
+[
+  {
+    "id": "RV-EVT-0001",
+    "type": "event-class",
+    "code": "A-FOOT-ROTATION",
+    "name": "Foot surveillance with shift rotations",
+    "category_code": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "default_route": "VERIFY",
+    "severity": "MED",
+    "vector": "physical",
+    "impacts": ["safety","autonomy"],
+    "evidence_hints": "Time, rotation pattern, photos/video if safe"
+  },
+  {
+    "id": "RV-EVT-0002",
+    "type": "event-class",
+    "code": "A-VEHICLE-HANDOFF",
+    "name": "Vehicle tailing with handoffs at intersections",
+    "category_code": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "default_route": "VERIFY",
+    "severity": "MED",
+    "vector": "physical",
+    "impacts": ["safety","autonomy"],
+    "evidence_hints": "Handoff point timestamps, plates, dashcam"
+  },
+  {
+    "id": "RV-EVT-0003",
+    "type": "event-class",
+    "code": "A-STATIC-STAKEOUT",
+    "name": "Static stakeouts near residence/office",
+    "category_code": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "default_route": "VERIFY",
+    "severity": "MED",
+    "vector": "physical",
+    "impacts": ["safety","autonomy"],
+    "evidence_hints": "Vehicle/person description, duration log"
+  }
+]

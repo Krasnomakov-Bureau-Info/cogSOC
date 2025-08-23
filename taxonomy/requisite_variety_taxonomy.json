@@ -1,0 +1,417 @@
+{
+  "version": "0.1.0",
+  "generated": "2025-08-22T00:00:00Z",
+  "objects": [
+    {
+      "id": "RV-TAC-0001",
+      "type": "tactic",
+      "name": "Buffer Incoming Variety",
+      "short_name": "Buffer",
+      "description": "Reduce raw disturbance variety before decision through canonicalization, pruning, batching, and deduplication.",
+      "phase": "intake",
+      "tags": ["lever", "ashby", "universal-matrix"],
+      "metrics": ["RV-MET-0002"],
+      "created": "2025-08-22T00:00:00Z",
+      "modified": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-TAC-0002",
+      "type": "tactic",
+      "name": "Deterministic Selection",
+      "short_name": "Select",
+      "description": "Ensure a unique admissible next action—eliminate ambiguity (H(A|D) → 0).",
+      "phase": "triage",
+      "tags": ["lever", "least-action", "least-ambiguity"],
+      "metrics": ["RV-MET-0003"],
+      "created": "2025-08-22T00:00:00Z",
+      "modified": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-TAC-0003",
+      "type": "tactic",
+      "name": "Compositional Amplification",
+      "short_name": "Compose",
+      "description": "Scale regulator effective variety via sequence depth of a sparse primitive set (elastic capacity).",
+      "phase": "response",
+      "tags": ["lever", "capacity"],
+      "metrics": ["RV-MET-0004"],
+      "created": "2025-08-22T00:00:00Z",
+      "modified": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-DST-0001",
+      "type": "disturbance",
+      "name": "Surveillance & Tail Monitoring",
+      "description": "Physical or digital tracking intended to increase cognitive load or enable subsequent intrusion.",
+      "tactics": ["RV-TAC-0001", "RV-TAC-0002"],
+      "mitigations": ["RV-MIT-0003"],
+      "metrics": ["RV-MET-0001"],
+      "created": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-DST-0002",
+      "type": "disturbance",
+      "name": "Device Intrusion Attempt",
+      "description": "Credential stuffing, unauthorized access, or data extraction attempts against devices or accounts.",
+      "tactics": ["RV-TAC-0001", "RV-TAC-0002", "RV-TAC-0003"],
+      "mitigations": ["RV-MIT-0001", "RV-MIT-0002"],
+      "metrics": ["RV-MET-0001"],
+      "tripwires": ["RV-TPW-0002"],
+      "created": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-DST-0003",
+      "type": "disturbance",
+      "name": "Impersonation / Identity Abuse",
+      "description": "Attempts to assume or counterfeit identity to manipulate trust surfaces.",
+      "tactics": ["RV-TAC-0001", "RV-TAC-0002"],
+      "mitigations": ["RV-MIT-0005"],
+      "tripwires": ["RV-TPW-0003"],
+      "metrics": ["RV-MET-0005"],
+      "created": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-DST-0004",
+      "type": "disturbance",
+      "name": "Disinformation / Theater",
+      "description": "Narrative shaping, noise injection, or staged events to consume regulator capacity.",
+      "tactics": ["RV-TAC-0001"],
+      "mitigations": ["RV-MIT-0004"],
+      "metrics": ["RV-MET-0002"],
+      "created": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-DST-0005",
+      "type": "disturbance",
+      "name": "Sleep Disruption Vector",
+      "description": "Actions targeting rest cycles to degrade decision quality and buffering capacity.",
+      "tactics": ["RV-TAC-0001"],
+      "mitigations": ["RV-MIT-0006"],
+      "tripwires": ["RV-TPW-0004"],
+      "metrics": ["RV-MET-0006"],
+      "created": "2025-08-22T00:00:00Z",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0001",
+      "type": "primitive",
+      "name": "observe",
+      "description": "Capture raw event into single canonical intake funnel.",
+      "tactics": ["RV-TAC-0001"],
+      "buffers": ["RV-BUF-0001"],
+      "phase": "intake",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0002",
+      "type": "primitive",
+      "name": "verify",
+      "description": "Validate authenticity and relevance, collapsing theater.",
+      "tactics": ["RV-TAC-0002"],
+      "buffers": ["RV-BUF-0002"],
+      "phase": "triage",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0003",
+      "type": "primitive",
+      "name": "compartment",
+      "description": "Isolate data/process/identity domains to constrain disturbance propagation.",
+      "tactics": ["RV-TAC-0001"],
+      "buffers": ["RV-BUF-0003"],
+      "phase": "intake",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0004",
+      "type": "primitive",
+      "name": "rotate",
+      "description": "Change credentials/keys/tokens with minimal reversible action.",
+      "tactics": ["RV-TAC-0003"],
+      "mitigations": ["RV-MIT-0001"],
+      "phase": "response",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0005",
+      "type": "primitive",
+      "name": "harden",
+      "description": "Apply minimal configuration or control to reduce attack surface (e.g., enable hardware key).",
+      "tactics": ["RV-TAC-0003"],
+      "mitigations": ["RV-MIT-0002"],
+      "phase": "response",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0006",
+      "type": "primitive",
+      "name": "publish_proof",
+      "description": "Emit signed evidence (hash, timestamp) to external anchor for visibility & accountability.",
+      "tactics": ["RV-TAC-0002"],
+      "mitigations": ["RV-MIT-0005"],
+      "phase": "response",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0007",
+      "type": "primitive",
+      "name": "decoy",
+      "description": "Deploy deceptive asset or sink to absorb probing variety.",
+      "tactics": ["RV-TAC-0001"],
+      "buffers": ["RV-BUF-0004"],
+      "phase": "intake",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0008",
+      "type": "primitive",
+      "name": "defer",
+      "description": "Delay non-critical response to batch similar items, increasing buffering K.",
+      "tactics": ["RV-TAC-0001"],
+      "buffers": ["RV-BUF-0005"],
+      "phase": "intake",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0009",
+      "type": "primitive",
+      "name": "rollback",
+      "description": "Revert system to prior integrity checkpoint after confirmed compromise.",
+      "tactics": ["RV-TAC-0003"],
+      "mitigations": ["RV-MIT-0002"],
+      "phase": "recovery",
+      "status": "draft"
+    },
+    {
+      "id": "RV-PRM-0010",
+      "type": "primitive",
+      "name": "remove",
+      "description": "Purge non-essential elements to shrink state space (aggressive pruning).",
+      "tactics": ["RV-TAC-0001"],
+      "buffers": ["RV-BUF-0006"],
+      "phase": "evaluation",
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0001",
+      "type": "buffer",
+      "name": "Single Canonical Intake Funnel",
+      "description": "All events pass through one schema-conforming channel.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0002",
+      "type": "buffer",
+      "name": "Deduplication & Hashing",
+      "description": "Collapse duplicate events via content hashing.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0003",
+      "type": "buffer",
+      "name": "Compartmentation",
+      "description": "Segment domains so disturbances are localized.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0001"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0004",
+      "type": "buffer",
+      "name": "Decoy Sinks",
+      "description": "Attractive but low-value targets absorbing probing variety.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0001"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0005",
+      "type": "buffer",
+      "name": "Temporal Batching",
+      "description": "Time-shift & batch low-priority inputs to flatten arrival spikes.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0003"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-BUF-0006",
+      "type": "buffer",
+      "name": "Aggressive Pruning",
+      "description": "Remove non-essential elements to keep state minimal.",
+      "tactics": ["RV-TAC-0001"],
+      "metrics": ["RV-MET-0003"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0001",
+      "type": "metric",
+      "name": "Exposure Vector Count",
+      "description": "Number of distinct active vectors currently exploitable (lower is better).",
+      "phase": "evaluation",
+      "tags": ["capacity", "risk"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0002",
+      "type": "metric",
+      "name": "Distinct Novelty Rate (DNR)",
+      "description": "Fraction of period intake items mapping to new canonical categories.",
+      "phase": "evaluation",
+      "tags": ["buffering", "variety"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0003",
+      "type": "metric",
+      "name": "Decision Latency Mean",
+      "description": "Average time from intake to triage labeling.",
+      "phase": "evaluation",
+      "tags": ["determinism", "throughput"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0004",
+      "type": "metric",
+      "name": "Composition Depth Utilization",
+      "description": "Current maximal primitive sequence depth invoked this period.",
+      "phase": "evaluation",
+      "tags": ["capacity", "elastic"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0005",
+      "type": "metric",
+      "name": "Impersonation Count",
+      "description": "Number of detected identity abuse attempts in rolling window.",
+      "phase": "evaluation",
+      "tags": ["identity"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MET-0006",
+      "type": "metric",
+      "name": "Sleep Disruption Score",
+      "description": "Composite (0–5) disturbance impact on rest hygiene.",
+      "phase": "evaluation",
+      "tags": ["resilience"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-TPW-0001",
+      "type": "tripwire",
+      "name": "DNR Spike",
+      "description": "DNR exceeds 2× trailing 7-day average for 2 consecutive periods.",
+      "metrics": ["RV-MET-0002"],
+      "mitigations": ["RV-MIT-0007"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-TPW-0002",
+      "type": "tripwire",
+      "name": "Credential Breach Threshold",
+      "description": "≥2 intrusion indicators within 7 days.",
+      "metrics": ["RV-MET-0001"],
+      "mitigations": ["RV-MIT-0001", "RV-MIT-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-TPW-0003",
+      "type": "tripwire",
+      "name": "Impersonation Escalation",
+      "description": "≥3 impersonations in 30 days.",
+      "metrics": ["RV-MET-0005"],
+      "mitigations": ["RV-MIT-0005"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-TPW-0004",
+      "type": "tripwire",
+      "name": "Sleep Degradation",
+      "description": "Sleep disruption score >2 for 3 consecutive days.",
+      "metrics": ["RV-MET-0006"],
+      "mitigations": ["RV-MIT-0006"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0001",
+      "type": "mitigation",
+      "name": "Credential Rotation",
+      "description": "Immediate rotate credentials & revoke sessions across affected vector set.",
+      "primitives": ["RV-PRM-0004"],
+      "tactics": ["RV-TAC-0003"],
+      "disturbances": ["RV-DST-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0002",
+      "type": "mitigation",
+      "name": "Hardware Key Hardening",
+      "description": "Introduce hardware-backed auth + rollback compromised endpoint.",
+      "primitives": ["RV-PRM-0005", "RV-PRM-0009"],
+      "disturbances": ["RV-DST-0002"],
+      "tactics": ["RV-TAC-0003"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0003",
+      "type": "mitigation",
+      "name": "Route & Routine Obfuscation",
+      "description": "Adjust predictable patterns under observation without adding complexity depth permanently.",
+      "primitives": ["RV-PRM-0003", "RV-PRM-0007"],
+      "disturbances": ["RV-DST-0001"],
+      "tactics": ["RV-TAC-0001"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0004",
+      "type": "mitigation",
+      "name": "Deterministic Ignore Policy",
+      "description": "Enforce canonical labeling that auto-ignores theater lacking verification signals.",
+      "primitives": ["RV-PRM-0002"],
+      "disturbances": ["RV-DST-0004"],
+      "tactics": ["RV-TAC-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0005",
+      "type": "mitigation",
+      "name": "Signed Trust Anchor Publication",
+      "description": "Public cryptographic anchor & periodic proofs to counter impersonation claims.",
+      "primitives": ["RV-PRM-0006"],
+      "disturbances": ["RV-DST-0003"],
+      "tactics": ["RV-TAC-0002"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0006",
+      "type": "mitigation",
+      "name": "Sleep Hygiene Hardening",
+      "description": "Environmental controls (devices out, ambient sound, routine anchors).",
+      "primitives": ["RV-PRM-0010"],
+      "disturbances": ["RV-DST-0005"],
+      "tactics": ["RV-TAC-0001"],
+      "status": "draft"
+    },
+    {
+      "id": "RV-MIT-0007",
+      "type": "mitigation",
+      "name": "Schema Expansion Sprint",
+      "description": "Focused update to canonical schema & buffers to absorb novelty spike without permanent depth.",
+      "primitives": ["RV-PRM-0001", "RV-PRM-0010"],
+      "tactics": ["RV-TAC-0001", "RV-TAC-0003"],
+      "disturbances": ["RV-DST-0004"],
+      "status": "draft"
+    }
+  ]
+}

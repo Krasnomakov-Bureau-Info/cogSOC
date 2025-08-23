@@ -124,7 +124,7 @@ If the situation gets worse, it gains energy and experience — and will provide
 
 **Primary goal:**
 
-> Development of an effective cyber cognitive kill chain, accessible by anyone, anywhere — allowing to successfully disrupt operations.
+> Development of an effective cyber cognitive kill chain, accessible by anyone, anywhere — allowing to successfully disrupt operations. Check **taxonomy** directory. 
 
 ---
 

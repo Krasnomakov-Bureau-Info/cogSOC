@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/requisite_variety/taxonomy/schema.json",
+  "title": "Requisite Variety Operational Taxonomy Schema",
+  "description": "Schema for a MITRE ATT&CK / DISARM style taxonomy capturing disturbances, tactics, techniques, primitives, buffers, metrics, tripwires, and mitigations rooted in the Universal Matrix framework.",
+  "type": "object",
+  "required": ["version", "objects"],
+  "properties": {
+    "version": {"type": "string", "description": "Semantic version of the taxonomy dataset."},
+    "generated": {"type": "string", "format": "date-time"},
+    "objects": {
+      "type": "array",
+      "items": {"$ref": "#/definitions/object"}
+    }
+  },
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^RV-[A-Z]{2,6}-[0-9]{4}$",
+      "description": "Stable identifier (e.g., RV-DST-0001). Prefix segments: DST (Disturbance), TAC (Tactic), TEC (Technique), STC (SubTechnique), PRM (Primitive), BUF (Buffer), MET (Metric), TPW (Tripwire), MIT (Mitigation), REL (Relationship)."
+    },
+    "object": {
+      "type": "object",
+      "required": ["id", "type", "name"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "type": {"type": "string", "enum": [
+          "disturbance", "tactic", "technique", "sub-technique", "primitive", "buffer", "metric", "tripwire", "mitigation", "relationship", "event-class"
+        ]},
+        "code": {"type": "string", "description": "Short machine code (e.g., A-FOOT-ROTATION)."},
+        "category_code": {"type": "string", "description": "Group letter/category code (A..U)."},
+        "category_name": {"type": "string", "description": "Category descriptive name."},
+        "default_route": {"type": "string", "enum": ["IGNORE","VERIFY","HARDEN","ESCALATE"], "description": "Default triage routing."},
+        "severity": {"type": "string", "enum": ["INFO","LOW","MED","HIGH","CRITICAL"]},
+        "vector": {"type": "string", "description": "Primary domain vector (physical|digital|narrative|legal|financial|environmental|cognitive|social|mobility|workplace|health|platform|infoenv|compliance|decoy|meta)."},
+        "impacts": {"type": "array", "items": {"type": "string"}},
+        "evidence_hints": {"type": "string"},
+        "name": {"type": "string"},
+        "short_name": {"type": "string"},
+        "description": {"type": "string"},
+        "rationale": {"type": "string"},
+        "phase": {"type": "string", "description": "High-level phase (e.g., intake, triage, response, recovery, evaluation)."},
+        "parent": {"type": "string", "description": "ID of parent (for techniques/sub-techniques or hierarchical grouping)."},
+        "tactics": {"type": "array", "items": {"type": "string", "pattern": "^RV-TAC-[0-9]{4}$"}},
+        "disturbances": {"type": "array", "items": {"type": "string", "pattern": "^RV-DST-[0-9]{4}$"}},
+        "techniques": {"type": "array", "items": {"type": "string", "pattern": "^RV-TEC-[0-9]{4}$"}},
+        "sub_techniques": {"type": "array", "items": {"type": "string", "pattern": "^RV-STC-[0-9]{4}$"}},
+        "primitives": {"type": "array", "items": {"type": "string", "pattern": "^RV-PRM-[0-9]{4}$"}},
+        "buffers": {"type": "array", "items": {"type": "string", "pattern": "^RV-BUF-[0-9]{4}$"}},
+        "metrics": {"type": "array", "items": {"type": "string", "pattern": "^RV-MET-[0-9]{4}$"}},
+        "tripwires": {"type": "array", "items": {"type": "string", "pattern": "^RV-TPW-[0-9]{4}$"}},
+        "mitigations": {"type": "array", "items": {"type": "string", "pattern": "^RV-MIT-[0-9]{4}$"}},
+        "relationships": {"type": "array", "items": {"type": "string", "pattern": "^RV-REL-[0-9]{4}$"}},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "examples": {"type": "array", "items": {"type": "string"}},
+        "references": {"type": "array", "items": {"type": "string"}},
+        "status": {"type": "string", "enum": ["draft", "stable", "deprecated"], "default": "draft"},
+        "created": {"type": "string", "format": "date-time"},
+        "modified": {"type": "string", "format": "date-time"},
+        "version": {"type": "string", "description": "Object semantic version."},
+        "data": {"type": "object", "description": "Arbitrary extension payload (key-value)."}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"type": {"const": "relationship"}}},
+          "then": {
+            "required": ["source_ref", "target_ref", "relationship_type"],
+            "properties": {
+              "source_ref": {"type": "string", "pattern": "^RV-[A-Z]{2,6}-[0-9]{4}$"},
+              "target_ref": {"type": "string", "pattern": "^RV-[A-Z]{2,6}-[0-9]{4}$"},
+              "relationship_type": {"type": "string", "description": "Uses | Mitigates | Detects | Measures | Triggers | Groups | Part-of"}
+            }
+          }
+        }
+      ]
+    }
+  }
+}
