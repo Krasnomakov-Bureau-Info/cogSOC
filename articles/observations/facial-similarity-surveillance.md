@@ -5,6 +5,8 @@ experience: 0.02
 
 #section:observations
 
+<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
+
 # Facial Similarity Surveillance: Observational Notes on Reported Multi-Actor Activity in the Russia-West Context
 
 > POLICY / SCOPE NOTICE  
