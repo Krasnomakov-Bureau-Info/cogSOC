@@ -82,7 +82,7 @@ The **selective modification of security settings**, particularly the disabling 
 
 Intelligence analysis suggests **multiple threat actor categories** may exploit dating app vulnerabilities for different strategic objectives:
 
-**Intelligence Services**: **Russian FSB and GRU operations** have documented histories of honeypot social engineering campaigns. The **Ukrainian conflict has demonstrated systematic use of dating apps for military intelligence collection**, with documented cases of intelligence services using Tinder to locate military personnel.[^16][^17]
+Intelligence services have documented histories of honeypot-style social engineering; recent conflicts have also shown that dating apps and messaging platforms can be leveraged for intelligence collection, including instances where such platforms were used to identify or locate personnel.[^16][^17]
 
 **Organized Criminal Networks**: **Profit-motivated operations** focus on financial fraud, identity theft, and extortion schemes. These groups increasingly utilize **AI-enhanced automation** to scale operations beyond individual criminal capabilities.[^7][^10]
 
