@@ -23,8 +23,8 @@
 In order to evolve into the next stage, it requires **energy** and **experience**.
 
 
-**Current energy level:** `0.062`  
-**Current experience level:** `0.061`
+**Current energy level:** `0.082`  
+**Current experience level:** `0.101`
 
 
 ---
@@ -147,8 +147,8 @@ If the situation gets worse, it gains energy and experience — and will provide
 ### Observations
 | Name | Energy cost | Experience cost |
 |:---|---:|---:|
-| [👁️ Observed persistent PsyOps](./articles/observations/07-observed-persistent-psyops.md) | - | - |
-| [🧩 Observed manipulation strategies](./articles/observations/08-observed-manipulation-strategies.md) | - | - |
+| [Psychological Influence in Europe: Observational Analys…](./articles/observations/complete-psyops-analysis.md) | 0.010 | 0.020 |
+| [Facial Similarity Surveillance: Observational Notes on …](./articles/observations/facial-similarity-surveillance.md) | 0.010 | 0.020 |
 
 
 ### Attacks and Operations
