@@ -43,7 +43,7 @@ Why rigorous logging matters:
 
 Analogy to ATT&CK: MITRE ATT&CK catalogs adversary TTPs and maps them to documented groups and campaigns; this taxonomy similarly catalogs harassment / coercion / disruption techniques so recurring behaviors become recognizable operational patterns rather than “random incidents.”
 
-Practical result: A disciplined log (10 → 50 → 100 events) evolves into a professional dossier—harder to ignore, easier to escalate deterministically, and better aligned with how law enforcement, regulators, or courts evaluate persistence, intent, harm, and proportional response.
+Practical result: A disciplined log evolves into a professional dossier—harder to ignore, easier to escalate deterministically, and better aligned with how law enforcement, regulators, or courts evaluate persistence, intent, harm, and proportional response.
 
 Conclusion: Treat each observation as a potential evidentiary brick. Capture it once, in a standard form, with minimal interpretation. Over time the structured accumulation supplies the leverage (credibility, clarity, precedence mapping) that isolated complaints lack. This is how you convert lived experience into a defensible, referenceable case file.
 
@@ -120,13 +120,6 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install streamlit pandas
-
-# run the event table viewer
-streamlit run streamlit_event_viewer.py
-
-or
-
-python3 -m streamlit run streamlit_event_viewer.py
 
 # or run the navigator prototype
 streamlit run streamlit_navigator.py
