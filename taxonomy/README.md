@@ -75,25 +75,25 @@ This is a small, practical taxonomy for logging, tracking and analysing attacks 
 
 Note: the project only has a light relation to the Universal Matrix appendix in this folder; the taxonomy stands on its own for everyday use.
 
-Main goals
+### Main goals
 - Keep entries small and human-readable.
 - Cover common attack patterns against people (social, digital, physical, narrative).
 - Enable simple queries and light automation.
 - Provide a short, practical handling pattern you can follow during an incident.
 
-What's included
+### What's included
 - `schema.json` — JSON Schema used to validate datasets.
 - `requisite_variety_taxonomy.json` — seed dataset of objects.
 - `event_classes.json` / `event_classes.csv` — intake categories used by viewers.
 - Streamlit viewers: `streamlit_event_viewer.py` and `streamlit_navigator.py` (see below).
 - `um_information_theory_appendix_v2.pdf` — appendix with background and suggested patterns.
 
-Core ideas
+### Core ideas
 - Object types: disturbance, tactic, primitive, buffer, metric, tripwire, mitigation, event-class.
 - IDs follow RV-<TYPE>-NNNN (for example `RV-DST-0001`).
 - Each object is minimal: `id`, `type`, `name`, `description`, and optional links to related objects.
 
-How to use
+### How to use
 - Log: record incidents as `event-class` entries or disturbances.
 - Track: reference disturbance IDs in notes; attach metrics and tripwires for detection.
 - Analyse: query relationships to reveal common tactics and effective mitigations.
@@ -104,7 +104,7 @@ How to use
 	 - Structure of a journal entry: `timestamp`, `date`, `event_id`, `event_code`, `event_name`, `category`, `category_name`, `note`, `score`.
 	 - Recommended practice: treat the note as an objective observation (what, where, when, actors, immediate evidence references), and defer interpretation / hypothesis to separate analytical summaries later. Keep one entry per discrete observation instance—even if the taxonomy event class is the same—to preserve frequency data.
 
-Simple handling steps (practical)
+### Simple handling steps (practical)
 1. Detect — use metrics & tripwires to decide if an event needs action.
 2. Contain — apply short-term buffers (isolate accounts, pause communications, limit exposure).
 3. Select — pick a mitigation mapped to the identified tactic or primitive.
@@ -112,13 +112,15 @@ Simple handling steps (practical)
 
 For more theory and longer guidance see the appendix at `taxonomy/um_information_theory_appendix_v2.pdf`.
 
-Streamlit viewers
+### Streamlit viewers
 This folder includes two small Streamlit prototypes that help browse and annotate event classes:
 
 - `streamlit_event_viewer.py` — filterable table view of `event_classes.csv` with download.
 - `streamlit_navigator.py` — category tabs, quick enrichment, notes and scoring; can persist simple edits to the JSON files.
 
-Quick run (from the `taxonomy` directory)
+### Quick run
+
+From the `taxonomy` directory:
 
 ```bash
 # create a venv and install minimal deps (macOS / zsh)
@@ -135,11 +137,11 @@ or
 python3 -m streamlit run streamlit_navigator.py
 ```
 
-Notes
+### Notes
 - The viewers are prototypes: they use local files (`event_classes.json`, `event_classes_enriched.json`) and will attempt to write small changes back to disk when you add entries or enrich records.
 - Keep backups of your JSON/CSV files if you make edits via Streamlit.
 
-Quick examples
+### Quick examples
 - List mitigation IDs for a disturbance with `jq`:
 
 ```bash
@@ -152,7 +154,7 @@ jq '.objects | map(select(.id=="RV-DST-0002").mitigations[])' requisite_variety_
 jq '.objects | map(select(.id=="RV-MIT-0001" or .id=="RV-MIT-0002"))' requisite_variety_taxonomy.json
 ```
 
-Validation (node)
+### Validation (node)
 
 Install once (adds date-time format support via `ajv-formats`):
 
@@ -173,12 +175,12 @@ One‑liner alternative (inline, but harder to read):
 node -e 'const fs=require("fs");const Ajv=require("ajv");const addFormats=require("ajv-formats");const ajv=new Ajv({allErrors:true,strict:false});addFormats(ajv);const s=JSON.parse(fs.readFileSync("taxonomy/schema.json"));const d=JSON.parse(fs.readFileSync("taxonomy/requisite_variety_taxonomy.json"));console.log(ajv.validate(s,d)?"VALID":"INVALID",ajv.errors||"")'
 ```
 
-Contributing
+### Contributing
 - Add new objects as `draft` and keep entries focused.
 - Validate against `schema.json` before committing.
 - Deprecate rather than delete to preserve references.
 
-License & provenance
+### License & provenance
 - Seeded from operational experience and open research. See the appendix for sources and theory.
 
 ---
