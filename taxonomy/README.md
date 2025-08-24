@@ -179,9 +179,11 @@ node -e 'const fs=require("fs");const Ajv=require("ajv");const addFormats=requir
 - Add new objects as `draft` and keep entries focused.
 - Validate against `schema.json` before committing.
 - Deprecate rather than delete to preserve references.
+- clone, make new branch, make pull request 
+- make issues 
 
 ### License & provenance
-- Seeded from operational experience and open research. See the appendix for sources and theory.
+- Monada Dominion Non-Commercial No-Derivatives Source License (MD-NC-ND) v1.0
 
 ---
 
