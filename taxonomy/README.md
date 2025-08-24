@@ -7,7 +7,7 @@ _Requisite variety for individual & small‑group defense and counteraction._
 - [Why this exists — a short scenario](#why-this-exists--a-short-scenario)
 - [Legal & evidentiary rationale](#legal--evidentiary-rationale)
 - [What this repository offers](#what-this-repository-offers)
-- [Requisite Variety — Simple taxonomy for individuals](#requisite-variety--simple-taxonomy-for-individuals)
+- [CCDT Requisite Variety — Simple taxonomy for individuals](#CCDT-requisite-variety--simple-taxonomy-for-individuals)
 - [Main goals](#main-goals)
 - [What's included](#whats-included)
 - [Core ideas](#core-ideas)
@@ -69,7 +69,7 @@ This is a simple, pragmatic approach to make covert operations and directed pres
 
 The repo and the framework are under active development and will gain more events and mitigation guidance over time.
 
-# Requisite Variety — Simple taxonomy for individuals
+# CCDT Requisite Variety — Simple taxonomy for individuals
 
 This is a small, practical taxonomy for logging, tracking and analysing attacks and disruptive techniques aimed at individuals and small teams. It's inspired by structured frameworks such as MITRE ATT&CK and DISARM, but written for non-specialists: simple, compact and easy to extend.
 
