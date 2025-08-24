@@ -2,8 +2,9 @@ import json
 from pathlib import Path
 import streamlit as st
 
-st.set_page_config(page_title="Requisite Variety Navigator", layout="wide")
-st.title("Requisite Variety Navigator (Prototype)")
+st.set_page_config(page_title="CCDT Navigator", layout="wide")
+st.title("Cognitive Civil Defense Taxonomy (CCDT) – Navigator (Prototype)")
+st.caption("Requisite variety for individual and small-group defense & counteraction")
 
 BASE = Path(__file__).parent
 JSON_EVENTS = BASE / "event_classes.json"

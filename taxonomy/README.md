@@ -1,8 +1,11 @@
-# Requisite Variety Taxonomy
+# Cognitive Civil Defense Taxonomy (CCDT)
+
+_Requisite variety for individual & small‑group defense and counteraction._
 
 ## Table of Contents
 
 - [Why this exists — a short scenario](#why-this-exists--a-short-scenario)
+- [Legal & evidentiary rationale](#legal--evidentiary-rationale)
 - [What this repository offers](#what-this-repository-offers)
 - [Requisite Variety — Simple taxonomy for individuals](#requisite-variety--simple-taxonomy-for-individuals)
 - [Main goals](#main-goals)
@@ -25,6 +28,24 @@
 Imagine you find yourself in a weird, unsettling situation: someone follows you, speaks as if they know more about you, tampers with your devices, or you notice repeated unexplained interactions. You report it to local authorities but they ask for evidence and can't help. You may be abroad, isolated, and unsure who is responsible. You have no clear status, no network of local contacts, and no organisations that can reliably help — especially with covert surveillance or psychological pressure.
 
 This grey area is widely exploited by malicious actors and, in some cases, by intelligence services to influence or coerce individuals. The behaviours involved can look like psychological operations, espionage, targeted surveillance, or staged pressure campaigns. They are designed to gather information, shape behaviour, and create leverage over a person.
+
+## Legal & evidentiary rationale
+
+Legal, regulatory, and judicial systems (national and international) operate on explicit records: precedent, comparative case analysis, chains of custody, and reproducible evidence handling. Outcomes hinge less on isolated anecdotes and more on coherent, timestamped, consistently classified event history.
+
+Why rigorous logging matters:
+- Precedent alignment: Courts, regulators, and investigators map new fact patterns to prior cases. A structured log accelerates that linkage.
+- Evidentiary weight: Numerous small, well‑described, time‑anchored events can collectively meet a threshold that single dramatic incidents cannot.
+- Pattern articulation: Categorisation (code, category, vector, route) turns subjective impressions into analyzable series (frequency, escalation rate, novelty).
+- Professional framing: A normalized taxonomy reduces emotional narration and increases signal density—mirroring how MITRE ATT&CK links TTPs to known threat groups with traceable references.
+- Actionability: Investigators can pivot on codes (e.g., all physical proximity pressure events) or vectors (digital vs. narrative) to prioritize forensic tasks.
+- Reproducibility: Clear definitions and evidence hints reduce ambiguity when multiple people contribute observations over weeks or months.
+
+Analogy to ATT&CK: MITRE ATT&CK catalogs adversary TTPs and maps them to documented groups and campaigns; this taxonomy similarly catalogs harassment / coercion / disruption techniques so recurring behaviors become recognizable operational patterns rather than “random incidents.”
+
+Practical result: A disciplined log (10 → 50 → 100 events) evolves into a professional dossier—harder to ignore, easier to escalate deterministically, and better aligned with how law enforcement, regulators, or courts evaluate persistence, intent, harm, and proportional response.
+
+Conclusion: Treat each observation as a potential evidentiary brick. Capture it once, in a standard form, with minimal interpretation. Over time the structured accumulation supplies the leverage (credibility, clarity, precedence mapping) that isolated complaints lack. This is how you convert lived experience into a defensible, referenceable case file.
 
 ## What this repository offers
 
