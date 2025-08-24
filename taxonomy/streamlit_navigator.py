@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from datetime import datetime, date
 import streamlit as st
 
 st.set_page_config(page_title="CCDT Navigator", layout="wide")
@@ -9,6 +10,7 @@ st.caption("Requisite variety for individual and small-group defense & counterac
 BASE = Path(__file__).parent
 JSON_EVENTS = BASE / "event_classes.json"
 JSON_ENRICHED = BASE / "event_classes_enriched.json"
+JOURNAL_DIR = BASE / "journal"
 
 @st.cache_data(show_spinner=False)
 def load_events():
@@ -177,6 +179,62 @@ if 'notes' not in st.session_state:
     st.session_state.notes = {}
 if 'scores' not in st.session_state:
     st.session_state.scores = {}
+if 'journal_last_saved' not in st.session_state:
+    # Track (date_str, note, score) last saved per event to avoid duplicate entries same day
+    st.session_state.journal_last_saved = {}
+
+# Journal utilities
+def _ensure_journal_dir():
+    try:
+        JOURNAL_DIR.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        pass
+
+def _journal_path(day: date) -> Path:
+    return JOURNAL_DIR / f"{day.isoformat()}.json"
+
+def load_journal(day: date):
+    p = _journal_path(day)
+    if p.exists():
+        try:
+            with p.open() as f:
+                return json.load(f)
+        except Exception:
+            return []
+    return []
+
+def save_journal(day: date, entries: list):
+    _ensure_journal_dir()
+    p = _journal_path(day)
+    try:
+        p.write_text(json.dumps(entries, indent=2))
+    except Exception as e:
+        st.error(f"Failed saving journal: {e}")
+
+def append_journal_entry(ev: dict, note: str, score: int):
+    if not note and score == 0:
+        return False, "Nothing to save (empty note & zero score)."
+    today = date.today()
+    last = st.session_state.journal_last_saved.get(ev['id'])
+    if last and last == (today.isoformat(), note.strip(), int(score)):
+        return False, "No change since last save today."
+    entries = load_journal(today)
+    ts = datetime.now().isoformat(timespec='seconds')
+    entry = {
+        "timestamp": ts,
+        "date": today.isoformat(),
+        "event_id": ev['id'],
+        "event_code": ev['code'],
+        "event_name": ev['name'],
+        "category": ev['category'],
+        "category_name": ev['category_name'],
+        "note": note.strip(),
+        "score": int(score),
+    }
+    entries.append(entry)
+    save_journal(today, entries)
+    st.session_state.journal_last_saved[ev['id']] = (today.isoformat(), note.strip(), int(score))
+    return True, f"Logged at {ts}"
 
 # Severity color mapping helper
 SEV_COLORS = {
@@ -238,6 +296,15 @@ def render_event(ev):
         # Persist back when changed
         st.session_state.notes[note_key] = st.session_state.get(f"note_{note_key}", "")
         st.session_state.scores[note_key] = st.session_state.get(f"score_{note_key}", 0)
+        save_col1, save_col2 = st.columns([0.25,0.75])
+        with save_col1:
+            if st.button("Save", key=f"save_{note_key}", help="Append this note & score to today's journal with timestamp"):
+                success, msg = append_journal_entry(ev, st.session_state.notes[note_key], st.session_state.scores[note_key])
+                (st.success if success else st.info)(msg)
+        with save_col2:
+            last = st.session_state.journal_last_saved.get(note_key)
+            if last and last[0] == date.today().isoformat():
+                st.caption(f"Last saved today: note/score snapshot recorded.")
 
 def render_event_compact(ev):
     """Compact expander for matrix/table layout with inline note & score editing."""
@@ -263,6 +330,9 @@ def render_event_compact(ev):
         # Sync back
         st.session_state.notes[note_key] = st.session_state.get(f"table_note_{note_key}", "")
         st.session_state.scores[note_key] = st.session_state.get(f"table_score_{note_key}", 0)
+        if st.button("Save", key=f"table_save_{note_key}", help="Append this note & score to today's journal"):
+            success, msg = append_journal_entry(ev, st.session_state.notes[note_key], st.session_state.scores[note_key])
+            (st.success if success else st.info)(msg)
 
 if view_mode == "Tabs":
     tabs = st.tabs([f"{c} – {cat_meta[c]}" for c in ordered_categories])
@@ -418,3 +488,54 @@ with colA:
         st.caption("No notes or scores to export yet.")
 with colB:
     st.caption("Prototype: future enhancements could include a full matrix layout, color gradients, bulk scoring, linkage overlays, and enrichment editing.")
+
+# Journal viewer / editor
+st.markdown("---")
+st.header("Journal (Daily Log)")
+selected_day = st.date_input("Select day", value=date.today(), help="Journal entries are stored per day.")
+j_entries = load_journal(selected_day)
+if not j_entries:
+    st.info("No entries for selected day yet.")
+else:
+    st.caption(f"{len(j_entries)} entries loaded for {selected_day.isoformat()}. Edit notes/scores and save.")
+    # Present in editable table
+    import pandas as pd
+    dfj = pd.DataFrame(j_entries)
+    # Keep stable order by timestamp
+    dfj = dfj.sort_values('timestamp')
+    editable = dfj[['timestamp','event_id','event_code','event_name','note','score']].copy()
+    edited = st.data_editor(
+        editable,
+        hide_index=True,
+        column_config={
+            'note': st.column_config.TextColumn("Note"),
+            'score': st.column_config.NumberColumn("Score", min_value=0, max_value=100, step=1)
+        },
+        disabled=['timestamp','event_id','event_code','event_name'],
+        key=f"journal_editor_{selected_day.isoformat()}"
+    )
+    if st.button("Save journal edits", key=f"save_journal_edits_{selected_day.isoformat()}"):
+        # Merge edits back
+        edited_map = {(r['timestamp'], r['event_id']): (r['note'], int(r['score']) if r['score'] != '' else 0) for _, r in edited.iterrows()}
+        changed = 0
+        for entry in j_entries:
+            key = (entry['timestamp'], entry['event_id'])
+            if key in edited_map:
+                new_note, new_score = edited_map[key]
+                if entry.get('note') != new_note or entry.get('score') != new_score:
+                    entry['note'] = new_note
+                    entry['score'] = new_score
+                    changed += 1
+        save_journal(selected_day, j_entries)
+        if changed:
+            st.success(f"Saved {changed} modified entries.")
+        else:
+            st.info("No changes detected.")
+    # Quick export for the day
+    st.download_button(
+        "Download day JSON",
+        data=json.dumps(j_entries, indent=2).encode(),
+        file_name=f"journal_{selected_day.isoformat()}.json",
+        mime="application/json"
+    )
+

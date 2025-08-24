@@ -97,6 +97,12 @@ How to use
 - Log: record incidents as `event-class` entries or disturbances.
 - Track: reference disturbance IDs in notes; attach metrics and tripwires for detection.
 - Analyse: query relationships to reveal common tactics and effective mitigations.
+ - Journal: open an event in the navigator, add / update a Note and Score, then press the Save button to append a timestamped snapshot to today's daily log (JSON). Each save creates (or updates) a file `taxonomy/journal/YYYY-MM-DD.json` holding a chronological list of entries for that date.
+	 - Duplicate suppression: if you press Save again without changing the note or score for that event on the same day, it will not add a redundant entry.
+	 - Daily grouping: use the Journal (Daily Log) section at the bottom of the navigator to pick a date, review all entries for that day, edit notes/scores inline, and re-save.
+	 - Export: download the selected day’s log as JSON via the Download day JSON button (good for backup or external analysis).
+	 - Structure of a journal entry: `timestamp`, `date`, `event_id`, `event_code`, `event_name`, `category`, `category_name`, `note`, `score`.
+	 - Recommended practice: treat the note as an objective observation (what, where, when, actors, immediate evidence references), and defer interpretation / hypothesis to separate analytical summaries later. Keep one entry per discrete observation instance—even if the taxonomy event class is the same—to preserve frequency data.
 
 Simple handling steps (practical)
 1. Detect — use metrics & tripwires to decide if an event needs action.
