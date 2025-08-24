@@ -239,3 +239,12 @@ RV-EVT-0237,U-CANONICAL-SCHEMA-MIMIC,U,"Meta-attacks on defenses","Mimicking you
 RV-EVT-0238,U-METRIC-POISONING-SYNTHETIC,U,"Meta-attacks on defenses","Poisoning your DNR/metrics with synthetic events",ESCALATE
 RV-EVT-0239,U-TRUST-ANCHOR-COUNTERFEIT,U,"Meta-attacks on defenses","Counterfeiting your trust-anchor statements",ESCALATE
 RV-EVT-0240,U-TIMING-ATTACK-CADENCE,U,"Meta-attacks on defenses","Timing attacks to break your cadence/tempo",ESCALATE
+RV-EVT-0241,B-SIMILAR-FACE-APPEARANCE-PERSON-APPEARS-A,B,"Performances and intimidation theater","Similar face/appearance person appears around/near",VERIFY
+RV-EVT-0242,V-STAGED-BRAKE-CHECK,V,"Vehicular coercion and staged collision tactics","Repeated hard brake checks directly in front to induce rear-end blame",ESCALATE
+RV-EVT-0243,V-SWERVE-COLLISION-FRAME,V,"Vehicular coercion and staged collision tactics","Last-second swerve into lane forcing evasive contact then blaming",ESCALATE
+RV-EVT-0244,V-BOX-IN-BIKE-LANE,V,"Vehicular coercion and staged collision tactics","Coordinated box-in of cyclist creating unavoidable contact risk",ESCALATE
+RV-EVT-0245,V-DOORING-SETUP,V,"Vehicular coercion and staged collision tactics","Vehicle parks then timed door opening as you pass (staged dooring)",ESCALATE
+RV-EVT-0246,V-FORCED-MERGE-PINCH,V,"Vehicular coercion and staged collision tactics","Dual-side squeeze forcing unsafe merge or side-scrape",ESCALATE
+RV-EVT-0247,V-INTERSECTION-ROLL-TRAP,V,"Vehicular coercion and staged collision tactics","Slow roll into intersection baiting right-of-way violation",VERIFY
+RV-EVT-0248,V-SUDDEN-REVERSE-IMPACT,V,"Vehicular coercion and staged collision tactics","Vehicle reverses suddenly toward you to allege you rear-ended",ESCALATE
+RV-EVT-0249,V-CONVOY-BLOCK-ROUTE,V,"Vehicular coercion and staged collision tactics","Multi-vehicle convoy pacing & blocking exits (pressure/framing)",ESCALATE

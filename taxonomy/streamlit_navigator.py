@@ -50,7 +50,11 @@ ordered_categories = sorted(cats.keys())  # A .. U
 # Sidebar controls
 with st.sidebar:
     st.header("Filters & Options")
-    view_mode = st.radio("View mode", ["Tabs"], help="Matrix view can be added later.")
+    view_mode = st.radio(
+        "View mode",
+        ["Tabs", "Matrix", "Table"],
+        help="Tabs: per-category expanders. Matrix: flat editable list. Table: all categories side-by-side like ATT&CK Navigator."
+    )
     search = st.text_input("Search techniques (name/code/id)")
     routes_all = sorted({ev['default_route'] for ev in events})
     sel_routes = st.multiselect("Default route", routes_all, default=routes_all)
@@ -133,9 +137,25 @@ with st.sidebar:
                         except Exception as e:
                             st.warning(f"Failed to write enrichment file: {e}")
                     st.success(f"Added {new_id}")
-                    st.experimental_rerun()
+                    # Streamlit >=1.27 provides st.rerun; older versions used experimental_rerun
+                    if hasattr(st, "rerun"):
+                        st.rerun()
+                    elif hasattr(st, "experimental_rerun"):
+                        st.experimental_rerun()
     st.markdown("---")
     st.caption("Click a technique to expand details, add a note & score. Export below.")
+    # Table view display options
+    if view_mode == "Table":
+        st.markdown("---")
+        st.subheader("Table View Options")
+        horizontal_scroll = st.checkbox("Horizontal scroll mode (read-only)", value=False, help="Show all categories in a wide horizontally scrollable strip with hover tooltips (no inline editing). Uncheck for paged interactive expanders.")
+        if not horizontal_scroll:
+            table_cols_per_page = st.slider("Columns per page", 4, 10, 6, help="Reduce number to widen each column; horizontal paging across category groups.")
+            total_pages = (len(ordered_categories) + table_cols_per_page - 1) // table_cols_per_page
+            table_page = st.number_input("Category page", min_value=1, max_value=total_pages, value=1, step=1, help=f"Navigate pages (total {total_pages})")
+            st.session_state.__setitem__('table_cols_per_page', table_cols_per_page)
+            st.session_state.__setitem__('table_page', table_page)
+        st.session_state.__setitem__('table_horizontal_scroll', horizontal_scroll)
 
 # Prepare filtered data
 search_lower = search.lower().strip()
@@ -190,6 +210,8 @@ def render_event(ev):
             vector = enr.get('vector')
             impacts = enr.get('impacts')
             hints = enr.get('evidence_hints')
+            details = enr.get('details')
+            mitigations = enr.get('mitigation_suggestions')
             if sev:
                 col3.markdown(f"**Severity:** {sev}")
             if vector:
@@ -200,6 +222,12 @@ def render_event(ev):
             if hints:
                 st.markdown("**Evidence hints:**")
                 st.write(hints)
+            if details:
+                st.markdown("**Details:**")
+                st.write(details)
+            if mitigations:
+                st.markdown("**Mitigation suggestions:**")
+                st.write(mitigations)
         # Notes & scoring
         note_key = ev['id']
         existing_note = st.session_state.notes.get(note_key, "")
@@ -210,6 +238,31 @@ def render_event(ev):
         st.session_state.notes[note_key] = st.session_state.get(f"note_{note_key}", "")
         st.session_state.scores[note_key] = st.session_state.get(f"score_{note_key}", 0)
 
+def render_event_compact(ev):
+    """Compact expander for matrix/table layout with inline note & score editing."""
+    enr = enriched_map.get(ev['id'])
+    sev = (enr.get('severity') if enr else None)
+    sev_norm = (sev or '').upper()
+    sev_map = {"LOW":"🟢 LOW","MED":"🟡 MED","HIGH":"🟠 HIGH","CRITICAL":"🔴 CRIT"}
+    badge = sev_map.get(sev_norm, "")
+    title = f"{badge} {ev['code']}".strip()
+    with st.expander(title, expanded=False):
+        st.markdown(f"**{ev['name']}**")
+        st.caption(f"ID {ev['id']} | Cat {ev['category']} | Route `{ev['default_route']}`")
+        if enr:
+            if enr.get('vector'):
+                st.caption(f"Vector: {enr['vector']}")
+            if enr.get('impacts'):
+                st.caption("Impacts: " + ", ".join(enr['impacts']))
+            if enr.get('details'):
+                st.write(enr['details'])
+        note_key = ev['id']
+        st.text_area("Note", key=f"table_note_{note_key}", value=st.session_state.notes.get(note_key, ""), label_visibility='collapsed', placeholder='Note...')
+        st.slider("Score", 0, 100, key=f"table_score_{note_key}", value=st.session_state.scores.get(note_key, 0))
+        # Sync back
+        st.session_state.notes[note_key] = st.session_state.get(f"table_note_{note_key}", "")
+        st.session_state.scores[note_key] = st.session_state.get(f"table_score_{note_key}", 0)
+
 if view_mode == "Tabs":
     tabs = st.tabs([f"{c} – {cat_meta[c]}" for c in ordered_categories])
     for idx, cat in enumerate(ordered_categories):
@@ -218,6 +271,129 @@ if view_mode == "Tabs":
             st.caption(f"{len(cat_events)} techniques in this category after filters")
             for ev in cat_events:
                 render_event(ev)
+elif view_mode == "Matrix":
+    import pandas as pd
+    flat_rows = []
+    for ev in events:
+        if not pass_filters(ev):
+            continue
+        enr = enriched_map.get(ev['id'], {})
+        sev = (enr.get('severity') or '').upper()
+        # Normalize severity variants (low/LOW etc.)
+        sev_map = {"LOW":"LOW","MED":"MED","MEDIUM":"MED","HIGH":"HIGH","CRIT":"CRITICAL","CRITICAL":"CRITICAL"}
+        sev_std = sev_map.get(sev, sev)
+        flat_rows.append({
+            'ID': ev['id'],
+            'Code': ev['code'],
+            'Category': ev['category'],
+            'Category Name': ev['category_name'],
+            'Name': ev['name'],
+            'Route': ev['default_route'],
+            'Severity': sev_std,
+            'Note': st.session_state.notes.get(ev['id'], ""),
+            'Score': st.session_state.scores.get(ev['id'], 0)
+        })
+    df = pd.DataFrame(flat_rows)
+    st.caption(f"Matrix view: {len(df)} techniques after filters. Edit Note/Score cells; press Apply to persist.")
+    editable_cols = ['Note', 'Score']
+    if not df.empty:
+        edited = st.data_editor(
+            df,
+            hide_index=True,
+            column_config={
+                'Score': st.column_config.NumberColumn(min_value=0, max_value=100, step=1),
+                'Severity': st.column_config.TextColumn(help="Severity (read-only from enrichment)")
+            },
+            disabled=[c for c in df.columns if c not in editable_cols],
+            key='matrix_editor'
+        )
+        if st.button("Apply matrix edits"):
+            for _, row in edited.iterrows():
+                ev_id = row['ID']
+                st.session_state.notes[ev_id] = row['Note'] or ""
+                try:
+                    st.session_state.scores[ev_id] = int(row['Score']) if row['Score'] != "" else 0
+                except Exception:
+                    st.session_state.scores[ev_id] = 0
+            st.success("Matrix edits applied. Export section updated.")
+    else:
+        st.info("No techniques match current filters.")
+elif view_mode == "Table":
+    # Build filtered events per category (maintain original ordering)
+    filtered_by_cat = {cat: [ev for ev in cats[cat] if pass_filters(ev)] for cat in ordered_categories}
+    if st.session_state.get('table_horizontal_scroll'):
+        # Horizontal scroll implementation (read-only, hover tooltips)
+        max_rows = max((len(v) for v in filtered_by_cat.values()), default=0)
+        if max_rows == 0:
+            st.info("No techniques match current filters.")
+        else:
+            st.caption("Table view (horizontal scroll): hover a code to see full name; expand for details (read-only). Use other modes for editing notes & scores.")
+            st.markdown(
+                """
+                <style>
+                .rv-hscroll-wrapper {overflow-x:auto; padding-bottom:0.5rem;}
+                .rv-flex {display:flex; gap:1rem; min-width:max-content;}
+                .rv-col {flex:0 0 260px;}
+                .rv-col h4 {margin:0 0 .25rem 0; font-size:0.9rem; white-space:nowrap;}
+                .rv-evt summary {cursor:pointer; list-style:none;}
+                .rv-evt summary::-webkit-details-marker {display:none;}
+                .rv-evt {border:1px solid #444; border-radius:6px; margin-bottom:6px; padding:2px 6px; background:#1f2226;}
+                .rv-evt:hover {border-color:#666; background:#262a2f;}
+                .rv-code {font-size:0.75rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+                .rv-sev-low{color:#6fbf73;} .rv-sev-med{color:#f2c744;} .rv-sev-high{color:#f28c28;} .rv-sev-critical{color:#e55353;}
+                .rv-meta {font-size:0.65rem; opacity:0.75;}
+                </style>
+                """,
+                unsafe_allow_html=True
+            )
+            # Build HTML
+            html_cols = []
+            for cat in ordered_categories:
+                col_events = filtered_by_cat[cat]
+                parts = [f"<div class='rv-col'><h4>{cat} – {cat_meta[cat]}</h4>"]
+                for ev in col_events:
+                    enr = enriched_map.get(ev['id'], {})
+                    sev = (enr.get('severity') or '').upper()
+                    sev_cls = {"LOW":"rv-sev-low","MED":"rv-sev-med","HIGH":"rv-sev-high","CRITICAL":"rv-sev-critical"}.get(sev,"")
+                    sev_label = f"<span class='{sev_cls}'>{sev}</span> " if sev else ""
+                    tooltip = f"{ev['name']}".replace('"','&quot;')
+                    parts.append(
+                        f"<details class='rv-evt'><summary class='rv-code' title=\"{tooltip}\">{sev_label}{ev['code']}</summary>"
+                        f"<div class='rv-meta'>ID {ev['id']} | Route {ev['default_route']}</div>"
+                        f"<div style='font-size:0.7rem; line-height:1.1'>{ev['name']}</div>"
+                        f"</details>"
+                    )
+                parts.append("</div>")
+                html_cols.append("".join(parts))
+            st.markdown(f"<div class='rv-hscroll-wrapper'><div class='rv-flex'>{''.join(html_cols)}</div></div>", unsafe_allow_html=True)
+            with st.expander("Legend"):
+                st.markdown("Hover shows full name via tooltip. Severity color: green=LOW yellow=MED orange=HIGH red=CRITICAL.")
+    else:
+        # Pagination for categories to avoid ultra-narrow columns with interactive expanders
+        cols_per = st.session_state.get('table_cols_per_page', 6)
+        page = st.session_state.get('table_page', 1)
+        start_idx = (page - 1) * cols_per
+        end_idx = start_idx + cols_per
+        page_cats = ordered_categories[start_idx:end_idx]
+        max_rows = max((len(v) for v in filtered_by_cat.values()), default=0)
+        if max_rows == 0:
+            st.info("No techniques match current filters.")
+        else:
+            st.caption(f"Table view: expandable cells; edit notes & scores inline. Showing categories {start_idx+1}-{min(end_idx, len(ordered_categories))} of {len(ordered_categories)}.")
+            header_cols = st.columns(len(page_cats))
+            for col, cat in zip(header_cols, page_cats):
+                col.markdown(f"**{cat} – {cat_meta[cat]}**")
+            for i in range(max_rows):
+                row_cols = st.columns(len(page_cats))
+                for col, cat in zip(row_cols, page_cats):
+                    evs = filtered_by_cat[cat]
+                    if i < len(evs):
+                        with col:
+                            render_event_compact(evs[i])
+                    else:
+                        col.write("")
+            with st.expander("Legend"):
+                st.markdown("Emoji legend: 🟢 LOW · 🟡 MED · 🟠 HIGH · 🔴 CRITICAL. Compact cells duplicate note/score state with other views.")
 
 # Export section
 export_payload = []

@@ -9,8 +9,19 @@
     "default_route": "VERIFY",
     "severity": "MED",
     "vector": "physical",
-    "impacts": ["safety","autonomy"],
-    "evidence_hints": "Time, rotation pattern, photos/video if safe"
+    "impacts": [
+      "safety",
+      "autonomy"
+    ],
+    "evidence_hints": "Time, rotation pattern, photos/video if safe",
+    "details": "Coordinated on-foot observers hand off visual contact at natural choke points (corners, transit stops) to maintain persistent but low-profile surveillance while reducing detectability of any single tail.",
+    "mitigation_suggestions": [
+      "Vary departure times & primary routes (unpredictability)",
+      "Use surveillance detection runs and deliberate pauses to force awkward repositioning",
+      "Leverage reflective surfaces / incidental CCTV for confirmation",
+      "Discreetly document distinct observers (appearance, direction, handoff points)",
+      "Escalate if observers attempt approach, block, or coordinate signaling"
+    ]
   },
   {
     "id": "RV-EVT-0002",
@@ -22,7 +33,10 @@
     "default_route": "VERIFY",
     "severity": "MED",
     "vector": "physical",
-    "impacts": ["safety","autonomy"],
+    "impacts": [
+      "safety",
+      "autonomy"
+    ],
     "evidence_hints": "Handoff point timestamps, plates, dashcam"
   },
   {
@@ -35,7 +49,118 @@
     "default_route": "VERIFY",
     "severity": "MED",
     "vector": "physical",
-    "impacts": ["safety","autonomy"],
+    "impacts": [
+      "safety",
+      "autonomy"
+    ],
     "evidence_hints": "Vehicle/person description, duration log"
+  },
+  {
+    "id": "RV-EVT-0241",
+  "severity": "LOW"
+  },
+  {
+    "id": "RV-EVT-0242",
+    "type": "event-class",
+    "code": "V-STAGED-BRAKE-CHECK",
+    "name": "Repeated hard brake checks directly in front to induce rear-end blame",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","financial","mobility"],
+    "evidence_hints": "Dashcam front; speed & brake force/ABS data; timestamp; plate numbers"
+  },
+  {
+    "id": "RV-EVT-0243",
+    "type": "event-class",
+    "code": "V-SWERVE-COLLISION-FRAME",
+    "name": "Last-second swerve into lane forcing evasive contact then blaming",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","financial","mobility"],
+    "evidence_hints": "Dashcam (front/side); lateral acceleration; steering angle; signal usage; plates"
+  },
+  {
+    "id": "RV-EVT-0244",
+    "type": "event-class",
+    "code": "V-BOX-IN-BIKE-LANE",
+    "name": "Coordinated box-in of cyclist creating unavoidable contact risk",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","mobility"],
+    "evidence_hints": "Rear & side cams; relative spacing timeline; multiple plates; cyclist perspective"
+  },
+  {
+    "id": "RV-EVT-0245",
+    "type": "event-class",
+    "code": "V-DOORING-SETUP",
+    "name": "Vehicle parks then timed door opening as you pass (staged dooring)",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","mobility"],
+    "evidence_hints": "Side cam; timing delta between stop and door; occupant action; plate; door angle"
+  },
+  {
+    "id": "RV-EVT-0246",
+    "type": "event-class",
+    "code": "V-FORCED-MERGE-PINCH",
+    "name": "Dual-side squeeze forcing unsafe merge or side-scrape",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","mobility"],
+    "evidence_hints": "Front/side cams; lane markings; distance measurements; simultaneous speed logs"
+  },
+  {
+    "id": "RV-EVT-0247",
+    "type": "event-class",
+    "code": "V-INTERSECTION-ROLL-TRAP",
+    "name": "Slow roll into intersection baiting right-of-way violation",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "VERIFY",
+    "severity": "MED",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","mobility"],
+    "evidence_hints": "Intersection cam; signal phase timing; roll speed; position at stop line"
+  },
+  {
+    "id": "RV-EVT-0248",
+    "type": "event-class",
+    "code": "V-SUDDEN-REVERSE-IMPACT",
+    "name": "Vehicle reverses suddenly toward you to allege you rear-ended",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","financial","mobility"],
+    "evidence_hints": "Front cam; reverse light status; gear change telemetry; pre/post distance"
+  },
+  {
+    "id": "RV-EVT-0249",
+    "type": "event-class",
+    "code": "V-CONVOY-BLOCK-ROUTE",
+    "name": "Multi-vehicle convoy pacing & blocking exits (pressure/framing)",
+    "category_code": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "default_route": "ESCALATE",
+    "severity": "HIGH",
+    "vector": "physical",
+    "impacts": ["safety","legal","psychological","mobility"],
+    "evidence_hints": "360 cam sequence; formation diagram; timing logs; multiple plates"
   }
 ]

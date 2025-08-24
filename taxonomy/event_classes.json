@@ -1,242 +1,1994 @@
 [
-  {"id":"RV-EVT-0001","code":"A-FOOT-ROTATION","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Foot surveillance with shift rotations","default_route":"VERIFY"},
-  {"id":"RV-EVT-0002","code":"A-VEHICLE-HANDOFF","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Vehicle tailing with handoffs at intersections","default_route":"VERIFY"},
-  {"id":"RV-EVT-0003","code":"A-STATIC-STAKEOUT","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Static stakeouts near residence/office","default_route":"VERIFY"},
-  {"id":"RV-EVT-0004","code":"A-PUBLIC-TRANSPORT-SHADOW","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Shadowing inside public transport","default_route":"VERIFY"},
-  {"id":"RV-EVT-0005","code":"A-ROUTINE-PRESENCE","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Repeated presence at predictable routines (gym, shop)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0006","code":"A-CLOSE-FOLLOW","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Close-follow on foot to test reactions","default_route":"VERIFY"},
-  {"id":"RV-EVT-0007","code":"A-OVERT-FILMING","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Overt filming/photography in sight","default_route":"VERIFY"},
-  {"id":"RV-EVT-0008","code":"A-COVERT-FILMING","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Covert filming from windows or parked cars","default_route":"VERIFY"},
-  {"id":"RV-EVT-0009","code":"A-STORE-STAFF-SHADOW","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Store staff always around during visits","default_route":"VERIFY"},
-  {"id":"RV-EVT-0010","code":"A-ELEVATOR-SHADOW","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Elevator shadowing and door-block maneuvers","default_route":"VERIFY"},
-  {"id":"RV-EVT-0011","code":"A-STAIRWELL-MIRROR","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Stairwell mirroring (up/down)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0012","code":"A-CHANCE-MEETING","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Street-corner chance meetings (scripted)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0013","code":"A-REPEATED-PATH-CROSS","category":"A","category_name":"Physical surveillance and proximity pressure","name":"We just crossed paths again repetitions","default_route":"VERIFY"},
-  {"id":"RV-EVT-0014","code":"A-IDLING-VEHICLE-OBSERVE","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Unmarked vehicle idling with driver observing","default_route":"VERIFY"},
-  {"id":"RV-EVT-0015","code":"A-DRONE-HOVER","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Drone hovering in visual range","default_route":"VERIFY"},
-  {"id":"RV-EVT-0016","code":"A-NEIGHBOR-WATCH","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Coordinated neighbor watch (curtains move on arrival)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0017","code":"A-GPS-SCOOTER-TAIL","category":"A","category_name":"Physical surveillance and proximity pressure","name":"GPS-enabled scooter/bike tailing","default_route":"VERIFY"},
-  {"id":"RV-EVT-0018","code":"A-DOG-WALKER-TRAIL","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Trailing dog-walkers who appear repeatedly","default_route":"VERIFY"},
-  {"id":"RV-EVT-0019","code":"A-CONSTRUCTION-ALONG-ROUTE","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Construction crews suddenly working along route","default_route":"VERIFY"},
-  {"id":"RV-EVT-0020","code":"A-SECURITY-RANDOM-CHECKS","category":"A","category_name":"Physical surveillance and proximity pressure","name":"Security guards random checks focused on target","default_route":"VERIFY"},
-  {"id":"RV-EVT-0021","code":"B-KNOW-EVERYTHING-CHANT","category":"B","category_name":"Performances and intimidation theater","name":"We know everything chant/phrases overheard","default_route":"IGNORE"},
-  {"id":"RV-EVT-0022","code":"B-STAGED-CALL-PRIVATE-DETAILS","category":"B","category_name":"Performances and intimidation theater","name":"Staged phone calls near you with private details","default_route":"IGNORE"},
-  {"id":"RV-EVT-0023","code":"B-LOUD-SCHEDULE-COMMENT","category":"B","category_name":"Performances and intimidation theater","name":"Loud commentary about your schedule in public","default_route":"IGNORE"},
-  {"id":"RV-EVT-0024","code":"B-ACTORS-NAME-USE","category":"B","category_name":"Performances and intimidation theater","name":"Actors using your name in conversations","default_route":"IGNORE"},
-  {"id":"RV-EVT-0025","code":"B-DROPPED-DATA-DOCS","category":"B","category_name":"Performances and intimidation theater","name":"Dropped documents with your data in your path","default_route":"IGNORE"},
-  {"id":"RV-EVT-0026","code":"B-FLASH-MOB-SIGNS","category":"B","category_name":"Performances and intimidation theater","name":"Flash mobs near your route with suggestive signs","default_route":"IGNORE"},
-  {"id":"RV-EVT-0027","code":"B-LICENSE-PLATE-CODES","category":"B","category_name":"Performances and intimidation theater","name":"License plates with coded messages (pattern priming)","default_route":"IGNORE"},
-  {"id":"RV-EVT-0028","code":"B-STRANGERS-REPEAT-ACTIONS","category":"B","category_name":"Performances and intimidation theater","name":"Random strangers repeating your recent actions","default_route":"IGNORE"},
-  {"id":"RV-EVT-0029","code":"B-STORE-DISPLAY-ALTER","category":"B","category_name":"Performances and intimidation theater","name":"Store displays altered to reference your data","default_route":"IGNORE"},
-  {"id":"RV-EVT-0030","code":"B-LASER-WINDOW-BEDTIME","category":"B","category_name":"Performances and intimidation theater","name":"Laser pointers at windows at bedtime","default_route":"VERIFY"},
-  {"id":"RV-EVT-0031","code":"B-NIGHT-CAR-HONKS","category":"B","category_name":"Performances and intimidation theater","name":"Nighttime car honks timed to your lights off","default_route":"IGNORE"},
-  {"id":"RV-EVT-0032","code":"B-DOOR-KNOCK-VANISH","category":"B","category_name":"Performances and intimidation theater","name":"Door knocks with no one present (knock-and-vanish)","default_route":"IGNORE"},
-  {"id":"RV-EVT-0033","code":"B-OBJECT-DOORSTEP","category":"B","category_name":"Performances and intimidation theater","name":"Object placement on doorstep (anonymous tokens)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0034","code":"B-LOUD-BANGS-CALLS","category":"B","category_name":"Performances and intimidation theater","name":"Sudden loud bangs timed to key calls or emails","default_route":"VERIFY"},
-  {"id":"RV-EVT-0035","code":"B-HARASSMENT-SYNCH","category":"B","category_name":"Performances and intimidation theater","name":"Street harassment synchronized across locations","default_route":"VERIFY"},
-  {"id":"RV-EVT-0036","code":"B-MOCK-INTERROGATION","category":"B","category_name":"Performances and intimidation theater","name":"Public mock interrogation performances","default_route":"IGNORE"},
-  {"id":"RV-EVT-0037","code":"B-SINGING-YOUR-SONG","category":"B","category_name":"Performances and intimidation theater","name":"Singing/whistling your song as you pass","default_route":"IGNORE"},
-  {"id":"RV-EVT-0038","code":"B-COINCIDENCE-SYMBOLS","category":"B","category_name":"Performances and intimidation theater","name":"Coincidences aligning numbers, colors, symbols","default_route":"IGNORE"},
-  {"id":"RV-EVT-0039","code":"B-STREET-SIGNAGE-ALTER","category":"B","category_name":"Performances and intimidation theater","name":"Street signage temporarily altered for you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0040","code":"B-PROJECTED-LIGHTS","category":"B","category_name":"Performances and intimidation theater","name":"Projected lights into windows (morse-like)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0041","code":"C-OBJECT-DISPLACEMENT","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Minor object displacement at home","default_route":"HARDEN"},
-  {"id":"RV-EVT-0042","code":"C-THERMOSTAT-CHANGE","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Thermostat settings changed overnight","default_route":"HARDEN"},
-  {"id":"RV-EVT-0043","code":"C-APPLIANCE-TOGGLE","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Appliances turned on/off unexpectedly","default_route":"HARDEN"},
-  {"id":"RV-EVT-0044","code":"C-WINDOW-UNLOCKED","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Windows unlocked/partially opened","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0045","code":"C-FOOTPRINTS-INDOOR","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Traceable footprints or scuffs indoors","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0046","code":"C-HIDDEN-CAMERA","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Hidden camera discovery (obvious or badly placed)","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0047","code":"C-SMARTLOCK-UNKNOWN-ACCESS","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Smart lock logs showing unknown access","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0048","code":"C-UTILITY-ANOMALY","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Water/electricity usage anomalies","default_route":"VERIFY"},
-  {"id":"RV-EVT-0049","code":"C-UNSCHEDULED-MAINTENANCE","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Maintenance visits without prior notice","default_route":"VERIFY"},
-  {"id":"RV-EVT-0050","code":"C-PET-AGITATION","category":"C","category_name":"Residential intrusions (overt/covert)","name":"Pet agitation aligned with suspected intrusions","default_route":"VERIFY"},
-  {"id":"RV-EVT-0051","code":"D-CREDENTIAL-STUFFING","category":"D","category_name":"Digital account and device threats","name":"Credential stuffing from known breaches","default_route":"HARDEN"},
-  {"id":"RV-EVT-0052","code":"D-PASSWORD-RESET-PROMPT","category":"D","category_name":"Digital account and device threats","name":"Password reset prompts you did not trigger","default_route":"HARDEN"},
-  {"id":"RV-EVT-0053","code":"D-NEW-LOGIN-UNUSUAL","category":"D","category_name":"Digital account and device threats","name":"New login from unusual geo/device","default_route":"HARDEN"},
-  {"id":"RV-EVT-0054","code":"D-MFA-FATIGUE","category":"D","category_name":"Digital account and device threats","name":"MFA fatigue (push-bombing) attempts","default_route":"HARDEN"},
-  {"id":"RV-EVT-0055","code":"D-SESSION-HIJACK-OAUTH","category":"D","category_name":"Digital account and device threats","name":"Session hijack via OAuth token reuse","default_route":"HARDEN"},
-  {"id":"RV-EVT-0056","code":"D-SIM-SWAP-ATTEMPT","category":"D","category_name":"Digital account and device threats","name":"SIM swap or attempted SIM swap","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0057","code":"D-VOICEMAIL-PIN-BRUTE","category":"D","category_name":"Digital account and device threats","name":"Voicemail PIN brute forcing","default_route":"HARDEN"},
-  {"id":"RV-EVT-0058","code":"D-EMAIL-RULE-INJECTION","category":"D","category_name":"Digital account and device threats","name":"Email rule injection (auto-forward/auto-delete)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0059","code":"D-RECOVERY-OPTION-ALTER","category":"D","category_name":"Digital account and device threats","name":"Account recovery options altered silently","default_route":"HARDEN"},
-  {"id":"RV-EVT-0060","code":"D-PHISH-SECURITY-ALERT","category":"D","category_name":"Digital account and device threats","name":"Security alert phishing imitating your providers","default_route":"HARDEN"},
-  {"id":"RV-EVT-0061","code":"D-MOBILE-CONFIG-MALICIOUS","category":"D","category_name":"Digital account and device threats","name":"Malicious mobile config profiles (MDM-like)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0062","code":"D-APP-SIDELOAD-PROMPT","category":"D","category_name":"Digital account and device threats","name":"App sideloading prompts disguised as updates","default_route":"HARDEN"},
-  {"id":"RV-EVT-0063","code":"D-MALVERTISING-DRIVEBY","category":"D","category_name":"Digital account and device threats","name":"Malvertising drive-by installs","default_route":"HARDEN"},
-  {"id":"RV-EVT-0064","code":"D-BROWSER-EXT-DATA-EXFIL","category":"D","category_name":"Digital account and device threats","name":"Browser extension with data exfiltration behavior","default_route":"HARDEN"},
-  {"id":"RV-EVT-0065","code":"D-KEYCHAIN-MANIPULATION","category":"D","category_name":"Digital account and device threats","name":"Keychain/keyring manipulation","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0066","code":"D-CLOUD-SHARE-LEAK","category":"D","category_name":"Digital account and device threats","name":"Cloud storage sharing link leakage","default_route":"HARDEN"},
-  {"id":"RV-EVT-0067","code":"D-UNAUTH-API-TOKEN","category":"D","category_name":"Digital account and device threats","name":"Unauthorized API tokens in dev consoles","default_route":"HARDEN"},
-  {"id":"RV-EVT-0068","code":"D-UNKNOWN-BLUETOOTH-PAIR","category":"D","category_name":"Digital account and device threats","name":"Device pairing to unknown Bluetooth/CarPlay","default_route":"HARDEN"},
-  {"id":"RV-EVT-0069","code":"D-WIFI-EVIL-TWIN","category":"D","category_name":"Digital account and device threats","name":"Wi-Fi Evil Twin (SSID spoof) capture","default_route":"HARDEN"},
-  {"id":"RV-EVT-0070","code":"D-ROGUE-DNS-CAPPORT","category":"D","category_name":"Digital account and device threats","name":"Rogue DNS or captive portal injection","default_route":"HARDEN"},
-  {"id":"RV-EVT-0071","code":"E-ROUTER-CONFIG-TAMPER","category":"E","category_name":"Network and endpoint compromise vectors","name":"Home router config tampering (admin creds reused)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0072","code":"E-ISP-DNS-MANIPULATION","category":"E","category_name":"Network and endpoint compromise vectors","name":"ISP-level DNS manipulation or injection","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0073","code":"E-ARP-SPOOFING","category":"E","category_name":"Network and endpoint compromise vectors","name":"ARP spoofing on shared/public networks","default_route":"HARDEN"},
-  {"id":"RV-EVT-0074","code":"E-IOT-PIVOT","category":"E","category_name":"Network and endpoint compromise vectors","name":"IoT devices exploited as pivot points","default_route":"HARDEN"},
-  {"id":"RV-EVT-0075","code":"E-SMB-OPEN-SHARE","category":"E","category_name":"Network and endpoint compromise vectors","name":"SMB/open shares exposed inadvertently","default_route":"HARDEN"},
-  {"id":"RV-EVT-0076","code":"E-PRINTER-MEMORY-LEAK","category":"E","category_name":"Network and endpoint compromise vectors","name":"Printer/scanner memory leaks of documents","default_route":"VERIFY"},
-  {"id":"RV-EVT-0077","code":"E-OFFICE-MACRO-WEAPON","category":"E","category_name":"Network and endpoint compromise vectors","name":"Office suite macros weaponized (doc, xls, ppt)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0078","code":"E-BROWSER-CREDENTIAL-THEFT","category":"E","category_name":"Network and endpoint compromise vectors","name":"Browser credential theft (non-isolated profile)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0079","code":"E-CLIPBOARD-HIJACK","category":"E","category_name":"Network and endpoint compromise vectors","name":"Clipboard hijacking (passwords/keys copied)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0080","code":"E-RDP-ENABLE-UNAUTH","category":"E","category_name":"Network and endpoint compromise vectors","name":"Remote desktop enablement without consent","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0081","code":"E-HIDDEN-ACCOUNT-BACKDOOR","category":"E","category_name":"Network and endpoint compromise vectors","name":"Hidden accounts or backdoor services created","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0082","code":"E-FIRMWARE-DOWNGRADE","category":"E","category_name":"Network and endpoint compromise vectors","name":"Firmware downgrade/replace attempts","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0083","code":"E-SUPPLYCHAIN-TROJAN","category":"E","category_name":"Network and endpoint compromise vectors","name":"Supply-chain trojaned installer usage","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0084","code":"E-USB-RUBBERDUCKY","category":"E","category_name":"Network and endpoint compromise vectors","name":"USB rubber ducky/BadUSB payloads","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0085","code":"E-WEBCAM-MIC-ACTIVATION","category":"E","category_name":"Network and endpoint compromise vectors","name":"Webcam/mic activation without indicator","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0086","code":"F-CLOUD-SYNC-EXFIL","category":"F","category_name":"Data theft, leaks, and exposure","name":"Exfiltration via cloud sync collisions","default_route":"HARDEN"},
-  {"id":"RV-EVT-0087","code":"F-CONTACT-LIST-SCRAPE","category":"F","category_name":"Data theft, leaks, and exposure","name":"Contact list scraping and misuse","default_route":"HARDEN"},
-  {"id":"RV-EVT-0088","code":"F-CALENDAR-EXPOSURE","category":"F","category_name":"Data theft, leaks, and exposure","name":"Calendar exposure and stalking schedules","default_route":"HARDEN"},
-  {"id":"RV-EVT-0089","code":"F-EXIF-EXPLOIT","category":"F","category_name":"Data theft, leaks, and exposure","name":"Photo metadata (EXIF) exploitation","default_route":"VERIFY"},
-  {"id":"RV-EVT-0090","code":"F-WATERMARK-TRACE","category":"F","category_name":"Data theft, leaks, and exposure","name":"Document watermark tracing to source","default_route":"VERIFY"},
-  {"id":"RV-EVT-0091","code":"F-PASSWORD-MANAGER-TARGET","category":"F","category_name":"Data theft, leaks, and exposure","name":"Password manager vault targeting (master credential fishing)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0092","code":"F-RECOVERY-CODES-HARVEST","category":"F","category_name":"Data theft, leaks, and exposure","name":"Recovery codes harvested (printed/mailed/emailed)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0093","code":"F-FIN-AGGREGATOR-ABUSE","category":"F","category_name":"Data theft, leaks, and exposure","name":"Financial aggregator access abuse (read-only tokens)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0094","code":"F-HEALTH-PORTAL-ACCESS","category":"F","category_name":"Data theft, leaks, and exposure","name":"Health portal access for sensitive data","default_route":"HARDEN"},
-  {"id":"RV-EVT-0095","code":"F-GOV-PORTAL-SCRAPE","category":"F","category_name":"Data theft, leaks, and exposure","name":"Government portal scraping (tax, ID, permits)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0096","code":"G-IMPERSONATION-CONTACTS","category":"G","category_name":"Social engineering and impersonation","name":"Impersonation of you to contacts (SMS/DM/email)","default_route":"HARDEN"},
-  {"id":"RV-EVT-0097","code":"G-URGENT-HELP-FAMILY","category":"G","category_name":"Social engineering and impersonation","name":"Urgent help requests to family in your name","default_route":"VERIFY"},
-  {"id":"RV-EVT-0098","code":"G-DEEPFAKE-VOICE-BANK","category":"G","category_name":"Social engineering and impersonation","name":"Deepfake voice snippets to authenticate to banks","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0099","code":"G-DEEPFAKE-VIDEO-CALL","category":"G","category_name":"Social engineering and impersonation","name":"Video-call deepfake attempt (face + voice)","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0100","code":"G-IT-SUPPORT-SCAM","category":"G","category_name":"Social engineering and impersonation","name":"IT support scams targeted to your stack","default_route":"HARDEN"},
-  {"id":"RV-EVT-0101","code":"G-FAKE-LEGAL-THREAT","category":"G","category_name":"Social engineering and impersonation","name":"Fake legal threats demanding immediate payment","default_route":"VERIFY"},
-  {"id":"RV-EVT-0102","code":"G-MESSAGING-ACCOUNT-TAKEOVER","category":"G","category_name":"Social engineering and impersonation","name":"WhatsApp/Telegram account takeover attempts","default_route":"HARDEN"},
-  {"id":"RV-EVT-0103","code":"G-SOCIAL-CLONE-OUTREACH","category":"G","category_name":"Social engineering and impersonation","name":"Social media clone profile outreach to network","default_route":"HARDEN"},
-  {"id":"RV-EVT-0104","code":"G-LINKEDIN-RECRUITER-LURE","category":"G","category_name":"Social engineering and impersonation","name":"LinkedIn recruiter lures for data/phishing","default_route":"VERIFY"},
-  {"id":"RV-EVT-0105","code":"G-DELIVERY-PRETEXT-ENTRY","category":"G","category_name":"Social engineering and impersonation","name":"Delivery-driver pretext to enter property","default_route":"VERIFY"},
-  {"id":"RV-EVT-0106","code":"H-WHISPER-CAMPAIGN","category":"H","category_name":"Psyops and narrative manipulation","name":"Whisper campaigns (rumors at work/neighborhood)","default_route":"IGNORE"},
-  {"id":"RV-EVT-0107","code":"H-EDITED-SCREENSHOTS","category":"H","category_name":"Psyops and narrative manipulation","name":"Edited screenshots of your posts/messages","default_route":"VERIFY"},
-  {"id":"RV-EVT-0108","code":"H-OUTOFCONTEXT-MEDIA","category":"H","category_name":"Psyops and narrative manipulation","name":"Out-of-context video/audio evidence","default_route":"VERIFY"},
-  {"id":"RV-EVT-0109","code":"H-DOGPILING-COORDINATED","category":"H","category_name":"Psyops and narrative manipulation","name":"Coordinated dogpiling on a post to induce silence","default_route":"IGNORE"},
-  {"id":"RV-EVT-0110","code":"H-CONCERN-TROLLING","category":"H","category_name":"Psyops and narrative manipulation","name":"Concern trolling by sockpuppets urging risky actions","default_route":"IGNORE"},
-  {"id":"RV-EVT-0111","code":"H-REPUTATION-SITE-FALSE","category":"H","category_name":"Psyops and narrative manipulation","name":"Reputation site entries with false claims","default_route":"VERIFY"},
-  {"id":"RV-EVT-0112","code":"H-FAKE-NEWS-MENTION","category":"H","category_name":"Psyops and narrative manipulation","name":"Fake news mentions in fringe outlets","default_route":"IGNORE"},
-  {"id":"RV-EVT-0113","code":"H-HASHTAG-HIJACK","category":"H","category_name":"Psyops and narrative manipulation","name":"Hashtag hijacking linking your name to scandal","default_route":"VERIFY"},
-  {"id":"RV-EVT-0114","code":"H-ANON-TIPS-EMPLOYER","category":"H","category_name":"Psyops and narrative manipulation","name":"Anonymous tips to your employer/clients","default_route":"VERIFY"},
-  {"id":"RV-EVT-0115","code":"H-MENTION-FLOOD","category":"H","category_name":"Psyops and narrative manipulation","name":"Flood of low-quality mentions to bury signals","default_route":"IGNORE"},
-  {"id":"RV-EVT-0116","code":"I-SPURIOUS-PLATFORM-COMPLAINT","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Spurious complaints to platform trust/safety","default_route":"VERIFY"},
-  {"id":"RV-EVT-0117","code":"I-FALSE-DMCA-REQUEST","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"False DMCA/privacy takedown requests","default_route":"VERIFY"},
-  {"id":"RV-EVT-0118","code":"I-PORTAL-SUSPEND-MISUSE","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Misuse of reporting portals to suspend you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0119","code":"I-BOGUS-INVOICE-HARASS","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Bogus invoice/collections harassment","default_route":"VERIFY"},
-  {"id":"RV-EVT-0120","code":"I-WELFARE-NOISE-CHECK","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Welfare checks or noise complaints to police","default_route":"VERIFY"},
-  {"id":"RV-EVT-0121","code":"I-INSURANCE-BANK-FLAG","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Insurance or banking flagging based on false risk","default_route":"VERIFY"},
-  {"id":"RV-EVT-0122","code":"I-LANDLORD-PRESSURE","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Landlord/property manager pressure based on reports","default_route":"VERIFY"},
-  {"id":"RV-EVT-0123","code":"I-HR-INQUIRY-IMPERSONATION","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Employer HR inquiries seeded by impersonation","default_route":"VERIFY"},
-  {"id":"RV-EVT-0124","code":"I-FOIA-HARASSMENT","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Harassing public records requests (FOIA-like)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0125","code":"I-PROCESS-SERVER-THREAT","category":"I","category_name":"Legal/administrative pressure and chokepoints","name":"Process server impersonations or threats","default_route":"VERIFY"},
-  {"id":"RV-EVT-0126","code":"J-SMALL-CARD-TEST","category":"J","category_name":"Financial and logistics interference","name":"Small unauthorized card transactions (testing)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0127","code":"J-CARD-FRAUD-REMOTE-CITY","category":"J","category_name":"Financial and logistics interference","name":"Card present fraud in cities you weren’t in","default_route":"VERIFY"},
-  {"id":"RV-EVT-0128","code":"J-DELIVERY-REROUTE","category":"J","category_name":"Financial and logistics interference","name":"Delivery reroutes/cancellations you didn’t make","default_route":"VERIFY"},
-  {"id":"RV-EVT-0129","code":"J-SUBSCRIPTION-DRAIN","category":"J","category_name":"Financial and logistics interference","name":"Subscription signups to drain funds/time","default_route":"VERIFY"},
-  {"id":"RV-EVT-0130","code":"J-TRAVEL-BOOKING-MOD","category":"J","category_name":"Financial and logistics interference","name":"Travel booking cancellations/modifications","default_route":"VERIFY"},
-  {"id":"RV-EVT-0131","code":"J-RIDESHARE-COLLUSION","category":"J","category_name":"Financial and logistics interference","name":"Rideshare driver collusion for tracking","default_route":"VERIFY"},
-  {"id":"RV-EVT-0132","code":"J-RENTAL-ACCOUNT-OPEN","category":"J","category_name":"Financial and logistics interference","name":"Rental service accounts opened in your name","default_route":"VERIFY"},
-  {"id":"RV-EVT-0133","code":"J-BANK-PHISH-SECURITY","category":"J","category_name":"Financial and logistics interference","name":"Bank account info phishing via security team","default_route":"VERIFY"},
-  {"id":"RV-EVT-0134","code":"J-CRYPTO-SEED-PHISH","category":"J","category_name":"Financial and logistics interference","name":"Crypto wallet seed phrase phishing","default_route":"VERIFY"},
-  {"id":"RV-EVT-0135","code":"J-ATM-SKIMMER-PROXIMITY","category":"J","category_name":"Financial and logistics interference","name":"ATM skimmer proximity patterns near you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0136","code":"K-NIGHT-NOISE-HARASS","category":"K","category_name":"Environmental and sensory interference","name":"Nighttime noise harassment near bedroom window","default_route":"IGNORE"},
-  {"id":"RV-EVT-0137","code":"K-CAR-ALARM-TRIGGER","category":"K","category_name":"Environmental and sensory interference","name":"Car alarms triggered near your route","default_route":"IGNORE"},
-  {"id":"RV-EVT-0138","code":"K-STREETLIGHT-FLICKER","category":"K","category_name":"Environmental and sensory interference","name":"Streetlight flicker coinciding with exits/entries","default_route":"IGNORE"},
-  {"id":"RV-EVT-0139","code":"K-ODOR-SMOKE-TIMED","category":"K","category_name":"Environmental and sensory interference","name":"Odor/smoke events timed to arrivals","default_route":"IGNORE"},
-  {"id":"RV-EVT-0140","code":"K-DIRECTED-SPEAKER","category":"K","category_name":"Environmental and sensory interference","name":"Directed speaker announcements near workspace","default_route":"VERIFY"},
-  {"id":"RV-EVT-0141","code":"K-HVAC-TAMPERING","category":"K","category_name":"Environmental and sensory interference","name":"HVAC tampering in shared buildings","default_route":"VERIFY"},
-  {"id":"RV-EVT-0142","code":"K-MOTION-ALERT-FLOOD","category":"K","category_name":"Environmental and sensory interference","name":"Proximity-triggered motion alerts floods","default_route":"IGNORE"},
-  {"id":"RV-EVT-0143","code":"K-LASER-LED-EYES","category":"K","category_name":"Environmental and sensory interference","name":"Laser/LED pointer into eyes at crosswalks","default_route":"VERIFY"},
-  {"id":"RV-EVT-0144","code":"K-FLOODLIGHT-DOOR-TIMED","category":"K","category_name":"Environmental and sensory interference","name":"Floodlights timed to your door opens","default_route":"IGNORE"},
-  {"id":"RV-EVT-0145","code":"K-INTERCOM-BUZZ-NOONE","category":"K","category_name":"Environmental and sensory interference","name":"Intercom buzz with no one present","default_route":"IGNORE"},
-  {"id":"RV-EVT-0146","code":"L-NOCTURNAL-SUGGESTIVE-AUDIO","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Nocturnal suggestive audio via thin walls or vents","default_route":"VERIFY"},
-  {"id":"RV-EVT-0147","code":"L-SMART-SPEAKER-ACTIVATION","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Smart speaker activation at night with suggestive content","default_route":"VERIFY"},
-  {"id":"RV-EVT-0148","code":"L-NIGHTMARE-PRIMING-MEDIA","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Nightmare priming via evening targeted media","default_route":"IGNORE"},
-  {"id":"RV-EVT-0149","code":"L-BEDTIME-PING-STORM","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Bedtime ping storms (notifications) despite settings","default_route":"VERIFY"},
-  {"id":"RV-EVT-0150","code":"L-BEDROOM-EM-LIGHT-CHANGE","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Sudden changes in bedroom EM/light environment","default_route":"VERIFY"},
-  {"id":"RV-EVT-0151","code":"L-SLEEP-APP-MANIPULATION","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Sleep tracking app manipulation (false scores)","default_route":"VERIFY"},
-  {"id":"RV-EVT-0152","code":"L-SLEEP-TALK-RUMOR","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"You talked in your sleep rumors seeded next day","default_route":"IGNORE"},
-  {"id":"RV-EVT-0153","code":"L-ALARM-MISFIRE","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Alarm misfires to disrupt circadian rhythm","default_route":"VERIFY"},
-  {"id":"RV-EVT-0154","code":"L-LATENIGHT-CALL-HANGUP","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Anonymous late-night calls that hang up","default_route":"IGNORE"},
-  {"id":"RV-EVT-0155","code":"L-STIMULUS-TIMING-INTRUSIVE","category":"L","category_name":"Dream/sleep interference and cognitive channels","name":"Stimulus-timing to anchor intrusive thoughts","default_route":"VERIFY"},
-  {"id":"RV-EVT-0156","code":"M-NEIGHBOR-CONFRONTATION","category":"M","category_name":"Community and relationship pressure","name":"Neighbor confrontations over contrived grievances","default_route":"VERIFY"},
-  {"id":"RV-EVT-0157","code":"M-HOA-BOARD-COMPLAINTS","category":"M","category_name":"Community and relationship pressure","name":"HOA/tenant board weaponized complaints","default_route":"VERIFY"},
-  {"id":"RV-EVT-0158","code":"M-FRIENDS-FAMILY-FALSE-CONCERN","category":"M","category_name":"Community and relationship pressure","name":"Friends/family contacted with false concerns","default_route":"VERIFY"},
-  {"id":"RV-EVT-0159","code":"M-EXPARTNER-MANIPULATION","category":"M","category_name":"Community and relationship pressure","name":"Ex-partner manipulation attempts resurface","default_route":"VERIFY"},
-  {"id":"RV-EVT-0160","code":"M-COMMUNITY-LEADER-INTERVENE","category":"M","category_name":"Community and relationship pressure","name":"Religious/community leaders nudged to intervene","default_route":"VERIFY"},
-  {"id":"RV-EVT-0161","code":"M-REFS-CONTACTED-INNUENDO","category":"M","category_name":"Community and relationship pressure","name":"Professional references contacted with innuendo","default_route":"VERIFY"},
-  {"id":"RV-EVT-0162","code":"M-MEETUP-ORGANIZER-WARN","category":"M","category_name":"Community and relationship pressure","name":"Meetup/event organizers receive warnings","default_route":"VERIFY"},
-  {"id":"RV-EVT-0163","code":"M-VOLUNTEER-EXCLUSION-PRESSURE","category":"M","category_name":"Community and relationship pressure","name":"Volunteer orgs pressured to exclude you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0164","code":"M-SHOPKEEPER-OBSERVE-REPORT","category":"M","category_name":"Community and relationship pressure","name":"Local shopkeepers told to watch/report","default_route":"VERIFY"},
-  {"id":"RV-EVT-0165","code":"M-SOCIAL-VENUE-BLOCKING","category":"M","category_name":"Community and relationship pressure","name":"Coincidental blocking at social venues","default_route":"VERIFY"},
-  {"id":"RV-EVT-0166","code":"N-RIDESHARE-CANCELLATIONS","category":"N","category_name":"Mobility and travel disruptions","name":"Rideshare cancellations upon your pickup","default_route":"VERIFY"},
-  {"id":"RV-EVT-0167","code":"N-TAXI-DRIVER-LOST","category":"N","category_name":"Mobility and travel disruptions","name":"Taxi drivers lost near your destination","default_route":"VERIFY"},
-  {"id":"RV-EVT-0168","code":"N-TRANSIT-DELAY-LINE","category":"N","category_name":"Mobility and travel disruptions","name":"Public transport accidental delays on your line","default_route":"VERIFY"},
-  {"id":"RV-EVT-0169","code":"N-LUGGAGE-TAMPERING","category":"N","category_name":"Mobility and travel disruptions","name":"Luggage tampering indications","default_route":"VERIFY"},
-  {"id":"RV-EVT-0170","code":"N-AIRPORT-RANDOM-CHECKS","category":"N","category_name":"Mobility and travel disruptions","name":"Airport random checks every time","default_route":"VERIFY"},
-  {"id":"RV-EVT-0171","code":"N-TICKETING-SITE-ERRORS","category":"N","category_name":"Mobility and travel disruptions","name":"Ticketing site errors only for your account","default_route":"VERIFY"},
-  {"id":"RV-EVT-0172","code":"N-HOTEL-RESERVATION-NOTFOUND","category":"N","category_name":"Mobility and travel disruptions","name":"Hotel reservation not found on arrival","default_route":"VERIFY"},
-  {"id":"RV-EVT-0173","code":"N-DUP-BOOKINGS-FLAPPING","category":"N","category_name":"Mobility and travel disruptions","name":"Duplicate bookings appearing then disappearing","default_route":"VERIFY"},
-  {"id":"RV-EVT-0174","code":"N-CAR-RENTAL-DAMAGE-CLAIM","category":"N","category_name":"Mobility and travel disruptions","name":"Car rental damage issues invented","default_route":"VERIFY"},
-  {"id":"RV-EVT-0175","code":"N-PARKING-TICKET-ERRONEOUS","category":"N","category_name":"Mobility and travel disruptions","name":"Parking tickets placed erroneously at home","default_route":"VERIFY"},
-  {"id":"RV-EVT-0176","code":"O-CALENDAR-INVITE-MOVE","category":"O","category_name":"Workplace and professional sabotage","name":"Calendar invites moved/duplicated","default_route":"VERIFY"},
-  {"id":"RV-EVT-0177","code":"O-DOCUMENT-VERSION-CONFLICT","category":"O","category_name":"Workplace and professional sabotage","name":"Document version conflicts seeded","default_route":"VERIFY"},
-  {"id":"RV-EVT-0178","code":"O-ACCESS-RIGHTS-TOGGLE","category":"O","category_name":"Workplace and professional sabotage","name":"Access rights toggled on shared repos","default_route":"HARDEN"},
-  {"id":"RV-EVT-0179","code":"O-MEETING-ID-LEAK","category":"O","category_name":"Workplace and professional sabotage","name":"Meeting IDs leaked to crash calls","default_route":"VERIFY"},
-  {"id":"RV-EVT-0180","code":"O-PERFORMANCE-RUMOR","category":"O","category_name":"Workplace and professional sabotage","name":"Performance concern rumors via backchannels","default_route":"VERIFY"},
-  {"id":"RV-EVT-0181","code":"O-CLIENT-POACH-IMPERSONATION","category":"O","category_name":"Workplace and professional sabotage","name":"Client poaching with impersonation","default_route":"VERIFY"},
-  {"id":"RV-EVT-0182","code":"O-RFP-INVALIDATED-CONFLICT","category":"O","category_name":"Workplace and professional sabotage","name":"RFPs invalidated by anonymous conflict tips","default_route":"VERIFY"},
-  {"id":"RV-EVT-0183","code":"O-HR-POLICY-FALSE-VIOLATION","category":"O","category_name":"Workplace and professional sabotage","name":"HR policy violations falsely attributed","default_route":"VERIFY"},
-  {"id":"RV-EVT-0184","code":"O-EXPENSE-REIMBURSEMENT-LOST","category":"O","category_name":"Workplace and professional sabotage","name":"Lost expense reimbursements repeatedly","default_route":"VERIFY"},
-  {"id":"RV-EVT-0185","code":"O-NDA-BREACH-FALSE","category":"O","category_name":"Workplace and professional sabotage","name":"NDA breach accusations seeded with fake evidence","default_route":"VERIFY"},
-  {"id":"RV-EVT-0186","code":"P-PHARMACY-LOST-MEDS","category":"P","category_name":"Health and safety vectors","name":"Pharmacy pickup lost meds","default_route":"VERIFY"},
-  {"id":"RV-EVT-0187","code":"P-APPOINTMENT-CANCELLED","category":"P","category_name":"Health and safety vectors","name":"Appointment cancellations by you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0188","code":"P-TEST-RESULT-MISDIRECT","category":"P","category_name":"Health and safety vectors","name":"Misdirected test results notifications","default_route":"VERIFY"},
-  {"id":"RV-EVT-0189","code":"P-WEARABLE-DATA-ANOMALY","category":"P","category_name":"Health and safety vectors","name":"Wearable device data anomalies","default_route":"VERIFY"},
-  {"id":"RV-EVT-0190","code":"P-GPS-SAFETY-APP-FALSE-ALARM","category":"P","category_name":"Health and safety vectors","name":"GPS safety app false alarms to contacts","default_route":"VERIFY"},
-  {"id":"RV-EVT-0191","code":"P-EMERGENCY-CONTACT-SPOOF","category":"P","category_name":"Health and safety vectors","name":"Emergency contact spoof calls","default_route":"VERIFY"},
-  {"id":"RV-EVT-0192","code":"P-SMOKE-CO-ALARM-FALSE","category":"P","category_name":"Health and safety vectors","name":"Home smoke/CO alarm triggers without cause","default_route":"VERIFY"},
-  {"id":"RV-EVT-0193","code":"P-FRIDGE-PANTRY-TAMPER","category":"P","category_name":"Health and safety vectors","name":"Fridge/pantry tampering suspicion","default_route":"VERIFY"},
-  {"id":"RV-EVT-0194","code":"P-ALLERGEN-INTRODUCED","category":"P","category_name":"Health and safety vectors","name":"Allergens introduced in shared spaces","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0195","code":"P-BIKE-CAR-TIRE-SLOW-LEAK","category":"P","category_name":"Health and safety vectors","name":"Bike/car tire slow leaks near departure","default_route":"VERIFY"},
-  {"id":"RV-EVT-0196","code":"Q-KYC-FAILURE-WITHOUT-CAUSE","category":"Q","category_name":"Platform and identity infrastructure","name":"Identity verification failures (KYC) without cause","default_route":"VERIFY"},
-  {"id":"RV-EVT-0197","code":"Q-PHONE-NUMBER-INVALID","category":"Q","category_name":"Platform and identity infrastructure","name":"Phone number invalid on services","default_route":"VERIFY"},
-  {"id":"RV-EVT-0198","code":"Q-EMAIL-DOMAIN-REPUTATION-DROP","category":"Q","category_name":"Platform and identity infrastructure","name":"Email domain reputation abruptly lowered","default_route":"VERIFY"},
-  {"id":"RV-EVT-0199","code":"Q-SMS-CODE-DELIVERY-FAIL","category":"Q","category_name":"Platform and identity infrastructure","name":"SMS delivery failures on critical codes","default_route":"VERIFY"},
-  {"id":"RV-EVT-0200","code":"Q-CAPTCHA-FRAUD-HYPERAGGRESSIVE","category":"Q","category_name":"Platform and identity infrastructure","name":"Captcha and fraud systems suddenly hyper-aggressive","default_route":"VERIFY"},
-  {"id":"RV-EVT-0201","code":"Q-USERNAME-SQUATTING","category":"Q","category_name":"Platform and identity infrastructure","name":"Username squatting near your handle","default_route":"VERIFY"},
-  {"id":"RV-EVT-0202","code":"Q-LOOKALIKE-DOMAIN-REGISTER","category":"Q","category_name":"Platform and identity infrastructure","name":"Confusable lookalike domains registered","default_route":"VERIFY"},
-  {"id":"RV-EVT-0203","code":"Q-SOCIAL-HANDLE-TYPO-CLONE","category":"Q","category_name":"Platform and identity infrastructure","name":"Social handle subtle typo clones","default_route":"VERIFY"},
-  {"id":"RV-EVT-0204","code":"Q-GRAVATAR-PHOTO-HIJACK","category":"Q","category_name":"Platform and identity infrastructure","name":"Gravatar/profile photo hijack clones","default_route":"VERIFY"},
-  {"id":"RV-EVT-0205","code":"Q-PASSWORD-BREACH-NOTICE-FAKE","category":"Q","category_name":"Platform and identity infrastructure","name":"Password breach notifications faked convincingly","default_route":"VERIFY"},
-  {"id":"RV-EVT-0206","code":"R-SEARCH-RESULT-POLLUTION","category":"R","category_name":"Information environment shaping","name":"Search engine results polluted for your name","default_route":"VERIFY"},
-  {"id":"RV-EVT-0207","code":"R-AUTOCOMPLETE-POISON","category":"R","category_name":"Information environment shaping","name":"Autocomplete poisoned with negative terms","default_route":"VERIFY"},
-  {"id":"RV-EVT-0208","code":"R-MAP-PIN-MANIPULATION","category":"R","category_name":"Information environment shaping","name":"Map pins added/removed for your locations","default_route":"VERIFY"},
-  {"id":"RV-EVT-0209","code":"R-REVIEW-SITE-BRIGADE","category":"R","category_name":"Information environment shaping","name":"Review site brigading against your business","default_route":"VERIFY"},
-  {"id":"RV-EVT-0210","code":"R-KNOWLEDGE-PANEL-VANDAL","category":"R","category_name":"Information environment shaping","name":"Wikipedia/knowledge panel vandalism attempts","default_route":"VERIFY"},
-  {"id":"RV-EVT-0211","code":"R-DATA-BROKER-FALSE-ENTRIES","category":"R","category_name":"Information environment shaping","name":"Data broker files seeded with false entries","default_route":"VERIFY"},
-  {"id":"RV-EVT-0212","code":"R-PUBLIC-RECORDS-DATA-MIX","category":"R","category_name":"Information environment shaping","name":"Public records mixed with someone else’s data","default_route":"VERIFY"},
-  {"id":"RV-EVT-0213","code":"R-ACADEMIC-PROFILE-SPOOF","category":"R","category_name":"Information environment shaping","name":"Academic or publication profiles spoofed","default_route":"VERIFY"},
-  {"id":"RV-EVT-0214","code":"R-CONFERENCE-CFP-SABOTAGE","category":"R","category_name":"Information environment shaping","name":"Conference CFP submissions sabotaged","default_route":"VERIFY"},
-  {"id":"RV-EVT-0215","code":"R-FAKE-CITATION-INDEXING","category":"R","category_name":"Information environment shaping","name":"Scholar indexing of fake citations to you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0216","code":"S-UNAUTH-SUBSCRIPTION-CONTRACT","category":"S","category_name":"Legal boundary and compliance traps","name":"Unauthorized subscription contracts in your name","default_route":"VERIFY"},
-  {"id":"RV-EVT-0217","code":"S-TOS-BREACH-NOTICE-FAKE","category":"S","category_name":"Legal boundary and compliance traps","name":"Terms of service breach notices based on fakes","default_route":"VERIFY"},
-  {"id":"RV-EVT-0218","code":"S-TRADEMARK-COPYRIGHT-COMPLAINT","category":"S","category_name":"Legal boundary and compliance traps","name":"Trademark/copyright complaints about your content","default_route":"VERIFY"},
-  {"id":"RV-EVT-0219","code":"S-DMCA-COUNTERNOTICE-BAIT","category":"S","category_name":"Legal boundary and compliance traps","name":"DMCA counter-notice baiting","default_route":"VERIFY"},
-  {"id":"RV-EVT-0220","code":"S-GDPR-DSAR-CONFUSION","category":"S","category_name":"Legal boundary and compliance traps","name":"GDPR/DSAR requests filed to confuse controllers","default_route":"VERIFY"},
-  {"id":"RV-EVT-0221","code":"S-HARASSMENT-REPORT-FALSE","category":"S","category_name":"Legal boundary and compliance traps","name":"Harassment reports filed against you falsely","default_route":"VERIFY"},
-  {"id":"RV-EVT-0222","code":"S-TRESPASS-ACCUSATION-LURED","category":"S","category_name":"Legal boundary and compliance traps","name":"Trespass accusations after lured entries","default_route":"VERIFY"},
-  {"id":"RV-EVT-0223","code":"S-RECORDING-WITHOUT-CONSENT-TRAP","category":"S","category_name":"Legal boundary and compliance traps","name":"Recording without consent traps","default_route":"VERIFY"},
-  {"id":"RV-EVT-0224","code":"S-DRONE-REGULATION-COMPLAINT","category":"S","category_name":"Legal boundary and compliance traps","name":"Drone regulation complaints against you","default_route":"VERIFY"},
-  {"id":"RV-EVT-0225","code":"S-FIRE-CODE-PERMIT-INSPECTION","category":"S","category_name":"Legal boundary and compliance traps","name":"Fire code/permit inspections triggered","default_route":"VERIFY"},
-  {"id":"RV-EVT-0226","code":"T-FOUND-USB-LURE","category":"T","category_name":"Decoy and honeypot lures","name":"Found USB meets in your path","default_route":"IGNORE"},
-  {"id":"RV-EVT-0227","code":"T-FREE-WIFI-POPUP","category":"T","category_name":"Decoy and honeypot lures","name":"Free Wi-Fi pop-ups at your haunts","default_route":"IGNORE"},
-  {"id":"RV-EVT-0228","code":"T-EXCLUSIVE-BETA-APP-INVITE","category":"T","category_name":"Decoy and honeypot lures","name":"Exclusive beta app invites via DM","default_route":"IGNORE"},
-  {"id":"RV-EVT-0229","code":"T-PRIVATE-GROUP-ID-REQUEST","category":"T","category_name":"Decoy and honeypot lures","name":"Private group invitations requesting scans/IDs","default_route":"IGNORE"},
-  {"id":"RV-EVT-0230","code":"T-SCHOLARSHIP-GRANT-BAIT","category":"T","category_name":"Decoy and honeypot lures","name":"Scholarship or grant bait with forms","default_route":"IGNORE"},
-  {"id":"RV-EVT-0231","code":"T-BUG-BOUNTY-PHISH","category":"T","category_name":"Decoy and honeypot lures","name":"Bug bounty emails with phishing links","default_route":"IGNORE"},
-  {"id":"RV-EVT-0232","code":"T-CLASS-ACTION-PAYOUT-PHISH","category":"T","category_name":"Decoy and honeypot lures","name":"Class action claims payout phishing","default_route":"IGNORE"},
-  {"id":"RV-EVT-0233","code":"T-SECURITY-AUDIT-ADMIN-DEMAND","category":"T","category_name":"Decoy and honeypot lures","name":"Security audit offers demanding admin","default_route":"IGNORE"},
-  {"id":"RV-EVT-0234","code":"T-REPUTATION-CLEAN-LURE","category":"T","category_name":"Decoy and honeypot lures","name":"We can clean your reputation lures","default_route":"IGNORE"},
-  {"id":"RV-EVT-0235","code":"T-PRESS-INTERVIEW-CONTEXT-HARVEST","category":"T","category_name":"Decoy and honeypot lures","name":"Press interview requests harvesting context","default_route":"IGNORE"},
-  {"id":"RV-EVT-0236","code":"U-INTAKE-PIPELINE-FLOOD","category":"U","category_name":"Meta-attacks on defenses","name":"Flooding your intake pipeline to induce overload","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0237","code":"U-CANONICAL-SCHEMA-MIMIC","category":"U","category_name":"Meta-attacks on defenses","name":"Mimicking your canonical schema to slip fakes","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0238","code":"U-METRIC-POISONING-SYNTHETIC","category":"U","category_name":"Meta-attacks on defenses","name":"Poisoning your DNR/metrics with synthetic events","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0239","code":"U-TRUST-ANCHOR-COUNTERFEIT","category":"U","category_name":"Meta-attacks on defenses","name":"Counterfeiting your trust-anchor statements","default_route":"ESCALATE"},
-  {"id":"RV-EVT-0240","code":"U-TIMING-ATTACK-CADENCE","category":"U","category_name":"Meta-attacks on defenses","name":"Timing attacks to break your cadence/tempo","default_route":"ESCALATE"}
+  {
+    "id": "RV-EVT-0001",
+    "code": "A-FOOT-ROTATION",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Foot surveillance with shift rotations",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0002",
+    "code": "A-VEHICLE-HANDOFF",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Vehicle tailing with handoffs at intersections",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0003",
+    "code": "A-STATIC-STAKEOUT",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Static stakeouts near residence/office",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0004",
+    "code": "A-PUBLIC-TRANSPORT-SHADOW",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Shadowing inside public transport",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0005",
+    "code": "A-ROUTINE-PRESENCE",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Repeated presence at predictable routines (gym, shop)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0006",
+    "code": "A-CLOSE-FOLLOW",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Close-follow on foot to test reactions",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0007",
+    "code": "A-OVERT-FILMING",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Overt filming/photography in sight",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0008",
+    "code": "A-COVERT-FILMING",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Covert filming from windows or parked cars",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0009",
+    "code": "A-STORE-STAFF-SHADOW",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Store staff always around during visits",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0010",
+    "code": "A-ELEVATOR-SHADOW",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Elevator shadowing and door-block maneuvers",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0011",
+    "code": "A-STAIRWELL-MIRROR",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Stairwell mirroring (up/down)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0012",
+    "code": "A-CHANCE-MEETING",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Street-corner chance meetings (scripted)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0013",
+    "code": "A-REPEATED-PATH-CROSS",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "We just crossed paths again repetitions",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0014",
+    "code": "A-IDLING-VEHICLE-OBSERVE",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Unmarked vehicle idling with driver observing",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0015",
+    "code": "A-DRONE-HOVER",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Drone hovering in visual range",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0016",
+    "code": "A-NEIGHBOR-WATCH",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Coordinated neighbor watch (curtains move on arrival)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0017",
+    "code": "A-GPS-SCOOTER-TAIL",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "GPS-enabled scooter/bike tailing",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0018",
+    "code": "A-DOG-WALKER-TRAIL",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Trailing dog-walkers who appear repeatedly",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0019",
+    "code": "A-CONSTRUCTION-ALONG-ROUTE",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Construction crews suddenly working along route",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0020",
+    "code": "A-SECURITY-RANDOM-CHECKS",
+    "category": "A",
+    "category_name": "Physical surveillance and proximity pressure",
+    "name": "Security guards random checks focused on target",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0021",
+    "code": "B-KNOW-EVERYTHING-CHANT",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "We know everything chant/phrases overheard",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0022",
+    "code": "B-STAGED-CALL-PRIVATE-DETAILS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Staged phone calls near you with private details",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0023",
+    "code": "B-LOUD-SCHEDULE-COMMENT",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Loud commentary about your schedule in public",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0024",
+    "code": "B-ACTORS-NAME-USE",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Actors using your name in conversations",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0025",
+    "code": "B-DROPPED-DATA-DOCS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Dropped documents with your data in your path",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0026",
+    "code": "B-FLASH-MOB-SIGNS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Flash mobs near your route with suggestive signs",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0027",
+    "code": "B-LICENSE-PLATE-CODES",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "License plates with coded messages (pattern priming)",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0028",
+    "code": "B-STRANGERS-REPEAT-ACTIONS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Random strangers repeating your recent actions",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0029",
+    "code": "B-STORE-DISPLAY-ALTER",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Store displays altered to reference your data",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0030",
+    "code": "B-LASER-WINDOW-BEDTIME",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Laser pointers at windows at bedtime",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0031",
+    "code": "B-NIGHT-CAR-HONKS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Nighttime car honks timed to your lights off",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0032",
+    "code": "B-DOOR-KNOCK-VANISH",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Door knocks with no one present (knock-and-vanish)",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0033",
+    "code": "B-OBJECT-DOORSTEP",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Object placement on doorstep (anonymous tokens)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0034",
+    "code": "B-LOUD-BANGS-CALLS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Sudden loud bangs timed to key calls or emails",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0035",
+    "code": "B-HARASSMENT-SYNCH",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Street harassment synchronized across locations",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0036",
+    "code": "B-MOCK-INTERROGATION",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Public mock interrogation performances",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0037",
+    "code": "B-SINGING-YOUR-SONG",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Singing/whistling your song as you pass",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0038",
+    "code": "B-COINCIDENCE-SYMBOLS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Coincidences aligning numbers, colors, symbols",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0039",
+    "code": "B-STREET-SIGNAGE-ALTER",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Street signage temporarily altered for you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0040",
+    "code": "B-PROJECTED-LIGHTS",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Projected lights into windows (morse-like)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0041",
+    "code": "C-OBJECT-DISPLACEMENT",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Minor object displacement at home",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0042",
+    "code": "C-THERMOSTAT-CHANGE",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Thermostat settings changed overnight",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0043",
+    "code": "C-APPLIANCE-TOGGLE",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Appliances turned on/off unexpectedly",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0044",
+    "code": "C-WINDOW-UNLOCKED",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Windows unlocked/partially opened",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0045",
+    "code": "C-FOOTPRINTS-INDOOR",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Traceable footprints or scuffs indoors",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0046",
+    "code": "C-HIDDEN-CAMERA",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Hidden camera discovery (obvious or badly placed)",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0047",
+    "code": "C-SMARTLOCK-UNKNOWN-ACCESS",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Smart lock logs showing unknown access",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0048",
+    "code": "C-UTILITY-ANOMALY",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Water/electricity usage anomalies",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0049",
+    "code": "C-UNSCHEDULED-MAINTENANCE",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Maintenance visits without prior notice",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0050",
+    "code": "C-PET-AGITATION",
+    "category": "C",
+    "category_name": "Residential intrusions (overt/covert)",
+    "name": "Pet agitation aligned with suspected intrusions",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0051",
+    "code": "D-CREDENTIAL-STUFFING",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Credential stuffing from known breaches",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0052",
+    "code": "D-PASSWORD-RESET-PROMPT",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Password reset prompts you did not trigger",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0053",
+    "code": "D-NEW-LOGIN-UNUSUAL",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "New login from unusual geo/device",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0054",
+    "code": "D-MFA-FATIGUE",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "MFA fatigue (push-bombing) attempts",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0055",
+    "code": "D-SESSION-HIJACK-OAUTH",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Session hijack via OAuth token reuse",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0056",
+    "code": "D-SIM-SWAP-ATTEMPT",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "SIM swap or attempted SIM swap",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0057",
+    "code": "D-VOICEMAIL-PIN-BRUTE",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Voicemail PIN brute forcing",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0058",
+    "code": "D-EMAIL-RULE-INJECTION",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Email rule injection (auto-forward/auto-delete)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0059",
+    "code": "D-RECOVERY-OPTION-ALTER",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Account recovery options altered silently",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0060",
+    "code": "D-PHISH-SECURITY-ALERT",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Security alert phishing imitating your providers",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0061",
+    "code": "D-MOBILE-CONFIG-MALICIOUS",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Malicious mobile config profiles (MDM-like)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0062",
+    "code": "D-APP-SIDELOAD-PROMPT",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "App sideloading prompts disguised as updates",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0063",
+    "code": "D-MALVERTISING-DRIVEBY",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Malvertising drive-by installs",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0064",
+    "code": "D-BROWSER-EXT-DATA-EXFIL",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Browser extension with data exfiltration behavior",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0065",
+    "code": "D-KEYCHAIN-MANIPULATION",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Keychain/keyring manipulation",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0066",
+    "code": "D-CLOUD-SHARE-LEAK",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Cloud storage sharing link leakage",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0067",
+    "code": "D-UNAUTH-API-TOKEN",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Unauthorized API tokens in dev consoles",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0068",
+    "code": "D-UNKNOWN-BLUETOOTH-PAIR",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Device pairing to unknown Bluetooth/CarPlay",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0069",
+    "code": "D-WIFI-EVIL-TWIN",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Wi-Fi Evil Twin (SSID spoof) capture",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0070",
+    "code": "D-ROGUE-DNS-CAPPORT",
+    "category": "D",
+    "category_name": "Digital account and device threats",
+    "name": "Rogue DNS or captive portal injection",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0071",
+    "code": "E-ROUTER-CONFIG-TAMPER",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Home router config tampering (admin creds reused)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0072",
+    "code": "E-ISP-DNS-MANIPULATION",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "ISP-level DNS manipulation or injection",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0073",
+    "code": "E-ARP-SPOOFING",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "ARP spoofing on shared/public networks",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0074",
+    "code": "E-IOT-PIVOT",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "IoT devices exploited as pivot points",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0075",
+    "code": "E-SMB-OPEN-SHARE",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "SMB/open shares exposed inadvertently",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0076",
+    "code": "E-PRINTER-MEMORY-LEAK",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Printer/scanner memory leaks of documents",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0077",
+    "code": "E-OFFICE-MACRO-WEAPON",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Office suite macros weaponized (doc, xls, ppt)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0078",
+    "code": "E-BROWSER-CREDENTIAL-THEFT",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Browser credential theft (non-isolated profile)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0079",
+    "code": "E-CLIPBOARD-HIJACK",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Clipboard hijacking (passwords/keys copied)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0080",
+    "code": "E-RDP-ENABLE-UNAUTH",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Remote desktop enablement without consent",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0081",
+    "code": "E-HIDDEN-ACCOUNT-BACKDOOR",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Hidden accounts or backdoor services created",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0082",
+    "code": "E-FIRMWARE-DOWNGRADE",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Firmware downgrade/replace attempts",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0083",
+    "code": "E-SUPPLYCHAIN-TROJAN",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Supply-chain trojaned installer usage",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0084",
+    "code": "E-USB-RUBBERDUCKY",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "USB rubber ducky/BadUSB payloads",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0085",
+    "code": "E-WEBCAM-MIC-ACTIVATION",
+    "category": "E",
+    "category_name": "Network and endpoint compromise vectors",
+    "name": "Webcam/mic activation without indicator",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0086",
+    "code": "F-CLOUD-SYNC-EXFIL",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Exfiltration via cloud sync collisions",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0087",
+    "code": "F-CONTACT-LIST-SCRAPE",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Contact list scraping and misuse",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0088",
+    "code": "F-CALENDAR-EXPOSURE",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Calendar exposure and stalking schedules",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0089",
+    "code": "F-EXIF-EXPLOIT",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Photo metadata (EXIF) exploitation",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0090",
+    "code": "F-WATERMARK-TRACE",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Document watermark tracing to source",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0091",
+    "code": "F-PASSWORD-MANAGER-TARGET",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Password manager vault targeting (master credential fishing)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0092",
+    "code": "F-RECOVERY-CODES-HARVEST",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Recovery codes harvested (printed/mailed/emailed)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0093",
+    "code": "F-FIN-AGGREGATOR-ABUSE",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Financial aggregator access abuse (read-only tokens)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0094",
+    "code": "F-HEALTH-PORTAL-ACCESS",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Health portal access for sensitive data",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0095",
+    "code": "F-GOV-PORTAL-SCRAPE",
+    "category": "F",
+    "category_name": "Data theft, leaks, and exposure",
+    "name": "Government portal scraping (tax, ID, permits)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0096",
+    "code": "G-IMPERSONATION-CONTACTS",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Impersonation of you to contacts (SMS/DM/email)",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0097",
+    "code": "G-URGENT-HELP-FAMILY",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Urgent help requests to family in your name",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0098",
+    "code": "G-DEEPFAKE-VOICE-BANK",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Deepfake voice snippets to authenticate to banks",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0099",
+    "code": "G-DEEPFAKE-VIDEO-CALL",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Video-call deepfake attempt (face + voice)",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0100",
+    "code": "G-IT-SUPPORT-SCAM",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "IT support scams targeted to your stack",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0101",
+    "code": "G-FAKE-LEGAL-THREAT",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Fake legal threats demanding immediate payment",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0102",
+    "code": "G-MESSAGING-ACCOUNT-TAKEOVER",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "WhatsApp/Telegram account takeover attempts",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0103",
+    "code": "G-SOCIAL-CLONE-OUTREACH",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Social media clone profile outreach to network",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0104",
+    "code": "G-LINKEDIN-RECRUITER-LURE",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "LinkedIn recruiter lures for data/phishing",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0105",
+    "code": "G-DELIVERY-PRETEXT-ENTRY",
+    "category": "G",
+    "category_name": "Social engineering and impersonation",
+    "name": "Delivery-driver pretext to enter property",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0106",
+    "code": "H-WHISPER-CAMPAIGN",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Whisper campaigns (rumors at work/neighborhood)",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0107",
+    "code": "H-EDITED-SCREENSHOTS",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Edited screenshots of your posts/messages",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0108",
+    "code": "H-OUTOFCONTEXT-MEDIA",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Out-of-context video/audio evidence",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0109",
+    "code": "H-DOGPILING-COORDINATED",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Coordinated dogpiling on a post to induce silence",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0110",
+    "code": "H-CONCERN-TROLLING",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Concern trolling by sockpuppets urging risky actions",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0111",
+    "code": "H-REPUTATION-SITE-FALSE",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Reputation site entries with false claims",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0112",
+    "code": "H-FAKE-NEWS-MENTION",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Fake news mentions in fringe outlets",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0113",
+    "code": "H-HASHTAG-HIJACK",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Hashtag hijacking linking your name to scandal",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0114",
+    "code": "H-ANON-TIPS-EMPLOYER",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Anonymous tips to your employer/clients",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0115",
+    "code": "H-MENTION-FLOOD",
+    "category": "H",
+    "category_name": "Psyops and narrative manipulation",
+    "name": "Flood of low-quality mentions to bury signals",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0116",
+    "code": "I-SPURIOUS-PLATFORM-COMPLAINT",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Spurious complaints to platform trust/safety",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0117",
+    "code": "I-FALSE-DMCA-REQUEST",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "False DMCA/privacy takedown requests",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0118",
+    "code": "I-PORTAL-SUSPEND-MISUSE",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Misuse of reporting portals to suspend you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0119",
+    "code": "I-BOGUS-INVOICE-HARASS",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Bogus invoice/collections harassment",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0120",
+    "code": "I-WELFARE-NOISE-CHECK",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Welfare checks or noise complaints to police",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0121",
+    "code": "I-INSURANCE-BANK-FLAG",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Insurance or banking flagging based on false risk",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0122",
+    "code": "I-LANDLORD-PRESSURE",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Landlord/property manager pressure based on reports",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0123",
+    "code": "I-HR-INQUIRY-IMPERSONATION",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Employer HR inquiries seeded by impersonation",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0124",
+    "code": "I-FOIA-HARASSMENT",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Harassing public records requests (FOIA-like)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0125",
+    "code": "I-PROCESS-SERVER-THREAT",
+    "category": "I",
+    "category_name": "Legal/administrative pressure and chokepoints",
+    "name": "Process server impersonations or threats",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0126",
+    "code": "J-SMALL-CARD-TEST",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Small unauthorized card transactions (testing)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0127",
+    "code": "J-CARD-FRAUD-REMOTE-CITY",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Card present fraud in cities you weren\u2019t in",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0128",
+    "code": "J-DELIVERY-REROUTE",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Delivery reroutes/cancellations you didn\u2019t make",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0129",
+    "code": "J-SUBSCRIPTION-DRAIN",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Subscription signups to drain funds/time",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0130",
+    "code": "J-TRAVEL-BOOKING-MOD",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Travel booking cancellations/modifications",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0131",
+    "code": "J-RIDESHARE-COLLUSION",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Rideshare driver collusion for tracking",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0132",
+    "code": "J-RENTAL-ACCOUNT-OPEN",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Rental service accounts opened in your name",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0133",
+    "code": "J-BANK-PHISH-SECURITY",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Bank account info phishing via security team",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0134",
+    "code": "J-CRYPTO-SEED-PHISH",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "Crypto wallet seed phrase phishing",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0135",
+    "code": "J-ATM-SKIMMER-PROXIMITY",
+    "category": "J",
+    "category_name": "Financial and logistics interference",
+    "name": "ATM skimmer proximity patterns near you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0136",
+    "code": "K-NIGHT-NOISE-HARASS",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Nighttime noise harassment near bedroom window",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0137",
+    "code": "K-CAR-ALARM-TRIGGER",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Car alarms triggered near your route",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0138",
+    "code": "K-STREETLIGHT-FLICKER",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Streetlight flicker coinciding with exits/entries",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0139",
+    "code": "K-ODOR-SMOKE-TIMED",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Odor/smoke events timed to arrivals",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0140",
+    "code": "K-DIRECTED-SPEAKER",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Directed speaker announcements near workspace",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0141",
+    "code": "K-HVAC-TAMPERING",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "HVAC tampering in shared buildings",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0142",
+    "code": "K-MOTION-ALERT-FLOOD",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Proximity-triggered motion alerts floods",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0143",
+    "code": "K-LASER-LED-EYES",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Laser/LED pointer into eyes at crosswalks",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0144",
+    "code": "K-FLOODLIGHT-DOOR-TIMED",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Floodlights timed to your door opens",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0145",
+    "code": "K-INTERCOM-BUZZ-NOONE",
+    "category": "K",
+    "category_name": "Environmental and sensory interference",
+    "name": "Intercom buzz with no one present",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0146",
+    "code": "L-NOCTURNAL-SUGGESTIVE-AUDIO",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Nocturnal suggestive audio via thin walls or vents",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0147",
+    "code": "L-SMART-SPEAKER-ACTIVATION",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Smart speaker activation at night with suggestive content",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0148",
+    "code": "L-NIGHTMARE-PRIMING-MEDIA",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Nightmare priming via evening targeted media",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0149",
+    "code": "L-BEDTIME-PING-STORM",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Bedtime ping storms (notifications) despite settings",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0150",
+    "code": "L-BEDROOM-EM-LIGHT-CHANGE",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Sudden changes in bedroom EM/light environment",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0151",
+    "code": "L-SLEEP-APP-MANIPULATION",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Sleep tracking app manipulation (false scores)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0152",
+    "code": "L-SLEEP-TALK-RUMOR",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "You talked in your sleep rumors seeded next day",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0153",
+    "code": "L-ALARM-MISFIRE",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Alarm misfires to disrupt circadian rhythm",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0154",
+    "code": "L-LATENIGHT-CALL-HANGUP",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Anonymous late-night calls that hang up",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0155",
+    "code": "L-STIMULUS-TIMING-INTRUSIVE",
+    "category": "L",
+    "category_name": "Dream/sleep interference and cognitive channels",
+    "name": "Stimulus-timing to anchor intrusive thoughts",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0156",
+    "code": "M-NEIGHBOR-CONFRONTATION",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Neighbor confrontations over contrived grievances",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0157",
+    "code": "M-HOA-BOARD-COMPLAINTS",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "HOA/tenant board weaponized complaints",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0158",
+    "code": "M-FRIENDS-FAMILY-FALSE-CONCERN",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Friends/family contacted with false concerns",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0159",
+    "code": "M-EXPARTNER-MANIPULATION",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Ex-partner manipulation attempts resurface",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0160",
+    "code": "M-COMMUNITY-LEADER-INTERVENE",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Religious/community leaders nudged to intervene",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0161",
+    "code": "M-REFS-CONTACTED-INNUENDO",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Professional references contacted with innuendo",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0162",
+    "code": "M-MEETUP-ORGANIZER-WARN",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Meetup/event organizers receive warnings",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0163",
+    "code": "M-VOLUNTEER-EXCLUSION-PRESSURE",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Volunteer orgs pressured to exclude you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0164",
+    "code": "M-SHOPKEEPER-OBSERVE-REPORT",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Local shopkeepers told to watch/report",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0165",
+    "code": "M-SOCIAL-VENUE-BLOCKING",
+    "category": "M",
+    "category_name": "Community and relationship pressure",
+    "name": "Coincidental blocking at social venues",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0166",
+    "code": "N-RIDESHARE-CANCELLATIONS",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Rideshare cancellations upon your pickup",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0167",
+    "code": "N-TAXI-DRIVER-LOST",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Taxi drivers lost near your destination",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0168",
+    "code": "N-TRANSIT-DELAY-LINE",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Public transport accidental delays on your line",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0169",
+    "code": "N-LUGGAGE-TAMPERING",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Luggage tampering indications",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0170",
+    "code": "N-AIRPORT-RANDOM-CHECKS",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Airport random checks every time",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0171",
+    "code": "N-TICKETING-SITE-ERRORS",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Ticketing site errors only for your account",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0172",
+    "code": "N-HOTEL-RESERVATION-NOTFOUND",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Hotel reservation not found on arrival",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0173",
+    "code": "N-DUP-BOOKINGS-FLAPPING",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Duplicate bookings appearing then disappearing",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0174",
+    "code": "N-CAR-RENTAL-DAMAGE-CLAIM",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Car rental damage issues invented",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0175",
+    "code": "N-PARKING-TICKET-ERRONEOUS",
+    "category": "N",
+    "category_name": "Mobility and travel disruptions",
+    "name": "Parking tickets placed erroneously at home",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0176",
+    "code": "O-CALENDAR-INVITE-MOVE",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Calendar invites moved/duplicated",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0177",
+    "code": "O-DOCUMENT-VERSION-CONFLICT",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Document version conflicts seeded",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0178",
+    "code": "O-ACCESS-RIGHTS-TOGGLE",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Access rights toggled on shared repos",
+    "default_route": "HARDEN"
+  },
+  {
+    "id": "RV-EVT-0179",
+    "code": "O-MEETING-ID-LEAK",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Meeting IDs leaked to crash calls",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0180",
+    "code": "O-PERFORMANCE-RUMOR",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Performance concern rumors via backchannels",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0181",
+    "code": "O-CLIENT-POACH-IMPERSONATION",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Client poaching with impersonation",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0182",
+    "code": "O-RFP-INVALIDATED-CONFLICT",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "RFPs invalidated by anonymous conflict tips",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0183",
+    "code": "O-HR-POLICY-FALSE-VIOLATION",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "HR policy violations falsely attributed",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0184",
+    "code": "O-EXPENSE-REIMBURSEMENT-LOST",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "Lost expense reimbursements repeatedly",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0185",
+    "code": "O-NDA-BREACH-FALSE",
+    "category": "O",
+    "category_name": "Workplace and professional sabotage",
+    "name": "NDA breach accusations seeded with fake evidence",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0186",
+    "code": "P-PHARMACY-LOST-MEDS",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Pharmacy pickup lost meds",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0187",
+    "code": "P-APPOINTMENT-CANCELLED",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Appointment cancellations by you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0188",
+    "code": "P-TEST-RESULT-MISDIRECT",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Misdirected test results notifications",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0189",
+    "code": "P-WEARABLE-DATA-ANOMALY",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Wearable device data anomalies",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0190",
+    "code": "P-GPS-SAFETY-APP-FALSE-ALARM",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "GPS safety app false alarms to contacts",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0191",
+    "code": "P-EMERGENCY-CONTACT-SPOOF",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Emergency contact spoof calls",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0192",
+    "code": "P-SMOKE-CO-ALARM-FALSE",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Home smoke/CO alarm triggers without cause",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0193",
+    "code": "P-FRIDGE-PANTRY-TAMPER",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Fridge/pantry tampering suspicion",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0194",
+    "code": "P-ALLERGEN-INTRODUCED",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Allergens introduced in shared spaces",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0195",
+    "code": "P-BIKE-CAR-TIRE-SLOW-LEAK",
+    "category": "P",
+    "category_name": "Health and safety vectors",
+    "name": "Bike/car tire slow leaks near departure",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0196",
+    "code": "Q-KYC-FAILURE-WITHOUT-CAUSE",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Identity verification failures (KYC) without cause",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0197",
+    "code": "Q-PHONE-NUMBER-INVALID",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Phone number invalid on services",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0198",
+    "code": "Q-EMAIL-DOMAIN-REPUTATION-DROP",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Email domain reputation abruptly lowered",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0199",
+    "code": "Q-SMS-CODE-DELIVERY-FAIL",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "SMS delivery failures on critical codes",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0200",
+    "code": "Q-CAPTCHA-FRAUD-HYPERAGGRESSIVE",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Captcha and fraud systems suddenly hyper-aggressive",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0201",
+    "code": "Q-USERNAME-SQUATTING",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Username squatting near your handle",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0202",
+    "code": "Q-LOOKALIKE-DOMAIN-REGISTER",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Confusable lookalike domains registered",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0203",
+    "code": "Q-SOCIAL-HANDLE-TYPO-CLONE",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Social handle subtle typo clones",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0204",
+    "code": "Q-GRAVATAR-PHOTO-HIJACK",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Gravatar/profile photo hijack clones",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0205",
+    "code": "Q-PASSWORD-BREACH-NOTICE-FAKE",
+    "category": "Q",
+    "category_name": "Platform and identity infrastructure",
+    "name": "Password breach notifications faked convincingly",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0206",
+    "code": "R-SEARCH-RESULT-POLLUTION",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Search engine results polluted for your name",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0207",
+    "code": "R-AUTOCOMPLETE-POISON",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Autocomplete poisoned with negative terms",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0208",
+    "code": "R-MAP-PIN-MANIPULATION",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Map pins added/removed for your locations",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0209",
+    "code": "R-REVIEW-SITE-BRIGADE",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Review site brigading against your business",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0210",
+    "code": "R-KNOWLEDGE-PANEL-VANDAL",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Wikipedia/knowledge panel vandalism attempts",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0211",
+    "code": "R-DATA-BROKER-FALSE-ENTRIES",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Data broker files seeded with false entries",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0212",
+    "code": "R-PUBLIC-RECORDS-DATA-MIX",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Public records mixed with someone else\u2019s data",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0213",
+    "code": "R-ACADEMIC-PROFILE-SPOOF",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Academic or publication profiles spoofed",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0214",
+    "code": "R-CONFERENCE-CFP-SABOTAGE",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Conference CFP submissions sabotaged",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0215",
+    "code": "R-FAKE-CITATION-INDEXING",
+    "category": "R",
+    "category_name": "Information environment shaping",
+    "name": "Scholar indexing of fake citations to you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0216",
+    "code": "S-UNAUTH-SUBSCRIPTION-CONTRACT",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Unauthorized subscription contracts in your name",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0217",
+    "code": "S-TOS-BREACH-NOTICE-FAKE",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Terms of service breach notices based on fakes",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0218",
+    "code": "S-TRADEMARK-COPYRIGHT-COMPLAINT",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Trademark/copyright complaints about your content",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0219",
+    "code": "S-DMCA-COUNTERNOTICE-BAIT",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "DMCA counter-notice baiting",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0220",
+    "code": "S-GDPR-DSAR-CONFUSION",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "GDPR/DSAR requests filed to confuse controllers",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0221",
+    "code": "S-HARASSMENT-REPORT-FALSE",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Harassment reports filed against you falsely",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0222",
+    "code": "S-TRESPASS-ACCUSATION-LURED",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Trespass accusations after lured entries",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0223",
+    "code": "S-RECORDING-WITHOUT-CONSENT-TRAP",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Recording without consent traps",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0224",
+    "code": "S-DRONE-REGULATION-COMPLAINT",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Drone regulation complaints against you",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0225",
+    "code": "S-FIRE-CODE-PERMIT-INSPECTION",
+    "category": "S",
+    "category_name": "Legal boundary and compliance traps",
+    "name": "Fire code/permit inspections triggered",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0226",
+    "code": "T-FOUND-USB-LURE",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Found USB meets in your path",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0227",
+    "code": "T-FREE-WIFI-POPUP",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Free Wi-Fi pop-ups at your haunts",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0228",
+    "code": "T-EXCLUSIVE-BETA-APP-INVITE",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Exclusive beta app invites via DM",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0229",
+    "code": "T-PRIVATE-GROUP-ID-REQUEST",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Private group invitations requesting scans/IDs",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0230",
+    "code": "T-SCHOLARSHIP-GRANT-BAIT",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Scholarship or grant bait with forms",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0231",
+    "code": "T-BUG-BOUNTY-PHISH",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Bug bounty emails with phishing links",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0232",
+    "code": "T-CLASS-ACTION-PAYOUT-PHISH",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Class action claims payout phishing",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0233",
+    "code": "T-SECURITY-AUDIT-ADMIN-DEMAND",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Security audit offers demanding admin",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0234",
+    "code": "T-REPUTATION-CLEAN-LURE",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "We can clean your reputation lures",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0235",
+    "code": "T-PRESS-INTERVIEW-CONTEXT-HARVEST",
+    "category": "T",
+    "category_name": "Decoy and honeypot lures",
+    "name": "Press interview requests harvesting context",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0236",
+    "code": "U-INTAKE-PIPELINE-FLOOD",
+    "category": "U",
+    "category_name": "Meta-attacks on defenses",
+    "name": "Flooding your intake pipeline to induce overload",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0237",
+    "code": "U-CANONICAL-SCHEMA-MIMIC",
+    "category": "U",
+    "category_name": "Meta-attacks on defenses",
+    "name": "Mimicking your canonical schema to slip fakes",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0238",
+    "code": "U-METRIC-POISONING-SYNTHETIC",
+    "category": "U",
+    "category_name": "Meta-attacks on defenses",
+    "name": "Poisoning your DNR/metrics with synthetic events",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0239",
+    "code": "U-TRUST-ANCHOR-COUNTERFEIT",
+    "category": "U",
+    "category_name": "Meta-attacks on defenses",
+    "name": "Counterfeiting your trust-anchor statements",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0240",
+    "code": "U-TIMING-ATTACK-CADENCE",
+    "category": "U",
+    "category_name": "Meta-attacks on defenses",
+    "name": "Timing attacks to break your cadence/tempo",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0241",
+    "code": "B-SIMILAR-FACE-APPEARANCE-PERSON-APPEARS-A",
+    "category": "B",
+    "category_name": "Performances and intimidation theater",
+    "name": "Similar face/appearance person appears around/near",
+    "default_route": "VERIFY"
+  }
+  ,{
+    "id": "RV-EVT-0242",
+    "code": "V-STAGED-BRAKE-CHECK",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Repeated hard brake checks directly in front to induce rear-end blame",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0243",
+    "code": "V-SWERVE-COLLISION-FRAME",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Last-second swerve into lane forcing evasive contact then blaming",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0244",
+    "code": "V-BOX-IN-BIKE-LANE",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Coordinated box-in of cyclist creating unavoidable contact risk",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0245",
+    "code": "V-DOORING-SETUP",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Vehicle parks then timed door opening as you pass (staged dooring)",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0246",
+    "code": "V-FORCED-MERGE-PINCH",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Dual-side squeeze forcing unsafe merge or side-scrape",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0247",
+    "code": "V-INTERSECTION-ROLL-TRAP",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Slow roll into intersection baiting right-of-way violation",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0248",
+    "code": "V-SUDDEN-REVERSE-IMPACT",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Vehicle reverses suddenly toward you to allege you rear-ended",
+    "default_route": "ESCALATE"
+  },
+  {
+    "id": "RV-EVT-0249",
+    "code": "V-CONVOY-BLOCK-ROUTE",
+    "category": "V",
+    "category_name": "Vehicular coercion and staged collision tactics",
+    "name": "Multi-vehicle convoy pacing & blocking exits (pressure/framing)",
+    "default_route": "ESCALATE"
+  }
 ]
