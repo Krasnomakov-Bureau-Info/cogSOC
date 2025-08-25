@@ -381,8 +381,9 @@ This gives a full ladder from “file comprehensive cases and brief media” dow
 - as a possible meausure allow making journal public with one click, if no interaction happens within certain time amount
 - add ability to attach and save photo/video/sound materials to cases 
 - by default photo/video/sound must be stored privately
-- however, if needed DB must quickly go public to counter events and prevent future covert work
+- add descriptions and details to events, connect to existing registered cases (for leagal reference and filing as potential techniques/tactics)
 
+- however, if needed DB must quickly go public to counter events and prevent future covert work
 - think over possible community of users + cross verification from DBs of multiple users
 
 - possible next stages in Civil Defense context may include development of a network of registered(!) live surveillance devices such as sensors, cameras network plus allowed AI models that don't contradict EU AI Act
