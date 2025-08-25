@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 # Ignore macOS files
 .DS_Store
+
+# Ignore taxonomy journal folder and its contents (local notes / generated files)
+taxonomy/journal/
