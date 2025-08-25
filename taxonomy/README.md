@@ -371,3 +371,42 @@ Tiered response catalog you can wire to your taxonomy and protocol. It’s order
 - Intake schema (JSON) and a codebook mapping event classes → default level, evidence hints, and escalation tripwires.
 
 This gives a full ladder from “file comprehensive cases and brief media” down to “ignore.” Hook it into your pipeline so a single labeled observation deterministically picks the least necessary action, and let metrics handle when to climb the ladder.
+
+---
+
+## TO DO:
+
+- update functionality to allow user accounts 
+- figure out deployment ( allow live remote access from mobile devices )
+- as a possible meausure allow making journal public with one click, if no interaction happens within certain time amount
+- add ability to attach and save photo/video/sound materials to cases 
+- by default photo/video/sound must be stored privately
+- however, if needed DB must quickly go public to counter events and prevent future covert work
+
+- think over possible community of users + cross verification from DBs of multiple users
+
+- possible next stages in Civil Defense context may include development of a network of registered(!) live surveillance devices such as sensors, cameras network plus allowed AI models that don't contradict EU AI Act
+- then observations can be verified with private network + OSINT 
+
+- research and connect services for AI facial comparison check with gathered photos/video, sound 
+- and research laws in this context
+- laws and regulatory act for dossier and personal profile collection (GDPR?, how laws cover/allow private investigation and how to legally store data) -> making DBs public is a serious counter action in this sense, but can happen in some cases 
+
+- add forms and templates for case filing to police 
+- add forms and templates for local and international case filing and complaints 
+- allow a complete legal framework for case filing locally and internationally 
+- add procedures and templates for escalation to higher bodies (above police)
+- consider automation functionality (log case to complaint sent into several organizations)
+
+- research relevant organizations to connect to for professional help (legal, psychology, privacy, police, etc.)
+
+- think over algorithmic implementation of requisite variety and occam's razor with UM usage in the context (is it possible to compute the process on the individual level and measure various layers of individual resilience in accordance to the amoun of incomming pressure/attacks?)
+
+----
+
+### Notes
+
+- camera/AI/sensor network doesn't add to privacy, but at least it will disrupt illegal surveillance, following and various types of covert attacks in blind/grey zone 
+- if realized with compliance to laws and regulatory acts will exist 
+- only legally obtained data can serve as an evidence in the criminal court -> develop a legal procedure to collect and store evidence in the context of private investigation 
+- maybe check licensing 
