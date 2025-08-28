@@ -376,13 +376,14 @@ This gives a full ladder from “file comprehensive cases and brief media” dow
 
 ## TO DO:
 
+- add suggestive behaviour category 
 - update functionality to allow user accounts 
 - figure out deployment ( allow live remote access from mobile devices )
 - as a possible meausure allow making journal public with one click, if no interaction happens within certain time amount
 - add ability to attach and save photo/video/sound materials to cases 
 - by default photo/video/sound must be stored privately
 - add descriptions and details to events, connect to existing registered cases (for leagal reference and filing as potential techniques/tactics)
-
+- add a possibility to send evidence to police or other relevant organisations locally and internationally
 - however, if needed DB must quickly go public to counter events and prevent future covert work
 - think over possible community of users + cross verification from DBs of multiple users
 
@@ -395,7 +396,7 @@ This gives a full ladder from “file comprehensive cases and brief media” dow
 
 - add forms and templates for case filing to police 
 - add forms and templates for local and international case filing and complaints 
-- allow a complete legal framework for case filing locally and internationally 
+- allow a complete legal framework for case filing locally and internationally (add countries list with relevant bodies and forms of request/complaint)
 - add procedures and templates for escalation to higher bodies (above police)
 - consider automation functionality (log case to complaint sent into several organizations)
 
