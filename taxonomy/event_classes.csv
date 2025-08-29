@@ -248,3 +248,18 @@ RV-EVT-0246,V-FORCED-MERGE-PINCH,V,"Vehicular coercion and staged collision tact
 RV-EVT-0247,V-INTERSECTION-ROLL-TRAP,V,"Vehicular coercion and staged collision tactics","Slow roll into intersection baiting right-of-way violation",VERIFY
 RV-EVT-0248,V-SUDDEN-REVERSE-IMPACT,V,"Vehicular coercion and staged collision tactics","Vehicle reverses suddenly toward you to allege you rear-ended",ESCALATE
 RV-EVT-0249,V-CONVOY-BLOCK-ROUTE,V,"Vehicular coercion and staged collision tactics","Multi-vehicle convoy pacing & blocking exits (pressure/framing)",ESCALATE
+RV-EVT-0250,W-SOFT-FLIRT-REPEATED,W,"Suggestive behavior and thematic nudging","Repeated light flirtation to test personal boundaries",VERIFY
+RV-EVT-0251,W-ORIENTATION-PROBE-INDIRECT,W,"Suggestive behavior and thematic nudging","Indirect probing about orientation or identity via leading questions",IGNORE
+RV-EVT-0252,W-SUGGESTIVE-DM-DRIP,W,"Suggestive behavior and thematic nudging","Escalating suggestive private messages over time (drip escalation)",VERIFY
+RV-EVT-0253,W-IDENTITY-POLITIC-PUSH,W,"Suggestive behavior and thematic nudging","Steering neutral chats into polarizing identity or social topics",IGNORE
+RV-EVT-0254,W-POLARIZING-ISSUE-ANCHOR,W,"Suggestive behavior and thematic nudging","Anchoring unrelated conversations to conflict/war or political themes",IGNORE
+RV-EVT-0255,W-GENDER-NORM-CHALLENGE-COORD,W,"Suggestive behavior and thematic nudging","Coordinated challenges to statements to provoke gender role debates",IGNORE
+RV-EVT-0256,W-SENSITIVE-RACE-TOPIC-BAIT,W,"Suggestive behavior and thematic nudging","Baiting introduction of sensitive demographic or cultural topics to log reactions",VERIFY
+RV-EVT-0257,W-CORPORATE-BRAND-SEED,W,"Suggestive behavior and thematic nudging","Repeated unsolicited insertion of specific product or brand suggestions",IGNORE
+RV-EVT-0258,W-LIFESTYLE-CHANGE-NUDGE,W,"Suggestive behavior and thematic nudging","Multiple contacts subtly nudging lifestyle or relationship changes",VERIFY
+RV-EVT-0259,W-RELATIONSHIP-STATUS-PRESS,W,"Suggestive behavior and thematic nudging","Pressure or repeated inquiries about relationship status/future plans",IGNORE
+RV-EVT-0260,W-CONTROVERSIAL-MEME-INJECT,W,"Suggestive behavior and thematic nudging","Injection of borderline or edgy meme content to gauge thresholds",IGNORE
+RV-EVT-0261,W-BOUNDARY-TEST-ESCALATION,W,"Suggestive behavior and thematic nudging","Gradual boundary testing with increasing suggestive tone across channels",VERIFY
+RV-EVT-0262,W-TARGETED-COMPLIMENT-PATTERN,W,"Suggestive behavior and thematic nudging","Patterned compliments focusing on perceived vulnerabilities or insecurities",VERIFY
+RV-EVT-0263,W-SOCIAL-CAUSE-SHAME-PUSH,W,"Suggestive behavior and thematic nudging","Shaming attempts for not endorsing specific social or political causes",IGNORE
+RV-EVT-0264,W-CONSENT-FRAME-AMBIGUITY,W,"Suggestive behavior and thematic nudging","Engineering ambiguous agreement framing in messages to reduce clear refusal",ESCALATE

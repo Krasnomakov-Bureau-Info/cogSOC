@@ -6,3 +6,6 @@ __pycache__/
 
 # Ignore taxonomy journal folder and its contents (local notes / generated files)
 taxonomy/journal/
+
+# Ignore analytics drafts 
+articles/analytics/

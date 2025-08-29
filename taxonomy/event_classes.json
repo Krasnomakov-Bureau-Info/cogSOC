@@ -1991,4 +1991,124 @@
     "name": "Multi-vehicle convoy pacing & blocking exits (pressure/framing)",
     "default_route": "ESCALATE"
   }
+  ,{
+    "id": "RV-EVT-0250",
+    "code": "W-SOFT-FLIRT-REPEATED",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Repeated light flirtation to test personal boundaries",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0251",
+    "code": "W-ORIENTATION-PROBE-INDIRECT",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Indirect probing about orientation or identity via leading questions",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0252",
+    "code": "W-SUGGESTIVE-DM-DRIP",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Escalating suggestive private messages over time (drip escalation)",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0253",
+    "code": "W-IDENTITY-POLITIC-PUSH",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Steering neutral chats into polarizing identity or social topics",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0254",
+    "code": "W-POLARIZING-ISSUE-ANCHOR",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Anchoring unrelated conversations to conflict/war or political themes",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0255",
+    "code": "W-GENDER-NORM-CHALLENGE-COORD",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Coordinated challenges to statements to provoke gender role debates",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0256",
+    "code": "W-SENSITIVE-RACE-TOPIC-BAIT",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Baiting introduction of sensitive demographic or cultural topics to log reactions",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0257",
+    "code": "W-CORPORATE-BRAND-SEED",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Repeated unsolicited insertion of specific product or brand suggestions",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0258",
+    "code": "W-LIFESTYLE-CHANGE-NUDGE",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Multiple contacts subtly nudging lifestyle or relationship changes",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0259",
+    "code": "W-RELATIONSHIP-STATUS-PRESS",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Pressure or repeated inquiries about relationship status/future plans",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0260",
+    "code": "W-CONTROVERSIAL-MEME-INJECT",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Injection of borderline or edgy meme content to gauge thresholds",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0261",
+    "code": "W-BOUNDARY-TEST-ESCALATION",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Gradual boundary testing with increasing suggestive tone across channels",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0262",
+    "code": "W-TARGETED-COMPLIMENT-PATTERN",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Patterned compliments focusing on perceived vulnerabilities or insecurities",
+    "default_route": "VERIFY"
+  },
+  {
+    "id": "RV-EVT-0263",
+    "code": "W-SOCIAL-CAUSE-SHAME-PUSH",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Shaming attempts for not endorsing specific social or political causes",
+    "default_route": "IGNORE"
+  },
+  {
+    "id": "RV-EVT-0264",
+    "code": "W-CONSENT-FRAME-AMBIGUITY",
+    "category": "W",
+    "category_name": "Suggestive behavior and thematic nudging",
+    "name": "Engineering ambiguous agreement framing in messages to reduce clear refusal",
+    "default_route": "ESCALATE"
+  }
 ]

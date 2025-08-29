@@ -27,8 +27,8 @@
         "type": {"type": "string", "enum": [
           "disturbance", "tactic", "technique", "sub-technique", "primitive", "buffer", "metric", "tripwire", "mitigation", "relationship", "event-class"
         ]},
-        "code": {"type": "string", "description": "Short machine code (e.g., A-FOOT-ROTATION)."},
-  "category_code": {"type": "string", "description": "Group letter/category code (A..V)."},
+    "code": {"type": "string", "description": "Short machine code (e.g., A-FOOT-ROTATION)."},
+  "category_code": {"type": "string", "enum": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W"], "description": "Group letter/category code (A..W)."},
         "category_name": {"type": "string", "description": "Category descriptive name."},
         "default_route": {"type": "string", "enum": ["IGNORE","VERIFY","HARDEN","ESCALATE"], "description": "Default triage routing."},
         "severity": {"type": "string", "enum": ["INFO","LOW","MED","HIGH","CRITICAL"]},
